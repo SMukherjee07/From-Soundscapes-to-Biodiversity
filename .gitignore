@@ -1,0 +1,22 @@
+# Environment / secrets
+.env
+*.key
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Node / website
+website/node_modules/
+website/dist/
+website/.vite/
+
+# Large raw data — not committed to GitHub (see README's data-storage note)
+data/raw/*/*.json
+audio/raw/*.mp3
+audio/validated/*.mp3
+audio/processed/*.mp3
+
+# OS
+.DS_Store
