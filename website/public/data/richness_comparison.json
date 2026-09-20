@@ -1,0 +1,26 @@
+[
+  {
+    "state":"AZ",
+    "acoustic_recordings":75,
+    "acoustic_species":44,
+    "ebird_observations":373,
+    "ebird_species":373,
+    "acoustic_representation_pct":11.8
+  },
+  {
+    "state":"CA",
+    "acoustic_recordings":100,
+    "acoustic_species":66,
+    "ebird_observations":495,
+    "ebird_species":495,
+    "acoustic_representation_pct":13.3
+  },
+  {
+    "state":"TX",
+    "acoustic_recordings":100,
+    "acoustic_species":100,
+    "ebird_observations":458,
+    "ebird_species":458,
+    "acoustic_representation_pct":21.8
+  }
+]

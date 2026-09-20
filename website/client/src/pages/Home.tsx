@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { DataPrepEDA } from "@/components/DataPrepEDA";
+import { IntroductionContent } from "@/IntroductionContent";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -48,18 +50,16 @@ const navItems = [
   "Conclusions",
 ];
 
-// TODO: replace every field below with real values once 01_fetch_xenocanto.py
-// and 03_fetch_ebird_richness.py have run. Nothing here is real data yet —
-// richness is left at 0 (renders as an empty bar) rather than a fabricated
-// percentage, so an unfinished pull can't be mistaken for a finding.
+// Real values from the A1 diverse-sampling pipeline.
+// Species counts refer to species represented by the acquired acoustic recordings;
+// they are not estimates of regional biodiversity richness.
 const regions = [
   {
     id: "california",
     name: "California",
     abbr: "CA",
-    recordings: "—",
-    species: "—",
-    richness: 0,
+    recordings: "100",
+    species: "66",
     tone: "coral",
     note: "Coastal oak & chaparral",
   },
@@ -67,9 +67,8 @@ const regions = [
     id: "arizona",
     name: "Arizona",
     abbr: "AZ",
-    recordings: "—",
-    species: "—",
-    richness: 0,
+    recordings: "75",
+    species: "44",
     tone: "gold",
     note: "Sky islands & Sonoran desert",
   },
@@ -77,74 +76,72 @@ const regions = [
     id: "texas",
     name: "Texas",
     abbr: "TX",
-    recordings: "—",
-    species: "—",
-    richness: 0,
+    recordings: "100",
+    species: "100",
     tone: "cyan",
     note: "Piney woods & grassland",
   },
 ];
-
 const analysisCopy: Record<string, { eyebrow: string; title: string; text: string; metric: string }> = {
   Introduction: {
     eyebrow: "THE QUESTION",
     title: "Can a landscape be understood by listening?",
-    text: "This observatory follows bird sound through three ecologically distinct states to see how acoustic patterns can reveal biodiversity.",
+    text: "This observatory follows bird recordings across three geographically distinct regions to investigate whether acoustic patterns can provide meaningful evidence about biodiversity.",
     metric: "03 regions",
   },
   "DataPrep_EDA": {
     eyebrow: "A1 · DATA FOUNDATION",
     title: "Every observation begins as a sound.",
     text: "Audio, place, time, and species metadata are prepared as a transparent research pipeline before any model is trained.",
-    metric: "— clips", // TODO: real count once data pull completes
+    metric: "275 recordings",
   },
   Clustering: {
     eyebrow: "A2 · DISCOVER",
     title: "Finding natural families in sound.",
     text: "Unsupervised clustering will reveal acoustic neighborhoods across recordings without starting from a species label.",
-    metric: "coming next",
+    metric: "analysis chapter",
   },
   PCA: {
     eyebrow: "A2 · DISCOVER",
     title: "Reducing a forest of features.",
     text: "Principal component analysis will bring high-dimensional acoustic features into a visual field we can interpret.",
-    metric: "coming next",
+    metric: "analysis chapter",
   },
   NaiveBayes: {
     eyebrow: "A3 · CLASSIFY",
     title: "Probabilities in every chirp.",
     text: "Naive Bayes will establish a transparent baseline for classifying recordings from their extracted features.",
-    metric: "coming next",
+    metric: "analysis chapter",
   },
   DecTrees: {
     eyebrow: "A3 · CLASSIFY",
     title: "Readable branches of evidence.",
     text: "Decision trees will surface the acoustic characteristics that make species and habitats easier to distinguish.",
-    metric: "coming next",
+    metric: "analysis chapter",
   },
   SVMs: {
     eyebrow: "A4 · CLASSIFY",
     title: "Drawing the sound boundary.",
     text: "Support vector machines will test whether acoustic signatures separate species and regions robustly.",
-    metric: "coming next",
+    metric: "analysis chapter",
   },
   Regression: {
     eyebrow: "A5 · PREDICT",
     title: "Estimating diversity from sound.",
     text: "Regression will explore how a soundscape's measured texture relates to observed species richness.",
-    metric: "coming next",
+    metric: "analysis chapter",
   },
   NN: {
     eyebrow: "A5 · PREDICT",
     title: "Listening at another scale.",
     text: "A neural network will later learn richer patterns across acoustic features and classifications.",
-    metric: "coming next",
+    metric: "analysis chapter",
   },
   Conclusions: {
     eyebrow: "THE TAKEAWAY",
-    title: "Biodiversity may be easier to hear.",
-    text: "This study does not replace field observation. It asks how listening can make ecological observation more continuous, accessible, and expansive.",
-    metric: "sound → species",
+    title: "What can sound tell us about biodiversity?",
+    text: "The study examines where acoustic information is informative, where it becomes limited, and how recording and sampling conditions shape ecological interpretation.",
+    metric: "sound → evidence",
   },
 };
 
@@ -187,48 +184,39 @@ function BirdFlight() {
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Introduction");
   const [activeRegion, setActiveRegion] = useState("texas");
-  const [isPlaying, setIsPlaying] = useState(false);
   const [soundOn, setSoundOn] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const audioContextRef = useRef<AudioContext | null>(null);
-  const chirpTimerRef = useRef<number | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const activeRegionInfo = regions.find((region) => region.id === activeRegion) ?? regions[2];
   const copy = analysisCopy[activeTab];
 
   const stopSoundscape = () => {
-    if (chirpTimerRef.current) window.clearInterval(chirpTimerRef.current);
-    chirpTimerRef.current = null;
+    if (!audioRef.current) return;
+
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0;
     setSoundOn(false);
   };
 
-  const playChirp = () => {
-    const AudioContextClass = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-    if (!AudioContextClass) return;
-    const context = audioContextRef.current ?? new AudioContextClass();
-    audioContextRef.current = context;
-    if (context.state === "suspended") void context.resume();
-    const oscillator = context.createOscillator();
-    const gain = context.createGain();
-    oscillator.type = "sine";
-    oscillator.frequency.setValueAtTime(1550 + Math.random() * 500, context.currentTime);
-    oscillator.frequency.exponentialRampToValueAtTime(2700 + Math.random() * 900, context.currentTime + 0.13);
-    gain.gain.setValueAtTime(0.0001, context.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.04, context.currentTime + 0.015);
-    gain.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 0.2);
-    oscillator.connect(gain).connect(context.destination);
-    oscillator.start();
-    oscillator.stop(context.currentTime + 0.21);
-  };
+
 
   const toggleSoundscape = () => {
+    if (!audioRef.current) return;
+
     if (soundOn) {
-      stopSoundscape();
-      return;
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      setSoundOn(false);
+    } else {
+      audioRef.current.currentTime = 0;
+
+      audioRef.current.play().catch((error) => {
+        console.error("Unable to play bird recording:", error);
+      });
+
+      setSoundOn(true);
     }
-    playChirp();
-    chirpTimerRef.current = window.setInterval(playChirp, 1550);
-    setSoundOn(true);
   };
 
   useEffect(() => () => stopSoundscape(), []);
@@ -237,6 +225,11 @@ export default function Home() {
 
   return (
     <main className="site-shell">
+      <audio
+        ref={audioRef}
+        src="/audio/AZ_218539.mp3"
+        preload="metadata"
+      />
       <header className="site-header">
         <button className="brand" onClick={() => scrollTo("top")} aria-label="Return to top">
           <span className="brand-mark"><Bird size={18} strokeWidth={1.8} /></span>
@@ -304,7 +297,7 @@ export default function Home() {
         </div>
         <div className="hero__lower">
           <div className="region-tags"><span>California</span><i /> <span>Arizona</span><i /> <span>Texas</span></div>
-          <div className="hero__sound"><span>LIVE ACOUSTIC FIELD</span><Waveform compact /><span>00:13</span></div>
+          <div className="hero__sound"><span>XENO-CANTO FIELD RECORDING</span><Waveform compact /><span>FIELD RECORDING</span></div>
         </div>
         <BirdFlight />
         <button className="scroll-cue" onClick={() => scrollTo("field-guide")} aria-label="Scroll to field guide"><span />Scroll to listen</button>
@@ -335,7 +328,12 @@ export default function Home() {
               <g className="map-label"><text x="75" y="312">PACIFIC</text><text x="569" y="338">GULF OF MEXICO</text></g>
               <g className="map-marker"><circle cx="134" cy="177" r="6" /><circle cx="214" cy="210" r="6" /><circle cx="469" cy="241" r="6" /></g>
             </svg>
-            <div className="map-panel__footer"><span>Listening radius</span><b>200 km</b><span>Sample season</span><b>Spring 2026</b></div>
+            <div className="map-panel__footer">
+              <span>Acoustic sample</span>
+              <b>275 recordings</b>
+              <span>Study regions</span>
+              <b>CA · AZ · TX</b>
+            </div>
           </div>
 
           <div className="region-details">
@@ -348,8 +346,12 @@ export default function Home() {
                   <div><strong>{activeRegionInfo.recordings}</strong><span>recordings</span></div>
                   <div><strong>{activeRegionInfo.species}</strong><span>species</span></div>
                 </div>
-                <div className="richness-row"><span>Observed richness</span><b>{activeRegionInfo.richness}%</b></div>
-                <div className="richness-bar"><motion.span initial={{ width: 0 }} animate={{ width: `${activeRegionInfo.richness}%` }} transition={{ duration: 0.55 }} /></div>
+                <div className="region-method-note">
+                  <span>ACOUSTIC SAMPLE</span>
+                  <p>
+                    Species represented by the acquired acoustic recordings.
+                  </p>
+                </div>
               </motion.div>
             </AnimatePresence>
             <div className="region-list">
@@ -377,22 +379,40 @@ export default function Home() {
             ))}
           </div>
           <AnimatePresence mode="wait">
-            <motion.article className="analysis-main" key={activeTab} initial={{ opacity: 0, x: 16 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -16 }} transition={{ duration: 0.26 }}>
-              <p className="eyebrow"><span /> {copy.eyebrow}</p>
-              <div className="analysis-main__heading"><h2>{copy.title}</h2><span className="analysis-metric">{copy.metric}</span></div>
-              <p className="analysis-main__text">{copy.text}</p>
-              {activeTab === "DataPrep_EDA" || activeTab === "Introduction" ? (
-                <div className="signal-card">
-                  <div className="signal-card__header"><span><Waves size={16} /> ACOUSTIC SIGNAL / XC-0427</span><button onClick={() => setIsPlaying((value) => !value)}>{isPlaying ? <CirclePause size={20} /> : <CirclePlay size={20} />}{isPlaying ? "Pause" : "Listen"}</button></div>
-                  <div className={isPlaying ? "wave-area playing" : "wave-area"}><Waveform /></div>
-                  <div className="signal-card__meta"><span>Northern Mockingbird</span><span>TX · 31 SEC · 44.1 KHZ</span></div>
-                </div>
+            <motion.article
+              className="analysis-main"
+              key={activeTab}
+              initial={{ opacity: 0, x: 16 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -16 }}
+              transition={{ duration: 0.26 }}
+            >
+
+              {activeTab !== "Introduction" && (
+                <>
+                  <p className="eyebrow">
+                    <span /> {copy.eyebrow}
+                  </p>
+
+                  <div className="analysis-main__heading">
+                    <h2>{copy.title}</h2>
+                    <span className="analysis-metric">{copy.metric}</span>
+                  </div>
+
+                  <p className="analysis-main__text">{copy.text}</p>
+                </>
+              )}
+
+              {activeTab === "DataPrep_EDA" ? (
+                <DataPrepEDA />
+              ) : activeTab === "Introduction" ? (
+                <IntroductionContent />
               ) : (
                 <div className="future-visual">
-                  <div className="future-visual__points">{Array.from({ length: 34 }, (_, index) => <i key={index} style={{ left: `${8 + ((index * 29) % 82)}%`, top: `${12 + ((index * 47) % 73)}%`, animationDelay: `${index * 65}ms` }} />)}</div>
-                  <div className="future-visual__caption"><Sparkles size={15} /> This chapter's interactive analysis will be introduced in the next stage of the study.</div>
+                  {/* existing content */}
                 </div>
               )}
+
             </motion.article>
           </AnimatePresence>
         </div>
@@ -418,7 +438,7 @@ export default function Home() {
         </div>
 
         <div className="feature-story">
-          <div className="feature-story__image"><img src={FIELD_IMAGE} alt="A northern mockingbird on a flowering desert willow branch" /><div className="photo-tag">FIELD NOTE / SONORAN EDGE</div></div>
+          <div className="feature-story__image"><img src={FIELD_IMAGE} alt="Longleaf pine forest in Sam Houston National Forest, Texas" /><div className="photo-tag">FIELD NOTE / TEXAS PINEY WOODS</div></div>
           <div className="feature-story__content">
             <p className="eyebrow eyebrow--dark"><span /> WHY LISTEN?</p>
             <blockquote>“The goal is not to replace ecological observation. It is to make biodiversity easier to hear.”</blockquote>
@@ -439,7 +459,13 @@ export default function Home() {
       <footer className="site-footer">
         <div className="brand"><span className="brand-mark"><Bird size={18} /></span><span>Acoustic<br />Observatory</span></div>
         <p>From Soundscapes to Biodiversity · Assignment 1 · 2026</p>
-        <a href="https://github.com/" target="_blank" rel="noreferrer"><Github size={16} /> Research repository</a>
+        <a
+          href="https://github.com/SMukherjee07/From-Soundscapes-to-Biodiversity"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Github size={16} /> Research repository
+        </a>
       </footer>
     </main>
   );
