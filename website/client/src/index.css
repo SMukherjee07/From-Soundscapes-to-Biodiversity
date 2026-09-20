@@ -1661,3 +1661,12 @@ h2 {
     padding: 0.75rem;
   }
 }
+
+.signal-layout--full {
+  display: block;
+}
+
+.signal-layout--full .analysis-main {
+  width: 100%;
+  max-width: none;
+}

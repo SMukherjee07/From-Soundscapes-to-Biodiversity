@@ -79,11 +79,47 @@ const styles = {
     padding: "18px 0 70px",
   },
 
+  /* =========================================================
+     HERO
+     ========================================================= */
+
   introHero: {
+    position: "relative" as const,
+    overflow: "hidden",
+    minHeight: "620px",
+    borderRadius: "10px",
     display: "grid",
     gridTemplateColumns: "minmax(0, 1.15fr) minmax(280px, 0.85fr)",
     gap: "38px",
     alignItems: "stretch",
+  },
+
+  heroBackground: {
+    position: "absolute" as const,
+    inset: 0,
+    backgroundImage: "url('/images/misty-forest-2.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    transform: "scale(1.02)",
+  },
+
+  heroOverlay: {
+    position: "absolute" as const,
+    inset: 0,
+    background:
+      "linear-gradient(90deg, rgba(4, 24, 18, 0.76) 0%, rgba(4, 24, 18, 0.52) 42%, rgba(4, 24, 18, 0.28) 72%, rgba(4, 24, 18, 0.42) 100%), linear-gradient(180deg, rgba(4, 24, 18, 0.12) 0%, rgba(4, 24, 18, 0.48) 100%)",
+  },
+
+  heroContent: {
+    position: "relative" as const,
+    zIndex: 2,
+    width: "100%",
+    display: "grid",
+    gridTemplateColumns: "minmax(0, 1.15fr) minmax(280px, 0.85fr)",
+    gap: "38px",
+    alignItems: "center",
+    padding: "64px",
   },
 
   eyebrow: {
@@ -111,13 +147,28 @@ const styles = {
     fontSize: "17px",
   },
 
+  heroStatement: {
+    marginTop: "48px",
+    display: "flex",
+    flexDirection: "column" as const,
+    gap: "4px",
+    color: "#f2ebdd",
+    fontFamily: "Georgia, serif",
+    fontSize: "22px",
+    lineHeight: 1.2,
+    fontStyle: "italic" as const,
+    letterSpacing: "-0.01em",
+    opacity: 0.92,
+  },
+
   imageCard: {
     position: "relative" as const,
     minHeight: "330px",
     overflow: "hidden",
     borderRadius: "10px",
-    border: "1px solid #2a3530",
-    background: "#101d19",
+    border: "1px solid rgba(220, 235, 225, 0.2)",
+    background: "rgba(16, 29, 25, 0.45)",
+    boxShadow: "0 20px 60px rgba(0, 0, 0, 0.22)",
   },
 
   image: {
@@ -145,6 +196,10 @@ const styles = {
     letterSpacing: "0.12em",
     lineHeight: 1.5,
   },
+
+  /* =========================================================
+     FIELD NOTES
+     ========================================================= */
 
   noteShell: {
     borderTop: "1px solid #2a3530",
@@ -215,11 +270,13 @@ const styles = {
     alignItems: "center",
     gap: "7px",
     padding: "8px 11px",
-    border: "1px solid #2a3530",
+    border: "1px solid rgba(220, 235, 225, 0.2)",
     borderRadius: "999px",
-    color: "#a9b3ac",
+    color: "#d3dbd5",
     fontSize: "10px",
     letterSpacing: "0.1em",
+    background: "rgba(4, 20, 15, 0.28)",
+    backdropFilter: "blur(6px)",
   },
 
   controls: {
@@ -262,6 +319,10 @@ const styles = {
     color: "#f2ebdd",
     cursor: "pointer",
   },
+
+  /* =========================================================
+     RESEARCH QUESTIONS
+     ========================================================= */
 
   questionsHeader: {
     display: "flex",
@@ -350,50 +411,65 @@ export function IntroductionContent() {
           ========================================================= */}
 
       <section style={styles.introHero}>
-        <div>
-          <p style={styles.eyebrow}>
-            <span>01</span>&nbsp;&nbsp; INTRODUCTION · FIELD NOTES
-          </p>
+        {/* Forest background */}
+        <div style={styles.heroBackground} />
 
-          <h2 style={styles.title}>Can biodiversity be heard?</h2>
+        {/* Dark green readability overlay */}
+        <div style={styles.heroOverlay} />
 
-          <p style={styles.lead}>
-            A study of bird recordings across California, Arizona, and Texas,
-            asking how much ecological information can reasonably be recovered
-            from sound.
-          </p>
+        {/* Foreground hero content */}
+        <div style={styles.heroContent}>
+          <div>
+            <p style={styles.eyebrow}>
+              <span>01</span>&nbsp;&nbsp; INTRODUCTION · FIELD NOTES
+            </p>
 
-          <div style={styles.meta}>
-            <span style={styles.pill}>
-              <Mic2 size={13} />
-              275 RECORDINGS
-            </span>
+            <h2 style={styles.title}>Can biodiversity be heard?</h2>
 
-            <span style={styles.pill}>
-              <MapPin size={13} />
-              CA · AZ · TX
-            </span>
+            <p style={styles.lead}>
+              A study of bird recordings across California, Arizona, and Texas,
+              asking how much ecological information can reasonably be recovered
+              from sound.
+            </p>
 
-            <span style={styles.pill}>
-              <Radio size={13} />
-              XENO-CANTO
-            </span>
+            <div style={styles.meta}>
+              <span style={styles.pill}>
+                <Mic2 size={13} />
+                275 RECORDINGS
+              </span>
+
+              <span style={styles.pill}>
+                <MapPin size={13} />
+                CA · AZ · TX
+              </span>
+
+              <span style={styles.pill}>
+                <Radio size={13} />
+                XENO-CANTO
+              </span>
+            </div>
+
+            <div style={styles.heroStatement}>
+              <span>Different places.</span>
+              <span>Different voices.</span>
+              <span>A shared planet.</span>
+            </div>
           </div>
-        </div>
 
-        <div style={styles.imageCard}>
-          <img
-            src={HERO_IMAGE}
-            alt="White-crowned sparrow in its natural habitat"
-            style={styles.image}
-          />
+          <div style={styles.imageCard}>
+            <img
+              src={HERO_IMAGE}
+              alt="White-crowned sparrow in its natural habitat"
+              style={styles.image}
+            />
 
-          <div style={styles.imageOverlay} />
+            <div style={styles.imageOverlay} />
 
-          <div style={styles.imageLabel}>
-            FIELD NOTE / WHITE-CROWNED SPARROW
-            <br />
-            IMAGE SOURCE: WIKIMEDIA COMMONS
+            <div style={styles.imageLabel}>
+              FIELD NOTE / WHITE-CROWNED SPARROW
+              <br />
+              IMAGE SOURCE: WIKIMEDIA COMMONS
+            </div>
           </div>
         </div>
       </section>

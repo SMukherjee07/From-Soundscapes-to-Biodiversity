@@ -379,16 +379,8 @@ export default function Home() {
             ))}
           </div>
         </nav>
-        <div className="signal-layout">
-          <div className="analysis-tabs" aria-label="Assignment research tabs">
-            <p>PROJECT CHAPTERS</p>
-            {navItems.map((item, index) => (
-              <button key={item} className={activeTab === item ? "active" : ""} onClick={() => setActiveTab(item)}>
-                <span>{String(index + 1).padStart(2, "0")}</span>{item}
-                {activeTab === item && <motion.i layoutId="active-tab" />}
-              </button>
-            ))}
-          </div>
+        <div className="signal-layout signal-layout--full">
+
           <AnimatePresence mode="wait">
             <motion.article
               className="analysis-main"
