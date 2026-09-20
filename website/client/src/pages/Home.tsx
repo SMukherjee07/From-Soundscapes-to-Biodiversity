@@ -368,12 +368,23 @@ export default function Home() {
       <section className="signal-section" id="research">
         <div className="signal-section__background" />
         <div className="section-label section-label--light"><span>02</span> RESEARCH OBSERVATORY</div>
+        <nav className="project-nav-large" aria-label="Project chapters">
+          <div className="project-nav-large__label"><span />EXPLORE THE PROJECT</div>
+          <div className="project-nav-large__tabs">
+            {navItems.map((tab, index) => (
+              <button key={tab} type="button" className={`project-nav-large__tab ${activeTab === tab ? "is-active" : ""}`} onClick={() => setActiveTab(tab)}>
+                <span className="project-nav-large__number">{String(index + 1).padStart(2, "0")}</span>
+                <span>{tab}</span>
+              </button>
+            ))}
+          </div>
+        </nav>
         <div className="signal-layout">
           <div className="analysis-tabs" aria-label="Assignment research tabs">
             <p>PROJECT CHAPTERS</p>
             {navItems.map((item, index) => (
               <button key={item} className={activeTab === item ? "active" : ""} onClick={() => setActiveTab(item)}>
-                <span>0{index + 1}</span>{item}
+                <span>{String(index + 1).padStart(2, "0")}</span>{item}
                 {activeTab === item && <motion.i layoutId="active-tab" />}
               </button>
             ))}
