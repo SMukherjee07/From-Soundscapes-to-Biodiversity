@@ -1,85 +1,276 @@
 """
-Fetch bird recording metadata + audio subset from Xeno-canto API v3
-Scope: California, Arizona, Texas — quality C or better
-A1 target: ~275 total audio files (100 CA / 75 AZ / 100 TX), expandable
-to the full ~550 target in Module 2+ once the pipeline is proven.
+Xeno-canto API v3 acquisition utilities.
+
+Scope:
+    California, Arizona, Texas
+    Bird recordings
+    Quality C or better query
+
+A1 target:
+    100 California
+    75 Arizona
+    100 Texas
+
+This module provides reusable acquisition functions.
+The actual A1 sample selection and acquisition workflow
+is documented in 02_data_acquisition.ipynb.
 """
-import requests
+
 import json
+import os
 import time
 from pathlib import Path
 
-API_KEY = "YOUR_KEY_HERE"  # register at xeno-canto.org
-BASE_URL = "https://xeno-canto.org/api/3/recordings"
-RAW_DIR = Path("../data/raw")
+import requests
+from dotenv import load_dotenv
 
-# Approximate state bounding boxes (min_lat,min_lon,max_lat,max_lon)
+
+# ---------------------------------------------------------------------
+# Project paths
+# ---------------------------------------------------------------------
+
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+
+RAW_XC_DIR = PROJECT_ROOT / "data" / "raw" / "xenocanto"
+RAW_AUDIO_DIR = PROJECT_ROOT / "audio" / "raw"
+
+RAW_XC_DIR.mkdir(parents=True, exist_ok=True)
+RAW_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+
+
+# ---------------------------------------------------------------------
+# API configuration
+# ---------------------------------------------------------------------
+
+load_dotenv(PROJECT_ROOT / ".env")
+
+API_KEY = os.getenv("XENO_CANTO_API_KEY")
+
+if not API_KEY:
+    raise RuntimeError(
+        "XENO_CANTO_API_KEY not found. "
+        "Check that your .env file is in the project root."
+    )
+
+BASE_URL = "https://xeno-canto.org/api/3/recordings"
+
+
+# ---------------------------------------------------------------------
+# Study regions
+# ---------------------------------------------------------------------
+
 STATE_BOXES = {
     "CA": "32.5,-124.5,42.0,-114.1",
     "AZ": "31.3,-114.9,37.0,-109.0",
     "TX": "25.8,-106.7,36.5,-93.5",
 }
-A1_TARGETS = {"CA": 100, "AZ": 75, "TX": 100}
+
+A1_TARGETS = {
+    "CA": 100,
+    "AZ": 75,
+    "TX": 100,
+}
 
 
-def fetch_metadata(state, max_pages=3, per_page=100):
-    """Pull metadata for one state's bounding box, quality C or better, birds only."""
-    query = f'grp:birds box:{STATE_BOXES[state]} q:">C"'
+# ---------------------------------------------------------------------
+# Metadata acquisition
+# ---------------------------------------------------------------------
+
+def fetch_metadata(state, max_pages=3):
+    """
+    Fetch Xeno-canto metadata for one study region.
+
+    Parameters
+    ----------
+    state : str
+        One of CA, AZ, or TX.
+
+    max_pages : int or None
+        Maximum number of API pages to retrieve.
+        None retrieves all available pages.
+
+    Returns
+    -------
+    list
+        Raw Xeno-canto recording metadata.
+    """
+
+    if state not in STATE_BOXES:
+        raise ValueError(
+            f"Unknown state '{state}'. "
+            f"Expected one of {list(STATE_BOXES)}."
+        )
+
+    query = (
+        f'grp:birds '
+        f'box:{STATE_BOXES[state]} '
+        f'q:">C"'
+    )
+
     all_recordings = []
     page = 1
+
     while True:
-        resp = requests.get(
+
+        params = {
+            "query": query,
+            "key": API_KEY,
+            "page": page,
+        }
+
+        response = requests.get(
             BASE_URL,
-            params={"query": query, "key": API_KEY, "page": page, "per_page": per_page}
+            params=params,
+            timeout=30,
         )
-        resp.raise_for_status()
-        data = resp.json()
+
+        response.raise_for_status()
+
+        data = response.json()
+
         if "error" in data:
-            raise RuntimeError(f"Xeno-canto API error ({state}): {data['error']}")
-        all_recordings.extend(data["recordings"])
-        print(f"[{state}] Page {page}/{data['numPages']} — {len(data['recordings'])} recordings "
-              f"({data['numSpecies']} species total)")
-        if page >= data["numPages"] or (max_pages and page >= max_pages):
+            raise RuntimeError(
+                f"Xeno-canto API error ({state}): "
+                f"{data['error']}"
+            )
+
+        page_recordings = data.get("recordings", [])
+
+        all_recordings.extend(page_recordings)
+
+        print(
+            f"[{state}] "
+            f"Page {page}/{data['numPages']} — "
+            f"{len(page_recordings)} recordings "
+            f"({data['numSpecies']} species total)"
+        )
+
+        if page >= data["numPages"]:
             break
+
+        if max_pages is not None and page >= max_pages:
+            break
+
         page += 1
-        time.sleep(1)  # be polite to the API
+
+        # Respect the API with a small pause between requests.
+        time.sleep(1)
+
     return all_recordings
 
 
+# ---------------------------------------------------------------------
+# Raw metadata storage
+# ---------------------------------------------------------------------
+
 def save_raw_metadata(recordings, state, path=None):
-    path = path or RAW_DIR / f"xc_metadata_raw_{state}.json"
+    """
+    Save raw Xeno-canto metadata without modifying the records.
+    """
+
+    if path is None:
+        path = RAW_XC_DIR / f"xc_metadata_raw_{state}.json"
+
     path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, "w") as f:
-        json.dump(recordings, f, indent=2)
-    print(f"Saved {len(recordings)} records to {path}")
+
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(recordings, f, indent=2, ensure_ascii=False)
+
+    print(
+        f"[{state}] Saved {len(recordings)} raw records to:\n"
+        f"    {path}"
+    )
 
 
-def download_audio_sample(recordings, n, state, out_dir=RAW_DIR / "audio"):
+# ---------------------------------------------------------------------
+# Audio download
+# ---------------------------------------------------------------------
+
+def download_audio_sample(
+    recordings,
+    n,
+    state,
+    out_dir=None,
+):
     """
-    Download a manageable per-state subset of actual audio files (metadata
-    covers the rest). Skips restricted species, which have redacted 'file'
-    fields per API docs — document this exclusion as a cleaning decision.
+    Download up to n audio recordings.
+
+    The function does not perform scientific cleaning.
+    It only handles acquisition/access constraints.
     """
+
+    if out_dir is None:
+        out_dir = RAW_AUDIO_DIR
+
     out_dir.mkdir(parents=True, exist_ok=True)
-    downloaded, skipped_restricted = 0, 0
+
+    downloaded = 0
+    skipped = 0
+    failed = 0
+
     for rec in recordings:
+
         if downloaded >= n:
             break
-        if rec.get("_meta", {}).get("redacted_fields", {}).get("file"):
-            skipped_restricted += 1
+
+        recording_id = rec.get("id")
+        url = rec.get("file")
+
+        # Audio unavailable/restricted.
+        if not url:
+            skipped += 1
             continue
-        url = rec["file"]  # already a full https URL in API v3
-        fname = out_dir / f"{state}_{rec['id']}.mp3"
-        if not fname.exists():
-            r = requests.get(url)
-            fname.write_bytes(r.content)
+
+        filename = out_dir / f"{state}_{recording_id}.mp3"
+
+        if filename.exists():
             downloaded += 1
+            continue
+
+        try:
+
+            response = requests.get(
+                url,
+                timeout=60,
+            )
+
+            response.raise_for_status()
+
+            content_type = response.headers.get(
+                "content-type",
+                ""
+            ).lower()
+
+            if len(response.content) == 0:
+                raise ValueError("Empty response.")
+
+            # Save only after successful response validation.
+            filename.write_bytes(response.content)
+
+            downloaded += 1
+
+        except Exception as exc:
+
+            failed += 1
+
+            print(
+                f"[{state}] Failed to download "
+                f"XC{recording_id}: {exc}"
+            )
+
         time.sleep(0.5)
-    print(f"[{state}] Downloaded {downloaded} files, skipped {skipped_restricted} restricted-species records")
 
+    print(
+        f"[{state}] "
+        f"Downloaded={downloaded}, "
+        f"Skipped={skipped}, "
+        f"Failed={failed}"
+    )
 
-if __name__ == "__main__":
-    for state, target in A1_TARGETS.items():
-        recs = fetch_metadata(state)
-        save_raw_metadata(recs, state)
-        download_audio_sample(recs, n=target, state=state)
+    return {
+        "state": state,
+        "requested": n,
+        "downloaded": downloaded,
+        "skipped": skipped,
+        "failed": failed,
+    }

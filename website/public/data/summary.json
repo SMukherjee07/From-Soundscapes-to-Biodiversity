@@ -1,0 +1,13 @@
+{
+  "total_recordings": 275,
+  "total_species": 159,
+  "states": [
+    "AZ",
+    "CA",
+    "TX"
+  ],
+  "total_windows": 1179,
+  "short_windows": 53,
+  "flagged_recordings": 67,
+  "feature_count": 100
+}

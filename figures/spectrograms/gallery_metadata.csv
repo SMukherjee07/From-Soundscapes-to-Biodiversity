@@ -1,0 +1,5 @@
+gallery_label,state,recording_id,common_name,scientific_name,duration_seconds,flag_any,flag_short_duration,spectrogram_frequency_range_hz,analysis_window_seconds,image_file
+typical_clean,CA,964250,Blue-winged Teal,Spatula discors,23.5771875,False,False,1000-10000,10.0,typical_clean_964250.png
+short_recording,CA,691650,Black-chinned Hummingbird,Archilochus alexandri,0.696,True,True,1000-10000,0.696,short_recording_691650.png
+qc_flagged,CA,1089596,Canada Goose,Branta canadensis,21.748833333333334,True,False,1000-10000,10.0,qc_flagged_1089596.png
+long_recording,AZ,611001,Greater Roadrunner,Geococcyx californianus,646.992,False,False,1000-10000,10.0,long_recording_611001.png

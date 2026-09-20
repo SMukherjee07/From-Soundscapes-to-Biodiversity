@@ -1,0 +1,5 @@
+requests==2.32.3
+python-dotenv==1.0.1
+pandas==2.2.2
+librosa==0.10.2
+scikit-maad==1.5.1

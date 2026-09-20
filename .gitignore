@@ -3,9 +3,11 @@
 *.key
 
 # Python
+venv/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
 
 # Node / website
 website/node_modules/
