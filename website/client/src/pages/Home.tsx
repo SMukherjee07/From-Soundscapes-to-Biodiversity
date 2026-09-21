@@ -50,6 +50,19 @@ const navItems = [
   "Conclusions",
 ];
 
+const navLabels: Record<string, string> = {
+  Introduction: "Introduction",
+  DataPrep_EDA: "Data Prep & EDA",
+  Clustering: "Clustering",
+  PCA: "PCA",
+  NaiveBayes: "Naive Bayes",
+  DecTrees: "Decision Trees",
+  SVMs: "SVMs",
+  Regression: "Regression",
+  NN: "Neural Networks",
+  Conclusions: "Conclusions",
+};
+
 // Real values from the A1 diverse-sampling pipeline.
 // Species counts refer to species represented by the acquired acoustic recordings;
 // they are not estimates of regional biodiversity richness.
@@ -89,7 +102,7 @@ const analysisCopy: Record<string, { eyebrow: string; title: string; text: strin
     text: "This observatory follows bird recordings across three geographically distinct regions to investigate whether acoustic patterns can provide meaningful evidence about biodiversity.",
     metric: "03 regions",
   },
-  "DataPrep_EDA": {
+  DataPrep_EDA: {
     eyebrow: "A1 · DATA FOUNDATION",
     title: "Every observation begins as a sound.",
     text: "Audio, place, time, and species metadata are prepared as a transparent research pipeline before any model is trained.",
@@ -119,7 +132,7 @@ const analysisCopy: Record<string, { eyebrow: string; title: string; text: strin
     text: "Decision trees will surface the acoustic characteristics that make species and habitats easier to distinguish.",
     metric: "analysis chapter",
   },
-  SVMs: {
+  "SVMs": {
     eyebrow: "A4 · CLASSIFY",
     title: "Drawing the sound boundary.",
     text: "Support vector machines will test whether acoustic signatures separate species and regions robustly.",
@@ -266,7 +279,7 @@ export default function Home() {
                     scrollTo("research");
                   }}
                 >
-                  <span>0{index + 1}</span>{item}
+                  <span>0{index + 1}</span>{navLabels[item]}
                 </button>
               ))}
             </div>
@@ -368,18 +381,24 @@ export default function Home() {
       <section className="signal-section" id="research">
         <div className="signal-section__background" />
         <div className="section-label section-label--light"><span>02</span> RESEARCH OBSERVATORY</div>
-        <nav className="project-nav-large" aria-label="Project chapters">
-          <div className="project-nav-large__label"><span />EXPLORE THE PROJECT</div>
-          <div className="project-nav-large__tabs">
-            {navItems.map((tab, index) => (
-              <button key={tab} type="button" className={`project-nav-large__tab ${activeTab === tab ? "is-active" : ""}`} onClick={() => setActiveTab(tab)}>
-                <span className="project-nav-large__number">{String(index + 1).padStart(2, "0")}</span>
-                <span>{tab}</span>
+
+        <div className="signal-layout">
+
+          <div className="analysis-tabs" aria-label="Assignment research tabs">
+            <p>PROJECT CHAPTERS</p>
+
+            {navItems.map((item, index) => (
+              <button
+                key={item}
+                className={activeTab === item ? "active" : ""}
+                onClick={() => setActiveTab(item)}
+              >
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                {navLabels[item]}
+                {activeTab === item && <motion.i layoutId="active-tab" />}
               </button>
             ))}
           </div>
-        </nav>
-        <div className="signal-layout signal-layout--full">
 
           <AnimatePresence mode="wait">
             <motion.article

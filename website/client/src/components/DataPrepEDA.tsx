@@ -514,8 +514,22 @@ export function DataPrepEDA() {
               <XAxis type="number" dataKey="lon" name="Longitude" stroke="#f2ebdd" domain={["dataMin - 1", "dataMax + 1"]} />
               <YAxis type="number" dataKey="lat" name="Latitude" stroke="#f2ebdd" domain={["dataMin - 1", "dataMax + 1"]} />
               <ZAxis range={[50, 50]} />
-              <Tooltip cursor={{ strokeDasharray: "3 3" }} contentStyle={{ background: "#07110f", border: "1px solid #2a3530" }}
-                formatter={(value: any, name: any, props: any) => [value, name === "lat" ? `Latitude (${props.payload.common_name})` : name]} />
+              <Tooltip
+                cursor={{ strokeDasharray: "3 3" }}
+                contentStyle={{
+                  background: "#07110f",
+                  border: "1px solid #2a3530",
+                  color: "#ffffff",
+                }}
+                itemStyle={{ color: "#ffffff" }}
+                labelStyle={{ color: "#ffffff" }}
+                formatter={(value: any, name: any, props: any) => [
+                  value,
+                  name === "lat"
+                    ? `Latitude (${props.payload.common_name})`
+                    : name,
+                ]}
+              />
               <Legend />
               {["CA", "AZ", "TX"].map((state) => (
                 <Scatter key={state} name={state} data={geoPoints.filter((r) => r.state === state)} fill={STATE_COLORS[state]} />
