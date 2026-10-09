@@ -1,0 +1,9 @@
+Across seven clustering approaches, the acoustic recordings showed broad but weakly separated structure rather than a single consensus set of sharply defined ecological communities. K-means and hierarchical clustering independently selected two clusters, and their partitions showed moderate agreement (ARI ≈ 0.50). The K-means two-cluster solution was the most stable under recording-level bootstrap resampling (median ARI ≈ 0.87), although its mean silhouette was only 0.14, indicating substantial overlap.
+
+The density-based methods produced a complementary negative result. DBSCAN, OPTICS, and HDBSCAN did not identify usable multi-cluster solutions covering at least half of the recordings; when multiple clusters were found, most recordings were classified as noise. This suggests that the acoustic space does not contain well-defined density-separated communities at the tested scales.
+
+Gaussian mixture modeling provided the best BIC fit with six spherical components, but the resulting silhouette was only 0.071 and one component contained a single recording. The GMM therefore supports the possibility of overlapping or multimodal acoustic structure rather than six distinct ecological groups.
+
+Spectral clustering produced its strongest result at two clusters with a five-neighbor graph, but this result was highly sensitive to neighborhood size and showed very low bootstrap stability. It therefore provides evidence for local structure without strong support for a reproducible global partition.
+
+Taken together, the clustering analyses suggest that acoustic variation in this recording collection is better characterized as a structured but substantially continuous space than as a set of sharply separated acoustic communities. The most reproducible summary is a broad two-group K-means partition, but that partition should not be interpreted as two biological communities.

@@ -1,0 +1,28 @@
+{
+  "analysis": "PCA bootstrap stability",
+  "n_recordings": 275,
+  "n_bootstrap": 500,
+  "random_seed": 42,
+  "sampling_unit": "recording",
+  "sampling_method": "bootstrap_with_replacement",
+  "representations": [
+    "baseline",
+    "distribution_aware",
+    "yeo_johnson",
+    "block_balanced",
+    "ndsi_derived_excluded",
+    "ndsi_family_excluded"
+  ],
+  "retained_pcs": {
+    "baseline": 9,
+    "distribution_aware": 9,
+    "yeo_johnson": 9,
+    "block_balanced": 7,
+    "ndsi_derived_excluded": 9,
+    "ndsi_family_excluded": 9
+  },
+  "preprocessing_refit_within_bootstrap": false,
+  "principal_angle_method": "scipy.linalg.subspace_angles",
+  "angle_units": "degrees",
+  "subspace_similarity": "mean_squared_cosine_of_principal_angles"
+}

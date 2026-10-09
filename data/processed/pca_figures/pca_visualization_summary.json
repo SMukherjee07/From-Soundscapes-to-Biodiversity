@@ -1,0 +1,14 @@
+{
+  "representation": "baseline",
+  "n_recordings": 275,
+  "n_features": 50,
+  "retained_pcs": 9,
+  "pc1_variance": 0.20953786064852226,
+  "pc2_variance": 0.12192119064972032,
+  "pc3_variance": 0.06781881261914768,
+  "pc1_pc5_cumulative": 0.514310521509597,
+  "pc1_pc9_cumulative": 0.6776478657328022,
+  "n_species_total": 159,
+  "species_centroid_cohort_n_species": 56,
+  "species_centroid_cohort_n_recordings": 172
+}

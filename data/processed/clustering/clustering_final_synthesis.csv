@@ -1,0 +1,8 @@
+method,family,representation,selected_structure,score_or_result
+K-means,Partitional,50 standardized acoustic features,k=2,Silhouette = 0.1402
+Hierarchical,Hierarchical,50 standardized acoustic features,k=2,Silhouette = 0.1840
+DBSCAN,Density-based,9 standardized PCA dimensions,No usable multi-cluster solution,No solution with >=2 clusters and >=50% coverage
+OPTICS,Density-based,9 standardized PCA dimensions,No usable multi-cluster solution,No solution with >=2 clusters and >=50% coverage
+HDBSCAN,Density-based,9 standardized PCA dimensions,No usable multi-cluster solution,No solution with >=2 clusters and >=50% coverage
+GMM,Model-based,9 standardized PCA dimensions,6 components by BIC,BIC = 6688.36
+Spectral,Graph-based,9 standardized PCA dimensions,k=2 at 5 neighbors,Silhouette = 0.1500

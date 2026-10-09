@@ -1,0 +1,7 @@
+method_1,method_2,ARI
+K-means (k=2),Hierarchical (k=2),0.5005089323789671
+Hierarchical (k=2),GMM (k=6),0.054040017681983854
+K-means (k=2),GMM (k=6),0.03614570957029552
+"Spectral (k=2, 5NN)",GMM (k=6),0.0030040965993634885
+K-means (k=2),"Spectral (k=2, 5NN)",-0.01382702119133299
+Hierarchical (k=2),"Spectral (k=2, 5NN)",-0.04237885126638666

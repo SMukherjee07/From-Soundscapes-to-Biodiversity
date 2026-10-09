@@ -1,0 +1,7 @@
+method,family,representation,selected_structure,primary_diagnostic,primary_score
+K-means,Partitional,50 standardized acoustic features,k=2,Silhouette,0.1402387269132682
+Hierarchical,Hierarchical,50 standardized acoustic features,k=2,Silhouette,0.1840019405245363
+DBSCAN,Density-based,9 retained PCA dimensions,No usable multi-cluster solution,Coverage + noise,
+OPTICS,Density-based,9 retained PCA dimensions,No usable multi-cluster solution,Coverage + noise,
+GMM,Model-based,9 retained PCA dimensions,6 components by BIC,BIC,6688.356038658667
+Spectral,Graph-based,9 retained PCA dimensions,k=2 at 5-neighbor graph,Silhouette,0.1499702588663002

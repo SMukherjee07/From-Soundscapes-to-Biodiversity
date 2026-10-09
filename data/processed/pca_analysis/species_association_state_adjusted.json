@@ -1,0 +1,16 @@
+{
+  "n_recordings": 172,
+  "n_species": 56,
+  "n_states": 3,
+  "n_retained_pcs": 9,
+  "species_df": 55,
+  "residual_df": 114,
+  "ss_species_adjusted": 2787.625768675229,
+  "ss_residual_full": 3060.476783651811,
+  "pseudo_F": 1.8879371958496238,
+  "partial_R2": 0.47667183393800006,
+  "n_permutations": 4999,
+  "permutation_seed": 42,
+  "p_value": 0.0002,
+  "n_exceedances": 0
+}

@@ -1,0 +1,44 @@
+{
+  "baseline": {
+    "n_recordings": 275,
+    "n_features": 50,
+    "retained_components": 9,
+    "parallel_analysis_permutations": 1000,
+    "parallel_analysis_percentile": 95
+  },
+  "distribution_aware": {
+    "n_recordings": 275,
+    "n_features": 50,
+    "retained_components": 9,
+    "parallel_analysis_permutations": 1000,
+    "parallel_analysis_percentile": 95
+  },
+  "yeo_johnson": {
+    "n_recordings": 275,
+    "n_features": 50,
+    "retained_components": 9,
+    "parallel_analysis_permutations": 1000,
+    "parallel_analysis_percentile": 95
+  },
+  "block_balanced": {
+    "n_recordings": 275,
+    "n_features": 50,
+    "retained_components": 7,
+    "parallel_analysis_permutations": 1000,
+    "parallel_analysis_percentile": 95
+  },
+  "ndsi_derived_excluded": {
+    "n_recordings": 275,
+    "n_features": 48,
+    "retained_components": 9,
+    "parallel_analysis_permutations": 1000,
+    "parallel_analysis_percentile": 95
+  },
+  "ndsi_family_excluded": {
+    "n_recordings": 275,
+    "n_features": 46,
+    "retained_components": 9,
+    "parallel_analysis_permutations": 1000,
+    "parallel_analysis_percentile": 95
+  }
+}

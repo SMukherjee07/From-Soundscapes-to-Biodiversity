@@ -1,0 +1,3 @@
+method,distance,linkage,k,silhouette,cluster_1_size,cluster_2_size
+K-means,Euclidean,—,2,0.1326238881854069,140,135
+Hierarchical,Cosine,Average,2,0.18793936090196445,84,191

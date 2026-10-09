@@ -1,0 +1,3 @@
+method,distance,linkage,k,silhouette
+K-means,Euclidean,—,2,0.1402387269132682
+Hierarchical,Cosine,Average,2,0.1840019405245363

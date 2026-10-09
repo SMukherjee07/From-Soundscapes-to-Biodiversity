@@ -1,0 +1,29 @@
+{
+  "n_recordings": 275,
+  "representations": {
+    "baseline": {
+      "n_features": 50,
+      "n_recordings": 275
+    },
+    "distribution_aware": {
+      "n_features": 50,
+      "n_recordings": 275
+    },
+    "yeo_johnson": {
+      "n_features": 50,
+      "n_recordings": 275
+    },
+    "block_balanced": {
+      "n_features": 50,
+      "n_recordings": 275
+    },
+    "ndsi_derived_excluded": {
+      "n_features": 48,
+      "n_recordings": 275
+    },
+    "ndsi_family_excluded": {
+      "n_features": 46,
+      "n_recordings": 275
+    }
+  }
+}
