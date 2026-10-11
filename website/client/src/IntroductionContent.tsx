@@ -545,6 +545,65 @@ export function IntroductionContent() {
       </section>
 
       {/* =========================================================
+          SOUND AS DATA / SPECTROGRAM
+          ========================================================= */}
+
+      <section
+        aria-labelledby="spectrogram-heading"
+        style={{
+          margin: "32px 0 48px",
+          padding: "24px",
+          background: "rgba(16, 29, 25, 0.55)",
+          border: "1px solid rgba(220, 235, 225, 0.2)",
+          borderRadius: "10px",
+        }}
+      >
+        <p style={styles.eyebrow}>FROM SOUND TO SIGNAL</p>
+
+        <h2
+          id="spectrogram-heading"
+          style={styles.questionsTitle}
+        >
+          A recording becomes a visual pattern.
+        </h2>
+
+        <figure style={{ margin: "20px 0 0" }}>
+          <img
+            src="/figures/spectrograms/typical_clean.png"
+            alt="Spectrogram of a clean bird-audio recording, showing how sound energy varies across frequencies and time."
+            loading="lazy"
+            style={{
+              display: "block",
+              width: "100%",
+              maxHeight: "380px",
+              objectFit: "contain",
+              background: "#101d19",
+              borderRadius: "8px",
+              border: "1px solid rgba(220, 235, 225, 0.15)",
+            }}
+          />
+
+          <figcaption
+            style={{
+              marginTop: "12px",
+              color: "#c7cdbf",
+              fontSize: "12px",
+              lineHeight: 1.7,
+            }}
+          >
+            **FIELD NOTE / ACOUSTIC EVIDENCE** — A spectrogram represents
+            sound across time and frequency. In this project, recordings
+            are converted into numerical acoustic features that can be
+            explored using PCA and clustering. These representations
+            help summarize recordings, but they do not independently
+            establish species identity or ecological condition.
+          </figcaption>
+        </figure>
+      </section>
+
+
+
+      {/* =========================================================
           RESEARCH QUESTIONS
           ========================================================= */}
 
