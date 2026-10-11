@@ -1,0 +1,23 @@
+/* Unifies the parchment sections with the dark-forest theme. */
+body .intro-section, body .method-section { position: relative; color: #f2ebdd; background:
+  radial-gradient(60% 40% at 85% 0%, rgba(110,214,209,.10), transparent 70%),
+  radial-gradient(50% 40% at 0% 100%, rgba(216,183,106,.07), transparent 70%),
+  linear-gradient(180deg, #030e0f 0%, #07201c 18%, #07201c 100%); }
+body .intro-section :is(h1,h2,h3,h4,p,span,small,li,dt,dd,button,a,label,div,strong,blockquote,text,td,th),
+body .method-section :is(h1,h2,h3,h4,p,span,small,li,dt,dd,button,a,label,div,strong,blockquote,text,td,th) { color: inherit; border-color: rgba(242,235,221,.16); }
+body .intro-section :is(em), .method-section :is(em) { color: #d8b76a; }
+body .intro-section .eyebrow, body .method-section .eyebrow, body .intro-section [class*="eyebrow"], body .method-section [class*="eyebrow"] { color: #6ed6d1; }
+body .intro-section p, body .method-section p { color: rgba(242,235,221,.78); }
+body .intro-section :is(hr), .method-section :is(hr) { border-color: rgba(242,235,221,.16); background: rgba(242,235,221,.16); }
+body .pipeline-step { background: rgba(242,235,221,.04) !important; border-color: rgba(242,235,221,.14) !important; }
+.photo-tag { color: #f2ebdd !important; }
+body .intro-section svg path, .intro-section svg polygon { stroke: rgba(242,235,221,.28); }
+body .intro-section h2 em, body .method-section h2 em, body .intro-section h3 em, body .method-section blockquote em { color: #d8b76a; }
+body .map-outline { fill: rgba(242,235,221,.05); stroke: rgba(242,235,221,.22); }
+body .map-lines path { stroke: rgba(242,235,221,.1); }
+body .map-label { fill: rgba(242,235,221,.45); }
+body .state-shape { fill: rgba(110,214,209,.13); stroke: rgba(242,235,221,.55); }
+body .state-shape:hover { fill: rgba(110,214,209,.3); }
+body .state-shape.selected { filter: drop-shadow(0 0 18px currentColor); }
+body .state-shape.ca.selected { fill: #e88b72; color: rgba(232,139,114,.6); } body .state-shape.az.selected { fill: #d8b76a; color: rgba(216,183,106,.6); } body .state-shape.tx.selected { fill: #6ed6d1; color: rgba(110,214,209,.6); }
+body .map-marker circle { fill: #f2ebdd; stroke: #07201c; }
