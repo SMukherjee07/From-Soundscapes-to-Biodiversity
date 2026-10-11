@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { DataPrepEDA } from "@/components/DataPrepEDA";
 import { IntroductionContent } from "@/IntroductionContent";
+import { ClusteringTab } from "@/components/analysis/ClusteringTab";
+import { PCATab } from "@/components/analysis/PCATab";
+import { ForestExperience } from "@/components/forest/ForestExperience";
+import { Atmosphere } from "@/components/journey/Atmosphere";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -44,9 +48,10 @@ const navItems = [
   "PCA",
   "NaiveBayes",
   "DecTrees",
-  "SVMs",
   "Regression",
-  "NN",
+  "AdaBoost",
+  "GradientBoosting",
+  "XGBoost",
   "Conclusions",
 ];
 
@@ -57,9 +62,10 @@ const navLabels: Record<string, string> = {
   PCA: "PCA",
   NaiveBayes: "Naive Bayes",
   DecTrees: "Decision Trees",
-  SVMs: "SVMs",
   Regression: "Regression",
-  NN: "Neural Networks",
+  AdaBoost: "AdaBoost",
+  GradientBoosting: "GradientBoosting",
+  XGBoost: "XGBoost",
   Conclusions: "Conclusions",
 };
 
@@ -132,24 +138,15 @@ const analysisCopy: Record<string, { eyebrow: string; title: string; text: strin
     text: "Decision trees will surface the acoustic characteristics that make species and habitats easier to distinguish.",
     metric: "analysis chapter",
   },
-  "SVMs": {
-    eyebrow: "A4 · CLASSIFY",
-    title: "Drawing the sound boundary.",
-    text: "Support vector machines will test whether acoustic signatures separate species and regions robustly.",
-    metric: "analysis chapter",
-  },
   Regression: {
     eyebrow: "A5 · PREDICT",
     title: "Estimating diversity from sound.",
     text: "Regression will explore how a soundscape's measured texture relates to observed species richness.",
     metric: "analysis chapter",
   },
-  NN: {
-    eyebrow: "A5 · PREDICT",
-    title: "Listening at another scale.",
-    text: "A neural network will later learn richer patterns across acoustic features and classifications.",
-    metric: "analysis chapter",
-  },
+  AdaBoost: { eyebrow: "ENSEMBLE · BOOSTING", title: "AdaBoost", text: "", metric: "analysis chapter" },
+  GradientBoosting: { eyebrow: "ENSEMBLE · BOOSTING", title: "GradientBoosting", text: "", metric: "analysis chapter" },
+  XGBoost: { eyebrow: "ENSEMBLE · BOOSTING", title: "XGBoost", text: "", metric: "analysis chapter" },
   Conclusions: {
     eyebrow: "THE TAKEAWAY",
     title: "What can sound tell us about biodiversity?",
@@ -214,23 +211,8 @@ export default function Home() {
 
 
 
-  const toggleSoundscape = () => {
-    if (!audioRef.current) return;
+  const toggleSoundscape = () => setSoundOn((v) => !v);
 
-    if (soundOn) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-      setSoundOn(false);
-    } else {
-      audioRef.current.currentTime = 0;
-
-      audioRef.current.play().catch((error) => {
-        console.error("Unable to play bird recording:", error);
-      });
-
-      setSoundOn(true);
-    }
-  };
 
   useEffect(() => () => stopSoundscape(), []);
 
@@ -238,6 +220,7 @@ export default function Home() {
 
   return (
     <main className="site-shell">
+      <Atmosphere />
       <audio
         ref={audioRef}
         src="/audio/AZ_218539.mp3"
@@ -287,34 +270,11 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      <section className="hero" id="top">
-        <img className="hero__image" src={HERO_IMAGE} alt="Bird flying over a golden oak woodland at sunrise" />
-        <div className="hero__gradient" />
-        <div className="hero__grain" />
-        <motion.div className="hero__orb orb-one" animate={{ x: [0, 26, 0], y: [0, -18, 0] }} transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }} />
-        <motion.div className="hero__orb orb-two" animate={{ x: [0, -28, 0], y: [0, 16, 0] }} transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }} />
-        <div className="hero__content">
-          <motion.div className="eyebrow hero__eyebrow" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}>
-            <span /> A FIELD STUDY IN ECOLOGICAL LISTENING
-          </motion.div>
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.28 }}>
-            From<br /><em>soundscapes</em><br />to biodiversity.
-          </motion.h1>
-          <motion.p className="hero__lede" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, delay: 0.52 }}>
-            Can the layered sounds of birds help us read the living richness of a place?
-          </motion.p>
-          <motion.div className="hero__actions" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.66 }}>
-            <button className="button button--primary" onClick={() => scrollTo("field-guide")}>Enter the field <ArrowDown size={16} /></button>
-            <button className="button button--text" onClick={toggleSoundscape}>{soundOn ? "Pause the ambience" : "Play a gentle soundscape"} <AudioLines size={17} /></button>
-          </motion.div>
-        </div>
-        <div className="hero__lower">
-          <div className="region-tags"><span>California</span><i /> <span>Arizona</span><i /> <span>Texas</span></div>
-          <div className="hero__sound"><span>XENO-CANTO FIELD RECORDING</span><Waveform compact /><span>FIELD RECORDING</span></div>
-        </div>
-        <BirdFlight />
-        <button className="scroll-cue" onClick={() => scrollTo("field-guide")} aria-label="Scroll to field guide"><span />Scroll to listen</button>
-      </section>
+      <ForestExperience
+        onEnter={() => scrollTo("field-guide")}
+        soundOn={soundOn}
+        onToggleSound={toggleSoundscape}
+      />
 
       <section className="intro-section" id="field-guide">
         <div className="section-label"><span>01</span> A CONTINENT OF SOUND</div>
@@ -429,6 +389,72 @@ export default function Home() {
                 <DataPrepEDA />
               ) : activeTab === "Introduction" ? (
                 <IntroductionContent />
+              ) : activeTab === "Clustering" ? (
+                <ClusteringTab />
+              ) : activeTab === "PCA" ? (
+                <PCATab />
+              ) : ["AdaBoost", "GradientBoosting", "XGBoost"].includes(activeTab) ? (
+                <div
+                  className="future-visual model-placeholder"
+                  style={{
+                    marginTop: "2rem",
+                    padding: "clamp(1.25rem, 3vw, 2rem)",
+                    border: "1px solid rgba(180, 205, 190, 0.22)",
+                    borderRadius: "18px",
+                    background: "linear-gradient(135deg, rgba(26, 52, 45, 0.62), rgba(12, 29, 29, 0.72))",
+                  }}
+                >
+                  <p
+                    style={{
+                      margin: "0 0 0.8rem",
+                      fontSize: "0.72rem",
+                      letterSpacing: "0.14em",
+                      textTransform: "uppercase",
+                      color: "#b7d3bc",
+                    }}
+                  >
+                    Model chapter · In preparation
+                  </p>
+                  <h3 style={{ margin: "0 0 0.75rem", fontSize: "clamp(1.35rem, 2.5vw, 1.8rem)" }}>
+                    {navLabels[activeTab]} analysis
+                  </h3>
+                  <p style={{ maxWidth: "44rem", margin: "0 0 1.5rem", lineHeight: 1.75, color: "rgba(238, 243, 235, 0.78)" }}>
+                    This section is reserved for the {navLabels[activeTab]} analysis. Results and visualizations will be added after the model has been implemented and evaluated. No PCA or clustering results are presented here.
+                  </p>
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+                      gap: "0.75rem",
+                    }}
+                  >
+                    {[
+                      ["01", "Prepare features", "Define the inputs and target."],
+                      ["02", "Train and evaluate", "Fit the model and assess performance."],
+                      ["03", "Interpret findings", "Report results, limitations, and ecological meaning."],
+                    ].map(([number, title, detail]) => (
+                      <div
+                        key={number}
+                        style={{
+                          padding: "1rem",
+                          borderRadius: "12px",
+                          border: "1px solid rgba(180, 205, 190, 0.16)",
+                          background: "rgba(255, 255, 255, 0.035)",
+                        }}
+                      >
+                        <span style={{ display: "block", marginBottom: "0.8rem", color: "#b7d3bc", fontSize: "0.72rem" }}>
+                          {number}
+                        </span>
+                        <strong style={{ display: "block", marginBottom: "0.4rem", color: "#f0f3eb", fontSize: "0.92rem" }}>
+                          {title}
+                        </strong>
+                        <span style={{ display: "block", color: "rgba(238, 243, 235, 0.68)", fontSize: "0.84rem", lineHeight: 1.6 }}>
+                          {detail}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               ) : (
                 <div className="future-visual">
                   {/* existing content */}
