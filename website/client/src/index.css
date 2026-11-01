@@ -1719,3 +1719,16 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,[t
 .site-header{background:rgba(8,27,22,.94)!important;backdrop-filter:blur(14px)}
 .an-panel{background:#15352c}.an-tick{font-size:13px;fill:#d2dfd3}.an-axis{font-size:13px;fill:#d2dfd3}.an-feat{font-size:11px}.an-dot:focus{outline:none;stroke:#fff;stroke-width:3}.an-select input{background:#102a23;color:#f4f0df;border:1px solid #769981;border-radius:6px;padding:.5rem;max-width:180px}.an-readout a{color:#e6c778;text-underline-offset:3px}.an-panel__head p,.sk-fig figcaption{color:#c9d9cd}.intro-copy p,.method-copy p{line-height:1.8}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Persistent primary destinations, including mobile. */
+main.site-shell .site-header{display:flex!important;height:82px}
+main.site-shell .desktop-nav{display:flex;position:static;transform:none;gap:12px;align-items:center}
+main.site-shell .desktop-nav .primary-destination{font-size:12px;font-weight:800;letter-spacing:.04em;min-height:44px;padding:10px 14px;border:1px solid #d8b76a88;border-radius:4px;color:#f2ebdd}
+main.site-shell .desktop-nav .primary-destination--journal{background:#e6d4a8;color:#243526;border-color:#e6d4a8}
+main.site-shell .desktop-nav .primary-destination[aria-current=page]{box-shadow:inset 0 -3px #b88736}
+main.site-shell .desktop-nav button:focus-visible{outline:3px solid #6ed6d1;outline-offset:3px}
+main.site-shell .project-menu{display:block!important;top:82px}
+main.site-shell[data-view]:not([data-view=top]){padding-top:90px}
+main.site-shell #research,main.site-shell #top{scroll-margin-top:90px}
+@media(max-width:1100px){main.site-shell .desktop-nav .secondary-destination{display:none}}
+@media(max-width:650px){main.site-shell .site-header{height:116px;flex-wrap:wrap;align-content:center;gap:10px;padding:10px 4vw}main.site-shell .desktop-nav{order:3;width:100%;justify-content:center;gap:8px}main.site-shell .desktop-nav .primary-destination{flex:1;font-size:11px;padding:8px}main.site-shell .header-actions .sound-toggle{display:none}main.site-shell .project-menu{top:116px}main.site-shell[data-view]:not([data-view=top]){padding-top:124px}main.site-shell #research,main.site-shell #top{scroll-margin-top:124px}}
