@@ -1,3 +1,4 @@
+import { JournalPages } from "@/components/journal/JournalPages";
 import "./analysis.css";
 import { cluster as T } from "@/content/story";
 import { ClusterScatter } from "./ClusterScatter";
@@ -58,8 +59,8 @@ print("Best k:", best_k, "Score:", scores[best_k])`;
   const best = (s: ClusteringData["kmeans"]) => s.reduce((a, b) => (b.silhouette > a.silhouette ? b : a));
   const explore = (f: () => React.ReactNode) => data && <div className="sk-explore">{f()}</div>;
   return (
-    <div className="an-root">
-      <SectionNav sections={SECTIONS} />
+    <JournalPages book="clustering">
+      
       <Chapter id="cl-overview" no="a" kicker="Overview" title="Do the recordings form distinct groups?">
         <Paras text={T.overview} /><FigGrid figs={T.overviewFigs} />
       </Chapter>
@@ -104,6 +105,6 @@ print("Best k:", best_k, "Score:", scores[best_k])`;
         ]} />
       </Chapter>
       <Chapter id="cl-conclusions" no="e" kicker="Conclusions" title="What the groups do and do not show"><Paras text={T.conclusions} /></Chapter>
-    </div>
+    </JournalPages>
   );
 }

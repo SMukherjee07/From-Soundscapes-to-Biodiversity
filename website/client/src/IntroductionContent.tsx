@@ -1,3 +1,4 @@
+import { JournalPages } from "@/components/journal/JournalPages";
 import { useState } from "react";
 import {
   ArrowLeft,
@@ -405,7 +406,7 @@ export function IntroductionContent() {
   };
 
   return (
-    <div style={styles.wrap}>
+    <JournalPages book="introduction" labels={["Opening notes","Five field notes","Sound as data","Research questions"]}>
       {/* =========================================================
           HERO
           ========================================================= */}
@@ -485,7 +486,7 @@ export function IntroductionContent() {
             {note.label}
           </div>
 
-          <span style={styles.noteCounter}>
+          <span aria-live="polite" style={styles.noteCounter}>
             {String(activeNote + 1).padStart(2, "0")} /{" "}
             {String(NOTES.length).padStart(2, "0")}
           </span>
@@ -501,7 +502,7 @@ export function IntroductionContent() {
           </div>
 
           <div>
-            <p style={styles.noteText}>{note.text}</p>
+            <p key={note.number} className="journal-note-turn" style={styles.noteText}>{note.text}</p>
 
             <div style={styles.controls}>
               <div style={styles.dots}>
@@ -648,6 +649,6 @@ export function IntroductionContent() {
           INTERPRETATION
         </p>
       </section>
-    </div>
+    </JournalPages>
   );
 }

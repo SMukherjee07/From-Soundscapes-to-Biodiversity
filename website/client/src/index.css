@@ -1713,4 +1713,9 @@ h2 {
 
     padding: 18px 0 10px;
   }
-}
+}/* Evidence remains readable against the atmospheric setting. */
+:root{--muted-foreground:#c0cfc3}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid #e6c778;outline-offset:4px}
+.site-header{background:rgba(8,27,22,.94)!important;backdrop-filter:blur(14px)}
+.an-panel{background:#15352c}.an-tick{font-size:13px;fill:#d2dfd3}.an-axis{font-size:13px;fill:#d2dfd3}.an-feat{font-size:11px}.an-dot:focus{outline:none;stroke:#fff;stroke-width:3}.an-select input{background:#102a23;color:#f4f0df;border:1px solid #769981;border-radius:6px;padding:.5rem;max-width:180px}.an-readout a{color:#e6c778;text-underline-offset:3px}.an-panel__head p,.sk-fig figcaption{color:#c9d9cd}.intro-copy p,.method-copy p{line-height:1.8}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

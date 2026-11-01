@@ -1,3 +1,4 @@
+import { JournalPages } from "@/components/journal/JournalPages";
 import { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, CartesianGrid, ScatterChart, Scatter, ZAxis } from "recharts";
 
@@ -318,7 +319,7 @@ export function DataPrepEDA() {
     )
   );
   return (
-    <div style={styles.report}>
+    <JournalPages book="data">
       <section style={styles.block}>
         <h3 style={styles.h3}>Data sources</h3>
         <div style={styles.apiDoc}>
@@ -567,6 +568,7 @@ export function DataPrepEDA() {
           <p style={styles.caption}>{fig.caption}</p>
         </section>
       ))}
-    </div>
+    </JournalPages>
   );
 }
+

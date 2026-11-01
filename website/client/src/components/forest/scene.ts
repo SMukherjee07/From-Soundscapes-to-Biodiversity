@@ -7,9 +7,9 @@ export const REGION_INFO: Record<RegionKey, { name: string; sub: string }> = {
 };
 type Cfg = { sky: string[]; glow: string; fog: string; moon: [number, number]; far: string; mid: string; near: string; fire: string; accent: string; trees: ("oak" | "pine" | "cactus")[]; eyes: ("owl" | "deer" | "coyote")[] };
 const CFG: Record<RegionKey, Cfg> = {
-  CA: { sky: ["#03100f", "#0a2a27", "#1c3b34"], glow: "232,139,114", fog: "30,78,70", moon: [0.74, 0.2], far: "#0b221e", mid: "#061311", near: "#02090a", fire: "216,183,106", accent: "232,139,114", trees: ["oak", "oak", "oak"], eyes: ["owl", "deer"] },
-  AZ: { sky: ["#070a1b", "#1a1a45", "#4a3043"], glow: "216,183,106", fog: "70,60,90", moon: [0.28, 0.17], far: "#17142e", mid: "#0c0a1e", near: "#04040d", fire: "240,190,110", accent: "216,183,106", trees: ["pine", "cactus", "cactus"], eyes: ["coyote", "owl"] },
-  TX: { sky: ["#030c0b", "#0a2420", "#164038"], glow: "110,214,209", fog: "40,95,88", moon: [0.68, 0.18], far: "#0b2622", mid: "#06130f", near: "#020a09", fire: "140,235,190", accent: "110,214,209", trees: ["pine", "pine", "pine"], eyes: ["deer", "owl"] },
+  CA: { sky: ["#18332b", "#3b6450", "#899478"], glow: "232,139,114", fog: "30,78,70", moon: [0.74, 0.2], far: "#0b221e", mid: "#061311", near: "#02090a", fire: "216,183,106", accent: "232,139,114", trees: ["oak", "oak", "oak"], eyes: ["owl", "deer"] },
+  AZ: { sky: ["#292c42", "#665368", "#a58069"], glow: "216,183,106", fog: "70,60,90", moon: [0.28, 0.17], far: "#17142e", mid: "#0c0a1e", near: "#04040d", fire: "240,190,110", accent: "216,183,106", trees: ["pine", "cactus", "cactus"], eyes: ["coyote", "owl"] },
+  TX: { sky: ["#142d2b", "#2e6256", "#738f75"], glow: "110,214,209", fog: "40,95,88", moon: [0.68, 0.18], far: "#315c4d", mid: "#1e4033", near: "#10271f", fire: "140,235,190", accent: "110,214,209", trees: ["pine", "pine", "pine"], eyes: ["deer", "owl"] },
 };
 const rngf = (a: number) => () => { a |= 0; a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
 const smooth = (a: number, b: number, x: number) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };

@@ -1,0 +1,107 @@
+[
+  {
+    "file": "sample.png",
+    "source": "data/processed/supervised/v1/assignment_artifacts_20261030T020845905141Z/figures/sample.png",
+    "sha256": "8815c7cc9417d523b69cc816c120314dc46f4fdc5126cbb8eb85dec73da88b02"
+  },
+  {
+    "file": "training.png",
+    "source": "data/processed/supervised/v1/assignment_artifacts_20261030T020845905141Z/figures/training.png",
+    "sha256": "84ffd64454aa321b3a70a3bb87d2ac05664c982f8e1bd826c96c8ad7f8a30f30"
+  },
+  {
+    "file": "test.png",
+    "source": "data/processed/supervised/v1/assignment_artifacts_20261030T020845905141Z/figures/test.png",
+    "sha256": "0a2861568e510649f15af67e076675404a9a8e594825f2137d5f72a24273bd47"
+  },
+  {
+    "file": "encoded_training.png",
+    "source": "data/processed/supervised/v1/assignment_artifacts_20261030T020845905141Z/figures/encoded_training.png",
+    "sha256": "0eedd84c3e73784ea39b617543085749621fbdce354b44945db67cb0f9f31a00"
+  },
+  {
+    "file": "selected_nb_oof_confusion_matrices.png",
+    "source": "data/processed/supervised/v1/naive_bayes/selected_checkpoint_20261030T023553086818Z/selected_nb_oof_confusion_matrices.png",
+    "sha256": "2fdf8fee0103095e71231c6d56e2ff05b10cbe1cea45dab41de0b3b9fd6cb18a"
+  },
+  {
+    "file": "nb_smoothing.png",
+    "source": "data/processed/supervised/v1/naive_bayes/selected_checkpoint_20261030T023553086818Z/teaching_figures_20261030T024546287759Z/nb_smoothing.png",
+    "sha256": "bf6bf9b07b3f8092ad56793942250d4af281ad7db2ac7b7a9261f328c6b7015d"
+  },
+  {
+    "file": "nb_worked_prediction.png",
+    "source": "data/processed/supervised/v1/naive_bayes/selected_checkpoint_20261030T023553086818Z/teaching_figures_20261030T024546287759Z/nb_worked_prediction.png",
+    "sha256": "f3df1c3040e6433aca1540a97521e572586b737574e03add83be0ef76f152e20"
+  },
+  {
+    "file": "top_label_reliability.png",
+    "source": "data/processed/supervised/v1/naive_bayes/selected_checkpoint_20261030T023553086818Z/probability_diagnostics_20261030T025842352733Z/top_label_reliability.png",
+    "sha256": "7a3004701e5b5b7c17fb9e917334953af0d32fccd4845eaff0bdae585619dac4"
+  },
+  {
+    "file": "calibration_tradeoff.png",
+    "source": "data/processed/supervised/v1/naive_bayes/selected_checkpoint_20261030T023553086818Z/sigmoid_calibration_20261030T030421381313Z/calibration_tradeoff.png",
+    "sha256": "0d0ee213f3c3fa29f6958cce273f4120b9263ae539affbd46b8f5b90c66e025d"
+  },
+  {
+    "file": "annotated_stump.png",
+    "source": "data/processed/supervised/v1/decision_trees/worked_split_20261030T031446273967Z/annotated_stump.png",
+    "sha256": "792ce7513d8653428b183b855e766b9410153dd6078c2f489dbf7ae1a7402108"
+  },
+  {
+    "file": "split_class_composition.png",
+    "source": "data/processed/supervised/v1/decision_trees/worked_split_20261030T031446273967Z/split_class_composition.png",
+    "sha256": "dc8e8deeecd5e39575a9cf0472f81a43675873bfee0ac9725e9f971fd400c416"
+  },
+  {
+    "file": "Gini_depth3.svg",
+    "source": "data/processed/supervised/v1/decision_trees/development_search_20261030T031713485157Z/selected_tree_presentations_20261030T031939375802Z/Gini_depth3.svg",
+    "sha256": "3f68f425500eb455932cfac44c784447fb9500a6c36d39526382929254db21a1"
+  },
+  {
+    "file": "Entropy_depth5.svg",
+    "source": "data/processed/supervised/v1/decision_trees/development_search_20261030T031713485157Z/selected_tree_presentations_20261030T031939375802Z/Entropy_depth5.svg",
+    "sha256": "be7eb1922bea74ae67bb41c1f7811c3f8cca1a2c8796e772204d98ed6a9ffcfb"
+  },
+  {
+    "file": "Gini_pruning_0.02.svg",
+    "source": "data/processed/supervised/v1/decision_trees/development_search_20261030T031713485157Z/selected_tree_presentations_20261030T031939375802Z/Gini_pruning_0.02.svg",
+    "sha256": "2714828ba13e21c89d446281560c921ba871d53117d3d90a4bf58572e960c3fc"
+  },
+  {
+    "file": "pruning_tradeoff.png",
+    "source": "data/processed/supervised/v1/decision_trees/development_search_20261030T031713485157Z/selected_tree_presentations_20261030T031939375802Z/pruning_tradeoff.png",
+    "sha256": "bc9a85903c81aa62b72e8ced0d91f4db09716b28b1dd343bc45bd02e1c935503"
+  },
+  {
+    "file": "three_tree_oof_confusion_matrices.png",
+    "source": "data/processed/supervised/v1/decision_trees/development_search_20261030T031713485157Z/selected_tree_presentations_20261030T031939375802Z/three_tree_oof_confusion_matrices.png",
+    "sha256": "556b9b370543dab7cb60cea0933ba0049e2a5c11af42a47d76a56b19c5946aea"
+  },
+  {
+    "file": "feature_family_paired_changes.png",
+    "source": "data/processed/supervised/v1/feature_families_20261030T032752459799Z/feature_family_paired_changes.png",
+    "sha256": "44a985c83227ef0d67eee11d162baa97eebb3f4cefdde80dd5198b53ca2ffb26"
+  },
+  {
+    "file": "regularization_tradeoff.png",
+    "source": "data/processed/supervised/v1/logistic_comparison_20261030T033349808226Z/regularization_tradeoff.png",
+    "sha256": "a1b7b9732b93694c966577229d6adc6079bd2f46466bb7c1b46bdc25ac03bb31"
+  },
+  {
+    "file": "labeled_sample.csv",
+    "source": "data/processed/supervised/v1/assignment_artifacts_20261030T020845905141Z/labeled_sample.csv",
+    "sha256": "9aae42b76364906c0b24bb31db4d149c7524d1ee4c743860664f28dcac1f3136"
+  },
+  {
+    "file": "development_train.csv",
+    "source": "data/processed/supervised/v1/assignment_artifacts_20261030T020845905141Z/development_train.csv",
+    "sha256": "cc9dfa66220eb2c126c9b329a9598220edbc058ed908343dbcb22dc1732c8a1b"
+  },
+  {
+    "file": "heldout_test.csv",
+    "source": "data/processed/supervised/v1/assignment_artifacts_20261030T020845905141Z/heldout_test.csv",
+    "sha256": "93c5840c51a5507f1f7941303dbcba3e3cb41ff5362da62d0acf072d66cd2f4e"
+  }
+]

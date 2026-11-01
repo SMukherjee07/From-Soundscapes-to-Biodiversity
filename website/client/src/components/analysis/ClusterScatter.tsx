@@ -10,6 +10,7 @@ const W = 760, H = 500, P = 48;
 export function ClusterScatter({ points, kmeans, hier, initial = "km", title = "Acoustic space (PCA projection)" }: {
   points: Pt[]; kmeans: Sweep[]; hier: Sweep[]; initial?: ColorBy; title?: string;
 }) {
+  const [search, setSearch] = useState("");
   const [by, setBy] = useState<ColorBy>(initial);
   const [k, setK] = useState(2);
   const [xi, setXi] = useState(0);
@@ -63,6 +64,7 @@ export function ClusterScatter({ points, kmeans, hier, initial = "km", title = "
   return (
     <Panel title={title} sub="Colour by method, state or QC. Hover a recording; recordings of the same species ring together.">
       <div className="an-controls">
+        <label className="an-select">Find species <input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="Species name" /></label>
         <Segmented label="Colour by" value={by} onChange={setBy}
           options={[{ v: "km", label: "K-means" }, { v: "hc", label: "Hierarchical" }, { v: "state", label: "State" }, { v: "qc", label: "QC flag" }]} />
         {showK && (
@@ -78,20 +80,20 @@ export function ClusterScatter({ points, kmeans, hier, initial = "km", title = "
         </label>
       </div>
       <div className="an-split">
-        <svg viewBox={`0 0 ${W} ${H}`} className="an-svg" role="img" aria-label={`Scatter of recordings on PC${xi + 1} and PC${yi + 1}`} onMouseLeave={() => setHover(null)}>
+        <svg viewBox={`0 0 ${W} ${H}`} className="an-svg" role="img" aria-label={`Scatter of recordings on PC${xi + 1} and PC${yi + 1}`} >
           {xt.map((t, i) => <g key={`x${i}`}><line x1={sx(t)} x2={sx(t)} y1={P} y2={H - P} className="an-grid" /><text x={sx(t)} y={H - P + 16} className="an-tick" textAnchor="middle">{fmt(t, 1)}</text></g>)}
           {yt.map((t, i) => <g key={`y${i}`}><line y1={sy(t)} y2={sy(t)} x1={P} x2={W - P} className="an-grid" /><text y={sy(t) + 3} x={P - 8} className="an-tick" textAnchor="end">{fmt(t, 1)}</text></g>)}
           <text x={W / 2} y={H - 8} className="an-axis" textAnchor="middle">PC{xi + 1}</text>
           <text transform={`translate(14 ${H / 2}) rotate(-90)`} className="an-axis" textAnchor="middle">PC{yi + 1}</text>
           {points.map((p, i) => {
             const g = group(i);
-            if (hidden.has(g)) return null;
+            if (hidden.has(g) || !p.species.toLowerCase().includes(search.toLowerCase())) return null;
             const same = hp && hp.species === p.species && hover !== i;
             return (
               <circle key={p.id + i} cx={sx(p.pc[xi])} cy={sy(p.pc[yi])} r={hover === i ? 8 : 5.2}
                 fill={colorOf(g)} fillOpacity={hover === null || hover === i || same ? 0.85 : 0.3}
                 stroke={same || hover === i ? "#f2ebdd" : "rgba(7,17,15,.6)"} strokeWidth={same || hover === i ? 2 : 0.8}
-                className="an-dot" onMouseEnter={() => setHover(i)} onFocus={() => setHover(i)} tabIndex={0} />
+                aria-label={`${p.species}, ${p.state}, PC${xi + 1} ${fmt(p.pc[xi])}, PC${yi + 1} ${fmt(p.pc[yi])}`} role="button" onClick={() => setHover(i)} onKeyDown={e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setHover(i); } }} className="an-dot" onMouseEnter={() => setHover(i)} onFocus={() => setHover(i)} tabIndex={0} />
             );
           })}
           {centroids.filter((c) => !hidden.has(c.g)).map((c) => (
@@ -114,7 +116,7 @@ export function ClusterScatter({ points, kmeans, hier, initial = "km", title = "
               <>
                 <strong>{hp.species}</strong>
                 <span>{normState(hp.state)} · {hp.flag ? "QC-flagged" : "passed QC"}</span>
-                <span>id {hp.id}</span>
+                <a href={`https://xeno-canto.org/${hp.id}`} target="_blank" rel="noreferrer">Recording XC{hp.id} & source ↗</a>
                 <span>PC{xi + 1} {fmt(hp.pc[xi])} · PC{yi + 1} {fmt(hp.pc[yi])}</span>
                 <span>k-means k={k}: cluster {(kmeans.find((s) => s.k === k)?.labels[hover!] ?? 0) + 1} · hclust: cluster {(hier.find((s) => s.k === k)?.labels[hover!] ?? 0) + 1}</span>
               </>
