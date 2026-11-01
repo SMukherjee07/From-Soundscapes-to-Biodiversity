@@ -1,0 +1,27 @@
+{
+  "dataset": "Sapsucker Woods annotated soundscapes",
+  "zenodo_record": "7079380",
+  "source": "https://zenodo.org/records/7079380",
+  "downloaded_utc": "20261030T224258610205Z",
+  "purpose": "Metadata feasibility audit; no audio or models",
+  "files": [
+    {
+      "filename": "annotations.csv",
+      "url": "https://zenodo.org/records/7079380/files/annotations.csv?download=1",
+      "bytes": 3179389,
+      "sha256": "1fee2194317ba20ec642aca938989267e67da5390de56393add1d0732d093957"
+    },
+    {
+      "filename": "species.csv",
+      "url": "https://zenodo.org/records/7079380/files/species.csv?download=1",
+      "bytes": 3490,
+      "sha256": "4e0c00683ebcc4674512c3d6e7da35d1630ee954af9a0372836a60de3bcd58e1"
+    },
+    {
+      "filename": "recording_location.txt",
+      "url": "https://zenodo.org/records/7079380/files/recording_location.txt?download=1",
+      "bytes": 78,
+      "sha256": "843a59b96908bf7bb4066583c7e88cfec81dfff47d449938c9c17a60779850ee"
+    }
+  ]
+}

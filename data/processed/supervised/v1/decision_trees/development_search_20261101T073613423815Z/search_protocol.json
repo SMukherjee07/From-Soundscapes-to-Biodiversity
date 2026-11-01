@@ -1,0 +1,73 @@
+{
+  "configurations": [
+    {
+      "name": "Gini_depth3",
+      "family": "fixed_gini",
+      "criterion": "gini",
+      "max_depth": 3,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.0
+    },
+    {
+      "name": "Entropy_depth5",
+      "family": "fixed_entropy",
+      "criterion": "entropy",
+      "max_depth": 5,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.0
+    },
+    {
+      "name": "Gini_pruning_0",
+      "family": "pruning_reference",
+      "criterion": "gini",
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.0
+    },
+    {
+      "name": "Gini_pruning_0.001",
+      "family": "pruning_candidate",
+      "criterion": "gini",
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.001
+    },
+    {
+      "name": "Gini_pruning_0.005",
+      "family": "pruning_candidate",
+      "criterion": "gini",
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.005
+    },
+    {
+      "name": "Gini_pruning_0.01",
+      "family": "pruning_candidate",
+      "criterion": "gini",
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.01
+    },
+    {
+      "name": "Gini_pruning_0.02",
+      "family": "pruning_candidate",
+      "criterion": "gini",
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.02
+    },
+    {
+      "name": "Gini_pruning_0.05",
+      "family": "pruning_candidate",
+      "criterion": "gini",
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.05
+    }
+  ],
+  "selection_metric": "Mean validation-fold macro-F1",
+  "pruning_selection": "Positive-alpha candidates only",
+  "tie_rule": "Within 1e-12 of maximum: fewer mean leaves, then larger alpha",
+  "fold_manifest": "data\\processed\\supervised\\v1\\splits\\group_stratified_20261030T012037371263Z\\development_cv_20261030T012147989813Z\\development_fold_manifest.csv",
+  "final_test_evaluated": false
+}

@@ -1,0 +1,57 @@
+{
+  "retrieved_utc": "2026-10-29T08:40:46.431481+00:00",
+  "endpoint": "https://xeno-canto.org/api/3/recordings",
+  "query": "nr:179040",
+  "recording": {
+    "id": "179040",
+    "gen": "Thalasseus",
+    "sp": "acuflavidus",
+    "ssp": "",
+    "grp": "birds",
+    "status": "identified",
+    "en": "Cabot's Tern",
+    "rec": "Dan Lane",
+    "cnt": "United States",
+    "loc": "Constance Beach, Cameron Parish, Louisiana",
+    "lat": "29.7589",
+    "lon": "-93.5804",
+    "alt": "0",
+    "type": "call",
+    "sex": "",
+    "stage": "",
+    "method": "field recording",
+    "url": "https://xeno-canto.org/179040",
+    "file": "https://xeno-canto.org/179040/download",
+    "file-name": "XC179040-Sterna sandvicensis140422_T856.mp3",
+    "sono": {
+      "small": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/179040/grey-small.png",
+      "med": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/179040/grey-medium.png",
+      "large": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/179040/colour.png",
+      "full": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/179040/colour.png"
+    },
+    "osci": {
+      "small": null,
+      "med": null,
+      "large": null
+    },
+    "lic": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "q": "B",
+    "length": "1:18",
+    "time": "09:00",
+    "date": "2014-04-22",
+    "uploaded": "2014-05-22",
+    "also": [
+      "Leucophaeus atricilla"
+    ],
+    "rmk": "Natural vocalizations from several individuals that were coasting by or perching on sand beach. Some other gulls and tern present, but primarily this species vocalizing.",
+    "animal-seen": "yes",
+    "playback-used": "no",
+    "temp": null,
+    "regnr": "",
+    "auto": "no",
+    "dvc": "",
+    "mic": "",
+    "smp": "44100",
+    "annotation-set": []
+  }
+}

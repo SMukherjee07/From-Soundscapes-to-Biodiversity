@@ -1,0 +1,39 @@
+{
+  "purpose": "Development performance as training location groups increase",
+  "fractions": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "sampling_seeds": [
+    42,
+    137,
+    2026
+  ],
+  "sampling": "Within each outer training fold and state, permute groups once per seed; take nested prefixes using ceiling(fraction * groups).",
+  "models": {
+    "Multinomial NB": {
+      "bins": 5,
+      "alpha": 1.0,
+      "fit_prior": true
+    },
+    "Gini depth 3": {
+      "criterion": "gini",
+      "max_depth": 3,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.0,
+      "random_state": 42
+    }
+  },
+  "validation": "Existing development folds; unchanged at every fraction",
+  "preprocessing": "Fit only on each selected training subset",
+  "tuning": "None; configurations fixed from earlier development analyses",
+  "full_fraction": "Identical across sampling seeds; fit once per model and fold, not treated as three independent observations.",
+  "limitations": [
+    "Exact coordinates are a grouping proxy, not verified independent sites.",
+    "More groups also add recordings and may change species composition.",
+    "Exploratory development analysis; model settings previously selected using these development folds."
+  ],
+  "final_test_evaluated": false
+}

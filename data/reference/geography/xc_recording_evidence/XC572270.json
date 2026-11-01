@@ -1,0 +1,57 @@
+{
+  "retrieved_utc": "2026-10-29T08:41:09.457853+00:00",
+  "endpoint": "https://xeno-canto.org/api/3/recordings",
+  "query": "nr:572270",
+  "recording": {
+    "id": "572270",
+    "gen": "Coturnicops",
+    "sp": "noveboracensis",
+    "ssp": "",
+    "grp": "birds",
+    "status": "identified",
+    "en": "Yellow Rail",
+    "rec": "Ron Overholtz",
+    "cnt": "United States",
+    "loc": "State Line, California side, Goose lake, Modoc Co.",
+    "lat": "41.9927",
+    "lon": "-120.326",
+    "alt": "1400",
+    "type": "call",
+    "sex": "uncertain",
+    "stage": "adult",
+    "method": "field recording",
+    "url": "https://xeno-canto.org/572270",
+    "file": "https://xeno-canto.org/572270/download",
+    "file-name": "XC572270-Yellow Rail 3  Coturnicops noveboracensis State Line Road, Modoc Co. Ca 6-23-2020mp3.mp3",
+    "sono": {
+      "small": "https://xeno-canto.org/sounds/spectrograms/OCGLDSUVRE/572270/grey-small.png",
+      "med": "https://xeno-canto.org/sounds/spectrograms/OCGLDSUVRE/572270/grey-medium.png",
+      "large": "https://xeno-canto.org/sounds/spectrograms/OCGLDSUVRE/572270/colour.png",
+      "full": "https://xeno-canto.org/sounds/spectrograms/OCGLDSUVRE/572270/colour.png"
+    },
+    "osci": {
+      "small": null,
+      "med": null,
+      "large": null
+    },
+    "lic": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "q": "B",
+    "length": "0:41",
+    "time": "17:00",
+    "date": "2020-06-23",
+    "uploaded": "2020-06-29",
+    "also": [
+      "Agelaius phoeniceus"
+    ],
+    "rmk": "ATR 6550 mic\r\nTascam Dr-05\r\nAudacity",
+    "animal-seen": "no",
+    "playback-used": "no",
+    "temp": null,
+    "regnr": "",
+    "auto": "no",
+    "dvc": "",
+    "mic": "",
+    "smp": "44100",
+    "annotation-set": []
+  }
+}

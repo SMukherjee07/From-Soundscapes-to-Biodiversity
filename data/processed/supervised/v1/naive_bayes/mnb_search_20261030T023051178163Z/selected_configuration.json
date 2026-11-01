@@ -1,0 +1,7 @@
+{
+  "bins": 5,
+  "alpha": 1.0,
+  "fit_prior": true,
+  "selection_mean_macro_f1": 0.4698080843238225,
+  "final_test_evaluated": false
+}

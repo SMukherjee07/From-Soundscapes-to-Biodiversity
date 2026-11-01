@@ -1,0 +1,60 @@
+{
+  "retrieved_utc": "2026-10-29T08:41:10.642070+00:00",
+  "endpoint": "https://xeno-canto.org/api/3/recordings",
+  "query": "nr:626768",
+  "recording": {
+    "id": "626768",
+    "gen": "Leucolia",
+    "sp": "violiceps",
+    "ssp": "ellioti",
+    "grp": "birds",
+    "status": "identified",
+    "en": "Violet-crowned Hummingbird",
+    "rec": "Richard E. Webster",
+    "cnt": "United States",
+    "loc": "Guadalupe Canyon, Hidalgo County, New Mexico",
+    "lat": "31.355",
+    "lon": "-109.044",
+    "alt": "1300",
+    "type": "call",
+    "sex": "uncertain",
+    "stage": "uncertain",
+    "method": "field recording",
+    "url": "https://xeno-canto.org/626768",
+    "file": "https://xeno-canto.org/626768/download",
+    "file-name": "XC626768-HUMMING_Vio-cro_c Guadalupe Cyn NM 1300m 082220 1305.mp3",
+    "sono": {
+      "small": "https://xeno-canto.org/sounds/spectrograms/KZYUWIRZVH/626768/grey-small.png",
+      "med": "https://xeno-canto.org/sounds/spectrograms/KZYUWIRZVH/626768/grey-medium.png",
+      "large": "https://xeno-canto.org/sounds/spectrograms/KZYUWIRZVH/626768/colour.png",
+      "full": null
+    },
+    "osci": {
+      "small": null,
+      "med": null,
+      "large": null
+    },
+    "lic": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "q": "A",
+    "length": "5:13",
+    "time": "13:05",
+    "date": "2020-08-22",
+    "uploaded": "2021-03-06",
+    "also": [
+      "Baeolophus wollweberi",
+      "Phainopepla nitens",
+      "Melanerpes uropygialis",
+      "Tyrannus vociferans"
+    ],
+    "rmk": "flight call at start, then endless chips from perch 5 m up on a leafless branch in a live sycamore, best after 4:20 to 5:10;",
+    "animal-seen": "yes",
+    "playback-used": "no",
+    "temp": null,
+    "regnr": "",
+    "auto": "no",
+    "dvc": "",
+    "mic": "",
+    "smp": "48000",
+    "annotation-set": []
+  }
+}

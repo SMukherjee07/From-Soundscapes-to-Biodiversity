@@ -1,0 +1,29 @@
+{
+  "purpose": "Evaluate probability quality of selected NB pipelines",
+  "timing": "Added after examining NB development classification results",
+  "configurations": {
+    "MultinomialNB": {
+      "bins": 5,
+      "alpha": 1.0,
+      "fit_prior": true,
+      "selection_mean_macro_f1": 0.4698080843238225,
+      "final_test_evaluated": false
+    },
+    "BernoulliNB": {
+      "parameter": "alpha",
+      "value": 1.0,
+      "selection_mean_macro_f1": 0.4567642709307666
+    },
+    "GaussianNB": {
+      "parameter": "var_smoothing",
+      "value": 1e-11,
+      "selection_mean_macro_f1": 0.418372998075246
+    }
+  },
+  "fold_manifest": "data\\processed\\supervised\\v1\\splits\\group_stratified_20261030T012037371263Z\\development_cv_20261030T012147989813Z\\development_fold_manifest.csv",
+  "brier_definition": "Mean over recordings of sum_c (p_c - y_c)^2",
+  "probability_calibration_fitted": false,
+  "additional_tuning": false,
+  "final_test_evaluated": false,
+  "limitation": "Configuration selection used these development folds."
+}

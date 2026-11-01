@@ -1,0 +1,18 @@
+{
+  "purpose": "Engineering feasibility, not final biodiversity evaluation",
+  "seed": 42,
+  "selection": "One UTC session uniformly sampled per UTC month; then one recording uniformly sampled within that session.",
+  "outcomes_used_for_selection": false,
+  "interval_selection": "All 60 consecutive one-minute intervals per file",
+  "pilot_recordings": 7,
+  "documented_audio_hours": 7,
+  "actual_duration_verified": false,
+  "evaluation_policy": "Pilot sessions reserved for development; remaining sessions unassigned. No final evaluation split created.",
+  "limitations": [
+    "Small feasibility sample; not a representative ecological survey.",
+    "Unequal recording inclusion probabilities from two-stage sampling.",
+    "Do not replace a selected recording because it is quiet or difficult."
+  ],
+  "source_reference": "c:\\Users\\Samanwita\\Downloads\\from-soundscapes-to-biodiversity\\data\\processed\\biodiversity\\ssw_reference_20261030T225304854848Z",
+  "audio_downloaded": false
+}

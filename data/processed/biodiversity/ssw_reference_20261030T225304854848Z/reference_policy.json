@@ -1,0 +1,19 @@
+{
+  "outcome": "Annotated audible named-species richness",
+  "interval_seconds": 60,
+  "interval_rule": "Half-open intervals; any positive annotation overlap",
+  "duration_basis": "Documented one-hour recordings; actual audio duration not yet verified",
+  "unknown_labels": "Tracked separately; excluded from named-species richness",
+  "zero_duration_boxes": "Retained in audit; excluded from primary overlap; affected intervals flagged",
+  "invalid_frequency_boxes": "Flagged; positive-duration species/time annotations remain eligible",
+  "grouping_candidate": "UTC recording date; provisional sampling session",
+  "limitations": [
+    "No annotation does not establish biological absence.",
+    "Richness describes annotated audible species, not total site richness.",
+    "Source collection excluded bird-free recordings.",
+    "No recorder-level or unseen-site independence established.",
+    "Intervals from the same recording/session must remain together."
+  ],
+  "splits_created": false,
+  "audio_verified": false
+}

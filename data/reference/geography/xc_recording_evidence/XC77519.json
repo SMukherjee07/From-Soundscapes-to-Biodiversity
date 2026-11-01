@@ -1,0 +1,57 @@
+{
+  "retrieved_utc": "2026-10-29T08:41:16.525947+00:00",
+  "endpoint": "https://xeno-canto.org/api/3/recordings",
+  "query": "nr:77519",
+  "recording": {
+    "id": "77519",
+    "gen": "Rallus",
+    "sp": "crepitans",
+    "ssp": "saturatus",
+    "grp": "birds",
+    "status": "identified",
+    "en": "Clapper Rail",
+    "rec": "Daniel Lane",
+    "cnt": "United States",
+    "loc": "E of Sabine River Bridge, Cameron Par., LA",
+    "lat": "29.767",
+    "lon": "-93.88",
+    "alt": "1",
+    "type": "call, 'check' calls",
+    "sex": "",
+    "stage": "",
+    "method": "field recording",
+    "url": "https://xeno-canto.org/77519",
+    "file": "https://xeno-canto.org/77519/download",
+    "file-name": "Rallus longirostris110505_T24.mp3",
+    "sono": {
+      "small": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/77519/grey-small.png",
+      "med": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/77519/grey-medium.png",
+      "large": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/77519/colour.png",
+      "full": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/77519/colour.png"
+    },
+    "osci": {
+      "small": null,
+      "med": null,
+      "large": null
+    },
+    "lic": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+    "q": "B",
+    "length": "0:34",
+    "time": "18:30",
+    "date": "2011-05-05",
+    "uploaded": "2011-05-09",
+    "also": [
+      "Tringa semipalmata"
+    ],
+    "rmk": "Vocalizations in response to playback from one of several individuals (unseen) in saltmarsh below bridge.",
+    "animal-seen": "unknown",
+    "playback-used": "unknown",
+    "temp": null,
+    "regnr": "",
+    "auto": "no",
+    "dvc": "",
+    "mic": "",
+    "smp": "44100",
+    "annotation-set": []
+  }
+}

@@ -1,0 +1,10 @@
+Filename,Start Time (s),End Time (s),Low Freq (Hz),High Freq (Hz),Species eBird Code,source_row,positive_duration,valid_frequency_box,unknown_label
+SSW_027_20170304_170010Z.flac,1215.4,1215.4,8536,8536,comgra,2871,False,False,False
+SSW_027_20170304_170010Z.flac,1221.3,1221.3,6829,6829,????,2873,False,False,True
+SSW_029_20170304_190011Z.flac,1055.5,1055.5,5680,5680,????,3302,False,False,True
+SSW_033_20170311_010000Z.flac,3318.9,3318.9,2381,2476,????,3490,False,True,True
+SSW_107_20170429_080005Z.flac,1897.9,1897.9,5572,5572,cangoo,13891,False,False,False
+SSW_111_20170429_120013Z.flac,391.0,391.0,7080,7080,swaspa,15162,False,False,False
+SSW_223_20170701_160018Z.flac,867.9,867.9,2666,2666,????,42229,False,False,True
+SSW_235_20170708_090008Z.flac,1590.1,1590.1,8712,8712,????,45826,False,False,True
+SSW_261_20170805_150010Z.flac,2833.8,2833.8,5072,5072,sonspa,51146,False,False,False

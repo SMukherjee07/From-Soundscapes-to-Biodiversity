@@ -1,0 +1,9 @@
+{
+  "method": "StratifiedKFold applied to unique development location groups",
+  "n_splits": 5,
+  "random_state": 42,
+  "primary_split_sha256": "a9a95cc227a8cb13c9914c0db7c79ca70a89a47e22ba6c6ba373f52578aaa0a5",
+  "development_recordings": 184,
+  "test_recordings_in_cv": 0,
+  "index_contract": "cv_splits indexes the row order of development_fold_manifest.csv. Join features by recording_id while preserving that order."
+}

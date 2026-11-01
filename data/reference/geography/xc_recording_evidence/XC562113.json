@@ -1,0 +1,58 @@
+{
+  "retrieved_utc": "2026-10-29T08:41:08.282141+00:00",
+  "endpoint": "https://xeno-canto.org/api/3/recordings",
+  "query": "nr:562113",
+  "recording": {
+    "id": "562113",
+    "gen": "Columbina",
+    "sp": "inca",
+    "ssp": "",
+    "grp": "birds",
+    "status": "identified",
+    "en": "Inca Dove",
+    "rec": "Bobby Wilcox",
+    "cnt": "United States",
+    "loc": "Cibola Valley Conservation Area, La Paz County, Arizona",
+    "lat": "33.4079",
+    "lon": "-114.6582",
+    "alt": "80",
+    "type": "call",
+    "sex": "male",
+    "stage": "adult",
+    "method": "field recording",
+    "url": "https://xeno-canto.org/562113",
+    "file": "https://xeno-canto.org/562113/download",
+    "file-name": "XC562113-200525_1490INDO 5m CVCA 0630 mp3 amp.mp3",
+    "sono": {
+      "small": "https://xeno-canto.org/sounds/spectrograms/YHKQPPJDVP/562113/grey-small.png",
+      "med": "https://xeno-canto.org/sounds/spectrograms/YHKQPPJDVP/562113/grey-medium.png",
+      "large": "https://xeno-canto.org/sounds/spectrograms/YHKQPPJDVP/562113/colour.png",
+      "full": "https://xeno-canto.org/sounds/spectrograms/YHKQPPJDVP/562113/colour.png"
+    },
+    "osci": {
+      "small": null,
+      "med": null,
+      "large": null
+    },
+    "lic": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "q": "B",
+    "length": "0:32",
+    "time": "06:30",
+    "date": "2020-05-25",
+    "uploaded": "2020-05-25",
+    "also": [
+      "Zenaida asiatica",
+      "Dryobates scalaris"
+    ],
+    "rmk": "About 5m away in cottonwood plantation with mixed shrub understory. Apparent aggression/courtship call.",
+    "animal-seen": "yes",
+    "playback-used": "no",
+    "temp": null,
+    "regnr": "",
+    "auto": "no",
+    "dvc": "",
+    "mic": "",
+    "smp": "48000",
+    "annotation-set": []
+  }
+}

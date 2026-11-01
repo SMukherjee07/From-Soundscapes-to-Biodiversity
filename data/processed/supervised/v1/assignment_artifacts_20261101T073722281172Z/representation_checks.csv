@@ -1,0 +1,16 @@
+fold,representation,training_rows,validation_rows,encoded_columns,checks
+0,continuous,150,34,50,PASS
+0,multinomial_bins,150,34,150,PASS
+0,bernoulli_indicators,150,34,50,PASS
+1,continuous,152,32,50,PASS
+1,multinomial_bins,152,32,150,PASS
+1,bernoulli_indicators,152,32,50,PASS
+2,continuous,131,53,50,PASS
+2,multinomial_bins,131,53,150,PASS
+2,bernoulli_indicators,131,53,50,PASS
+3,continuous,154,30,50,PASS
+3,multinomial_bins,154,30,150,PASS
+3,bernoulli_indicators,154,30,50,PASS
+4,continuous,149,35,50,PASS
+4,multinomial_bins,149,35,150,PASS
+4,bernoulli_indicators,149,35,50,PASS

@@ -1,0 +1,10 @@
+{
+  "feature": "spectral_centroid_mean_mean",
+  "threshold_full_precision": 2335.960205078125,
+  "information_gain_bits": 0.1528037266280109,
+  "gini_reduction_same_split": 0.0729333333333334,
+  "training_fold_excluded": 0,
+  "training_n": 150,
+  "purpose": "Teaching example; threshold selected using entropy",
+  "final_test_evaluated": false
+}

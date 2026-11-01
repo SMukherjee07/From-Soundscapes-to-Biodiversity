@@ -1,0 +1,12 @@
+{
+  "BernoulliNB": {
+    "parameter": "alpha",
+    "value": 1.0,
+    "selection_mean_macro_f1": 0.4567642709307666
+  },
+  "GaussianNB": {
+    "parameter": "var_smoothing",
+    "value": 1e-11,
+    "selection_mean_macro_f1": 0.418372998075246
+  }
+}

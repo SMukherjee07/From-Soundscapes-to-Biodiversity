@@ -1,0 +1,4 @@
+
+# Preserve downloaded reference bytes so recorded checksums remain valid.
+data/raw/external/** -text
+data/reference/** -text

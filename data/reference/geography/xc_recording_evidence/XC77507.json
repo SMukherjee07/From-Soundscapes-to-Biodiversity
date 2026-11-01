@@ -1,0 +1,57 @@
+{
+  "retrieved_utc": "2026-10-29T08:41:15.352395+00:00",
+  "endpoint": "https://xeno-canto.org/api/3/recordings",
+  "query": "nr:77507",
+  "recording": {
+    "id": "77507",
+    "gen": "Numenius",
+    "sp": "hudsonicus",
+    "ssp": "hudsonicus",
+    "grp": "birds",
+    "status": "identified",
+    "en": "Hudsonian Whimbrel",
+    "rec": "Daniel Lane",
+    "cnt": "United States",
+    "loc": "E of Sabine River Bridge, Cameron Par., LA",
+    "lat": "29.767",
+    "lon": "-93.88",
+    "alt": "1",
+    "type": "song",
+    "sex": "",
+    "stage": "",
+    "method": "field recording",
+    "url": "https://xeno-canto.org/77507",
+    "file": "https://xeno-canto.org/77507/download",
+    "file-name": "Numenius phaeopus110505_T35.mp3",
+    "sono": {
+      "small": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/77507/grey-small.png",
+      "med": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/77507/grey-medium.png",
+      "large": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/77507/colour.png",
+      "full": "https://xeno-canto.org/sounds/spectrograms/WOEAFQRMUD/77507/colour.png"
+    },
+    "osci": {
+      "small": null,
+      "med": null,
+      "large": null
+    },
+    "lic": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+    "q": "B",
+    "length": "0:10",
+    "time": "20:00",
+    "date": "2011-05-05",
+    "uploaded": "2011-05-09",
+    "also": [
+      "Himantopus mexicanus"
+    ],
+    "rmk": "Two birds, unseen, vocalizing over saltmarsh by petroleum and gas plants built on shell-bank. Lucky circumstances that I managed to have the mic on at the time!",
+    "animal-seen": "unknown",
+    "playback-used": "unknown",
+    "temp": null,
+    "regnr": "",
+    "auto": "no",
+    "dvc": "",
+    "mic": "",
+    "smp": "44100",
+    "annotation-set": []
+  }
+}

@@ -1,0 +1,16 @@
+fold,state,train_recordings,validation_recordings,train_groups,validation_groups
+0,CA,52,13,44,12
+0,AZ,58,8,28,6
+0,TX,40,13,36,10
+1,CA,54,11,45,11
+1,AZ,56,10,27,7
+1,TX,42,11,37,9
+2,CA,51,14,45,11
+2,AZ,36,30,27,7
+2,TX,44,9,37,9
+3,CA,53,12,45,11
+3,AZ,57,9,27,7
+3,TX,44,9,37,9
+4,CA,50,15,45,11
+4,AZ,57,9,27,7
+4,TX,42,11,37,9

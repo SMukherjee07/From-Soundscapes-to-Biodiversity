@@ -1,0 +1,4 @@
+step,node,feature,recording_value,threshold,comparison,branch,training_recordings_at_node
+1,0,spectral_centroid_mean_mean,3638.76806640625,2335.960205078125,>,right,150
+2,6,biophony_mean,126278.0625,74114.58984375,>,right,100
+3,10,mfcc_03_mean,-23.908565521240234,-10.800528526306152,<=,left,44

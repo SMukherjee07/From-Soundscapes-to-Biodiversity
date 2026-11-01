@@ -1,0 +1,38 @@
+{
+  "package_version": "2.4.0",
+  "configured_model_version": "V2.4",
+  "model_sample_rate": 48000,
+  "segment_seconds": 3.0,
+  "tensorflow_lite_interpreter_available": true,
+  "files": [
+    {
+      "setting": "BIRDNET_MODEL_PATH",
+      "path": "c:\\Users\\Samanwita\\Downloads\\from-soundscapes-to-biodiversity\\.venv-birdnet\\Lib\\site-packages\\birdnet_analyzer\\checkpoints\\V2.4\\BirdNET_GLOBAL_6K_V2.4_Model_FP32.tflite",
+      "exists": true,
+      "bytes": 51726412,
+      "sha256": "55f3e4055b1a13bfa9a2452731d0d34f6a02d6b775a334362665892794165e4c"
+    },
+    {
+      "setting": "BIRDNET_LABELS_FILE",
+      "path": "c:\\Users\\Samanwita\\Downloads\\from-soundscapes-to-biodiversity\\.venv-birdnet\\Lib\\site-packages\\birdnet_analyzer\\checkpoints\\V2.4\\BirdNET_GLOBAL_6K_V2.4_Labels.txt",
+      "exists": true,
+      "bytes": 266261,
+      "sha256": "7399780d6743a806d79857f3dea16d8be2ecbd44b745f7e378555bdb7742e685",
+      "label_count": 6522
+    },
+    {
+      "setting": "MDATA_MODEL_PATH",
+      "path": "c:\\Users\\Samanwita\\Downloads\\from-soundscapes-to-biodiversity\\.venv-birdnet\\Lib\\site-packages\\birdnet_analyzer\\checkpoints\\V2.4\\BirdNET_GLOBAL_6K_V2.4_MData_Model_V2_FP16.tflite",
+      "exists": true,
+      "bytes": 14770468,
+      "sha256": "1226f23fc20362617deb09178f366111b70cf085c2c82893f2814e5acedce6c2"
+    },
+    {
+      "setting": "CODES_FILE",
+      "path": "c:\\Users\\Samanwita\\Downloads\\from-soundscapes-to-biodiversity\\.venv-birdnet\\Lib\\site-packages\\birdnet_analyzer\\eBird_taxonomy_codes_2024E.json",
+      "exists": true,
+      "bytes": 752850,
+      "sha256": "c794b98a29784e1ddfece60efadf83ac5d7ec0fd673e26dfccc6bf37eb3adf3e"
+    }
+  ]
+}
