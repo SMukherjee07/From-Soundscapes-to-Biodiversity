@@ -1,0 +1,27 @@
+[
+  {
+    "file": "nb_final_confusion.png",
+    "source": "data\\processed\\supervised\\v1\\final_holdout_v1\\nb_final_confusion.png",
+    "sha256": "efec277a1ce0db6c67229b2472300a7d39b594d17544823fec21cba698407dad"
+  },
+  {
+    "file": "trees_final_confusion.png",
+    "source": "data\\processed\\supervised\\v1\\final_holdout_v1\\trees_final_confusion.png",
+    "sha256": "0d5013ed44b00d6a2fb16b09abbfa4562ceef70bc538ee5e3e7b0d386e88b89b"
+  },
+  {
+    "file": "final_metrics.csv",
+    "source": "data\\processed\\supervised\\v1\\final_holdout_v1\\metrics.csv",
+    "sha256": "124e5388bc150567d0ac0bd8fab50c3b95a450f076f0b52dd8740f75d1f86c6a"
+  },
+  {
+    "file": "final_predictions.csv",
+    "source": "data\\processed\\supervised\\v1\\final_holdout_v1\\predictions.csv",
+    "sha256": "fc90e5e5266dbe77ddd960093189824015fe846fc0a2cf85af7e025748777a23"
+  },
+  {
+    "file": "frozen_protocol.json",
+    "source": "data\\processed\\supervised\\v1\\final_holdout_v1\\frozen_protocol.json",
+    "sha256": "f3ffe62281adbf66b6274fd8d387ccf1c366385bfbe1adc504b18eb15aada49c"
+  }
+]

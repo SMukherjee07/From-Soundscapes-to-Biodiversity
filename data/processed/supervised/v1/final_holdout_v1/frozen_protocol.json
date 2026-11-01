@@ -1,0 +1,149 @@
+{
+  "frozen_utc": "2026-11-01T14:26:00.861012+00:00",
+  "purpose": "One-time assignment evaluation of the previously designated 52-recording holdout",
+  "primary_models": [
+    "Multinomial NB",
+    "Gini_depth3"
+  ],
+  "secondary_models": [
+    "Bernoulli NB",
+    "Gaussian NB",
+    "Entropy_depth5",
+    "Gini_pruning_0.02"
+  ],
+  "baseline": "Training class prior",
+  "nb": {
+    "MultinomialNB": {
+      "bins": 5,
+      "alpha": 1.0,
+      "fit_prior": true,
+      "selection_mean_macro_f1": 0.4698080843238225,
+      "final_test_evaluated": false
+    },
+    "BernoulliNB": {
+      "parameter": "alpha",
+      "value": 1.0,
+      "selection_mean_macro_f1": 0.4567642709307666
+    },
+    "GaussianNB": {
+      "parameter": "var_smoothing",
+      "value": 1e-11,
+      "selection_mean_macro_f1": 0.418372998075246
+    },
+    "feature_allowlist": [
+      "aci_mean",
+      "adi_mean",
+      "bioacoustic_index_mean",
+      "spectral_entropy_eas_mean",
+      "spectral_entropy_ecu_mean",
+      "spectral_entropy_ecv_mean",
+      "spectral_entropy_eps_mean",
+      "spectral_entropy_eps_kurt_mean",
+      "spectral_entropy_eps_skew_mean",
+      "temporal_entropy_mean",
+      "rms_mean_mean",
+      "rms_std_mean",
+      "zcr_mean_mean",
+      "zcr_std_mean",
+      "spectral_centroid_mean_mean",
+      "spectral_centroid_std_mean",
+      "spectral_bandwidth_mean_mean",
+      "spectral_bandwidth_std_mean",
+      "spectral_rolloff_mean_mean",
+      "spectral_rolloff_std_mean",
+      "ndsi_mean",
+      "ndsi_ratio_ba_mean",
+      "anthropophony_mean",
+      "biophony_mean",
+      "mfcc_01_mean",
+      "mfcc_01_within_std_mean",
+      "mfcc_02_mean",
+      "mfcc_02_within_std_mean",
+      "mfcc_03_mean",
+      "mfcc_03_within_std_mean",
+      "mfcc_04_mean",
+      "mfcc_04_within_std_mean",
+      "mfcc_05_mean",
+      "mfcc_05_within_std_mean",
+      "mfcc_06_mean",
+      "mfcc_06_within_std_mean",
+      "mfcc_07_mean",
+      "mfcc_07_within_std_mean",
+      "mfcc_08_mean",
+      "mfcc_08_within_std_mean",
+      "mfcc_09_mean",
+      "mfcc_09_within_std_mean",
+      "mfcc_10_mean",
+      "mfcc_10_within_std_mean",
+      "mfcc_11_mean",
+      "mfcc_11_within_std_mean",
+      "mfcc_12_mean",
+      "mfcc_12_within_std_mean",
+      "mfcc_13_mean",
+      "mfcc_13_within_std_mean"
+    ],
+    "fold_manifest": "data\\processed\\supervised\\v1\\splits\\group_stratified_20261030T012037371263Z\\development_cv_20261030T012147989813Z\\development_fold_manifest.csv",
+    "mnb_search_directory": "data\\processed\\supervised\\v1\\naive_bayes\\mnb_search_20261030T023051178163Z",
+    "variant_search_directory": "data\\processed\\supervised\\v1\\naive_bayes\\nb_variants_20261030T023255980241Z",
+    "status": "Selected on development CV; final evaluation pending",
+    "final_test_evaluated": false
+  },
+  "trees": [
+    {
+      "name": "Gini_depth3",
+      "family": "fixed_gini",
+      "criterion": "gini",
+      "max_depth": 3,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.0
+    },
+    {
+      "name": "Entropy_depth5",
+      "family": "fixed_entropy",
+      "criterion": "entropy",
+      "max_depth": 5,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.0
+    },
+    {
+      "name": "Gini_pruning_0.02",
+      "family": "pruning_candidate",
+      "criterion": "gini",
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "ccp_alpha": 0.02
+    }
+  ],
+  "tree_random_state": 42,
+  "metrics": [
+    "accuracy",
+    "balanced_accuracy",
+    "macro_f1",
+    "confusion_matrix",
+    "per_class_precision_recall_f1",
+    "log_loss",
+    "brier_sum"
+  ],
+  "rules": [
+    "Fit preprocessing and models on all 184 development recordings only",
+    "No new search, threshold tuning, cohort exclusions, or test-based winner selection",
+    "Report all frozen models, including failures and poor scores",
+    "Future test-informed revisions require new independent evaluation data"
+  ],
+  "versions": {
+    "python": "3.11.9",
+    "numpy": "2.4.6",
+    "pandas": "2.2.2",
+    "sklearn": "1.9.1"
+  },
+  "inputs": {
+    "data\\processed\\supervised\\v1\\splits\\group_stratified_20261030T012037371263Z\\primary_split_manifest.csv": "a9a95cc227a8cb13c9914c0db7c79ca70a89a47e22ba6c6ba373f52578aaa0a5",
+    "data\\processed\\supervised\\v1\\naive_bayes\\selected_checkpoint_20261030T023553086818Z\\selected_models.json": "d831b2877bc349bc51e4f52f9f8b383a42c10d3e1eb2d5611036bf836e101b86",
+    "data\\processed\\supervised\\v1\\decision_trees\\development_search_20261030T031713485157Z\\selected_three_configurations.json": "96841abe26132920ca25ba1d7f0c5f227c507d9db07dad3050c46e1838310770",
+    "data\\processed\\supervised\\v1\\assignment_artifacts_20261030T020845905141Z\\development_train.csv": "cc9dfa66220eb2c126c9b329a9598220edbc058ed908343dbcb22dc1732c8a1b",
+    "data\\processed\\supervised\\v1\\assignment_artifacts_20261030T020845905141Z\\heldout_test.csv": "93c5840c51a5507f1f7941303dbcba3e3cb41ff5362da62d0acf072d66cd2f4e",
+    "data\\processed\\supervised\\v1\\assignment_artifacts_20261030T020845905141Z\\artifact_manifest.json": "3bdd8c96f1715e9b8466d1c39bd051be088af35b3ef110dbf18cb0c98e4058f5",
+    "research\\src\\supervised\\representations.py": "8577af4432524e8513186ada0d94968d8e3ac53262098a96feae410f3e61d6e5",
+    "research\\src\\supervised\\final_holdout.py": "d52009ea7e0c8522aa429fb24a44a17dcef9383a214191bc5bf15d375efa11ea"
+  }
+}
