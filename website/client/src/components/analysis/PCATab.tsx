@@ -1,3 +1,4 @@
+import { JournalPages } from "@/components/journal/JournalPages";
 import "./analysis.css";
 import { pca as T } from "@/content/story";
 import { ClusterScatter } from "./ClusterScatter";
@@ -19,8 +20,8 @@ export function PCATab() {
   const R = T.results, P = T.prep, cum = d ? d.evr.slice(0, d.retained).reduce((a, b) => a + b, 0) : 0;
   const ex = (n: React.ReactNode) => d && <div className="sk-explore">{n}</div>;
   return (
-    <div className="an-root">
-      <SectionNav sections={SECTIONS} />
+    <JournalPages book="pca">
+      
       <Chapter id="pca-overview" no="a" kicker="Overview" title="Finding the dimensions of acoustic variation"><Paras text={T.overview} /><FigGrid figs={T.overviewFigs} /></Chapter>
       <Chapter id="pca-dataprep" no="b" kicker="Data prep" title="From recordings to a feature matrix">
         <p>{P.lead}</p><DataTable {...P.dataset} /><Paras text={P.afterDataset} /><Links links={P.tableLinks} />
@@ -42,6 +43,6 @@ export function PCATab() {
         ]} />
       </Chapter>
       <Chapter id="pca-conclusions" no="e" kicker="Conclusions" title="What PCA tells us"><Paras text={T.conclusions} /></Chapter>
-    </div>
+    </JournalPages>
   );
 }

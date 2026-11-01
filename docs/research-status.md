@@ -1,7 +1,7 @@
 # Research checkpoint — 1 November 2026
 
 ## Scope and evidence status
-Study A tests regional acoustic discrimination in selected focal-bird recordings. Study B evaluates acoustic evidence against expert-annotated soundscapes. Do not pool their labels or interpret state accuracy as biodiversity. All reported regional performance is development cross-validation; the 52-recording final test remains unevaluated. The website has not yet been updated to present this checkpoint.
+Study A tests regional acoustic discrimination in selected focal-bird recordings. Study B evaluates acoustic evidence against expert-annotated soundscapes. Do not pool their labels or interpret state accuracy as biodiversity. The website now separates historical development cross-validation from the frozen 52-recording final evaluation. See final_holdout_v1 and Final_holdout_evaluation.ipynb.
 
 ## Notebooks
 - `research/notebooks/Supervised_data_audit.ipynb`: identity, label, geographic and eligibility audits.
@@ -46,5 +46,9 @@ Processed CSV/JSON, figures, small fitted trees, audit evidence, external annota
 1. Finalize website copy and integrate actual artifacts with clear development/pilot labels.
 2. Complete Study B label audit, taxonomy mapping and reference-based evaluation.
 3. Complete registered generalization analyses and freeze final evaluation protocol.
-4. Evaluate the regional holdout only after model/protocol freeze.
+4. Completed: regional holdout evaluated after saved model/protocol freeze. Do not retune on its results.
 5. Complete source attribution, data/code links and assignment checklist.
+
+## Frozen final evaluation
+
+Primary MNB: 27/52 correct, accuracy 0.5192, macro-F1 0.5126. Primary Gini depth 3: 17/52, accuracy 0.3269, macro-F1 0.3256. All prespecified comparisons are in final_holdout_v1/metrics.csv. Test results do not replace development selection.

@@ -10,7 +10,7 @@ export function Paras({ text }: { text: string[] }) { return <>{text.map((t, i) 
 
 export function Fig({ n, src, caption, open }: FigSpec) {
   const [zoom, setZoom] = useState(false), btn = useRef<HTMLButtonElement>(null), close = useRef<HTMLButtonElement>(null);
-  useEffect(() => { if (!zoom) return; close.current?.focus(); const k = (e: KeyboardEvent) => e.key === "Escape" && setZoom(false); window.addEventListener("keydown", k); return () => { window.removeEventListener("keydown", k); btn.current?.focus(); }; }, [zoom]);
+  useEffect(() => { if (!zoom) return; close.current?.focus(); const k = (e: KeyboardEvent) => { if(e.key === "Escape")setZoom(false); if(e.key === "Tab"){e.preventDefault();close.current?.focus();} }; window.addEventListener("keydown", k); return () => { window.removeEventListener("keydown", k); btn.current?.focus(); }; }, [zoom]);
   return (
     <figure className="sk-fig">
       <button ref={btn} className="sk-fig__img" onClick={() => setZoom(true)} aria-label={`Enlarge figure ${n ?? ""}`}>
@@ -68,7 +68,7 @@ export function Stats({ items }: { items: { v: string; l: string }[] }) { return
 
 export function Panes({ tabs, label }: { tabs: { id: string; label: string; body: ReactNode }[]; label: string }) {
   const [cur, setCur] = useState(tabs[0].id);
-  const move = (e: React.KeyboardEvent, i: number) => { const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0; if (!d) return; const n = (i + d + tabs.length) % tabs.length; setCur(tabs[n].id); document.getElementById(`pane-t-${tabs[n].id}`)?.focus(); };
+  const move = (e: React.KeyboardEvent, i: number) => { const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0; if (!d) return; e.preventDefault(); const n = (i + d + tabs.length) % tabs.length; setCur(tabs[n].id); document.getElementById(`pane-t-${tabs[n].id}`)?.focus(); };
   return (
     <div className="sk-panes">
       <div className="sk-tabs" role="tablist" aria-label={label}>
