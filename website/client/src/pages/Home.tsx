@@ -251,10 +251,11 @@ export default function Home() {
           <span>Acoustic<br />Observatory</span>
         </button>
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <button onClick={() => scrollTo("field-guide")}>Field guide</button>
-          <button onClick={() => scrollTo("research")}>Research</button>
-          <button onClick={() => scrollTo("methods")}>Method</button>
-          <button onClick={() => scrollTo("immersive")}>Signal lab</button>
+          <button className="primary-destination" aria-current={view === "top" ? "page" : undefined} onClick={() => scrollTo("top")}>Expedition</button>
+          <button className="primary-destination primary-destination--journal" aria-current={view === "research" ? "page" : undefined} onClick={() => scrollTo("research")}>Research Journal</button>
+          <button className="secondary-destination" onClick={() => scrollTo("field-guide")}>Field guide</button>
+          <button className="secondary-destination" onClick={() => scrollTo("methods")}>Method</button>
+          <button className="secondary-destination" onClick={() => scrollTo("immersive")}>Signal lab</button>
         </nav>
         <div className="header-actions">
           <button className={`sound-toggle ${soundOn ? "is-on" : ""}`} onClick={toggleSoundscape} aria-pressed={soundOn}>
@@ -270,7 +271,7 @@ export default function Home() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div className="project-menu" initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.22 }}>
-            <div className="quest-links">{[["top","Choose expedition"],["field-notes","Your field notes"],["immersive","Signal lab"],["field-guide","Field guide"]].map(([id,label])=><button key={id} onClick={()=>{setMenuOpen(false);scrollTo(id);}}>{label} ↗</button>)}</div><div className="project-menu__eyebrow">RESEARCH CHAPTERS · EXPLORATORY STAGE</div>
+            <div className="quest-links">{[["top","Expedition"],["research","Research Journal"],["field-notes","Your field notes"],["immersive","Signal lab"],["field-guide","Field guide"]].map(([id,label])=><button key={id} onClick={()=>{setMenuOpen(false);scrollTo(id);}}>{label} ↗</button>)}</div><div className="project-menu__eyebrow">RESEARCH CHAPTERS · EXPLORATORY STAGE</div>
             <div className="project-menu__tabs">
               {navItems.map((item, index) => (
                 <button

@@ -57,6 +57,7 @@ const NOTES = [
       "The promise of acoustic biodiversity research lies in its ability to preserve observations that might otherwise disappear with the moment. A recording can be revisited, compared, measured, and placed alongside observations from other times and places. But the presence of information in a recording does not guarantee that the information is sufficient to describe the surrounding community. Traditional field surveys remain essential because many ecological facts cannot be recovered from sound alone. Acoustic observations are better understood as another window onto the landscape: valuable, repeatable, and necessarily incomplete. The deeper question is how much ecological meaning can be recovered from that window. Does the relationship between acoustic character and observed biodiversity remain stable across regions? Does it change with season, habitat, recording conditions, or sampling effort? Where are acoustic measurements informative, and where do they become uncertain? What matters is not only what the recordings reveal, but where their evidence begins to become uncertain. Ultimately, this study asks a deceptively simple question: when does sound reliably represent biodiversity, and when does it not?",
     meta: "SOUND → EVIDENCE",
   },
+  { number: "06", label: "PART 3 · SUPERVISED LEARNING", title: "Can acoustic measurements predict a recording’s region?", text: "Part 3 tests whether labeled acoustic measurements can distinguish recordings from California, Arizona and Texas. Naïve Bayes combines evidence from measurements, while decision trees learn sequences of threshold rules. After geographic review, 236 eligible recordings were divided into 184 development recordings and 52 held-out test recordings, keeping exact-coordinate groups separate. Model settings were frozen before the final test. Multinomial Naïve Bayes classified 27 of 52 recordings correctly (51.9%); the selected depth-3 Gini tree classified 17 (32.7%). These results suggest modest regional discrimination and weak tree generalization. Regional labels are not biodiversity measurements: species composition, recording conditions and sampling can all affect the signal. Further ecological claims require independent biological observations, and further model tuning requires a new untouched evaluation set.", meta: "REGIONAL PREDICTION · NOT BIODIVERSITY" },
 ];
 
 const QUESTIONS = [
@@ -390,6 +391,7 @@ const styles = {
 
 export function IntroductionContent() {
   const [activeNote, setActiveNote] = useState(0);
+  const [showAllNotes, setShowAllNotes] = useState(false);
 
   const note = NOTES[activeNote];
 
@@ -406,7 +408,7 @@ export function IntroductionContent() {
   };
 
   return (
-    <JournalPages book="introduction" labels={["Opening notes","Five field notes","Sound as data","Research questions"]}>
+    <JournalPages book="introduction" labels={["Opening notes","Six field notes","Sound as data","Research questions"]}>
       {/* =========================================================
           HERO
           ========================================================= */}
@@ -480,6 +482,9 @@ export function IntroductionContent() {
           ========================================================= */}
 
       <section style={styles.noteShell}>
+        <button type="button" aria-expanded={showAllNotes} aria-controls="all-field-notes" onClick={() => setShowAllNotes(v => !v)} style={{...styles.arrowButton, width: "auto", padding: "12px 18px", marginBottom: 24}}>{showAllNotes ? "Return to one field note" : "Read all six field notes"}</button>
+        <div hidden={!showAllNotes} id="all-field-notes">{NOTES.map(item => <article key={item.number} style={{marginBottom: 28}}><h3 style={styles.noteTitle}>{item.number} · {item.title}</h3><p style={styles.noteText}>{item.text}</p></article>)}</div>
+        <div hidden={showAllNotes}>
         <div style={styles.noteHeader}>
           <div style={styles.noteLabel}>
             <span style={styles.noteNumber}>{note.number}</span>
@@ -542,6 +547,7 @@ export function IntroductionContent() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
