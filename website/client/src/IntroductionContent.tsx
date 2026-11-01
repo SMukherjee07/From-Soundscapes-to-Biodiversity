@@ -592,7 +592,7 @@ export function IntroductionContent() {
               lineHeight: 1.7,
             }}
           >
-            **FIELD NOTE / ACOUSTIC EVIDENCE** — A spectrogram represents
+            <strong>FIELD NOTE / ACOUSTIC EVIDENCE</strong> — A spectrogram represents
             sound across time and frequency. In this project, recordings
             are converted into numerical acoustic features that can be
             explored using PCA and clustering. These representations
