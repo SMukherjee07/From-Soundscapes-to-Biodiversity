@@ -1,0 +1,57 @@
+{
+  "retrieved_utc": "2026-10-29T08:41:21.242535+00:00",
+  "endpoint": "https://xeno-canto.org/api/3/recordings",
+  "query": "nr:917376",
+  "recording": {
+    "id": "917376",
+    "gen": "Micrathene",
+    "sp": "whitneyi",
+    "ssp": "",
+    "grp": "birds",
+    "status": "identified",
+    "en": "Elf Owl",
+    "rec": "Luis Humberto Montemayor",
+    "cnt": "Mexico",
+    "loc": "General Zuazua, General Zuazua, Nuevo Leon",
+    "lat": "25.893",
+    "lon": "-100.0854",
+    "alt": "360",
+    "type": "song",
+    "sex": "uncertain",
+    "stage": "uncertain",
+    "method": "field recording",
+    "url": "https://xeno-canto.org/917376",
+    "file": "https://xeno-canto.org/917376/download",
+    "file-name": "XC917376-Zoom-11-elf-owl-260624-2128(2).wav",
+    "sono": {
+      "small": "https://xeno-canto.org/sounds/spectrograms/CZBDBBAERB/917376/grey-small.png",
+      "med": "https://xeno-canto.org/sounds/spectrograms/CZBDBBAERB/917376/grey-medium.png",
+      "large": "https://xeno-canto.org/sounds/spectrograms/CZBDBBAERB/917376/colour.png",
+      "full": "https://xeno-canto.org/sounds/spectrograms/CZBDBBAERB/917376/colour.png"
+    },
+    "osci": {
+      "small": null,
+      "med": null,
+      "large": null
+    },
+    "lic": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "q": "B",
+    "length": "0:31",
+    "time": "21:28",
+    "date": "2024-06-26",
+    "uploaded": "2024-06-29",
+    "also": [
+      "Nyctidromus albicollis"
+    ],
+    "rmk": "",
+    "animal-seen": "no",
+    "playback-used": "yes",
+    "temp": null,
+    "regnr": "",
+    "auto": "no",
+    "dvc": "Zoom F1",
+    "mic": "SGH-6",
+    "smp": "48000",
+    "annotation-set": []
+  }
+}

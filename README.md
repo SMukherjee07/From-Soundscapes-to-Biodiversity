@@ -1,32 +1,28 @@
 # From Soundscapes to Biodiversity
 
-Can passive acoustic recordings of birdsong serve as a scalable proxy for
-avian species richness? This project extracts ecoacoustic indices (ACI, ADI,
-NDSI, Bioacoustic Index) from Xeno-canto recordings across California,
-Arizona, and Texas, and compares them against eBird checklist-based
-richness estimates.
+This project studies when acoustic differences provide useful evidence about birds. It combines regional classification of selected Xeno-canto recordings with an expert-annotated soundscape pilot for audible species composition and richness. State classification is not a biodiversity estimate, and the datasets are analyzed separately.
 
-Built for CSCI 5612 (Fall 2026), CU Boulder — designed to extend beyond the
+Built for CSCI 5612 (Fall 2026), CU Boulder â€” designed to extend beyond the
 course into a full research pipeline (clustering, classification, regression,
 neural networks) across five project modules.
 
 ## Repository structure
 
-- `research/` — Python pipeline: acquisition, preprocessing, feature
+- `research/` â€” Python pipeline: acquisition, preprocessing, feature
   extraction, visualization, and Colab notebooks
-- `data/` — raw (gitignored, large files), interim, processed, and manifest
+- `data/` â€” raw (gitignored, large files), interim, processed, and manifest
   (cleaning log, acquisition log) data
-- `audio/` — raw/validated/processed audio (gitignored — see note below)
-- `figures/` — EDA and introduction images used on the website
-- `website/` — React/Vite site (dark forest theme, real habitat photography,
+- `audio/` â€” raw/validated/processed audio (gitignored â€” see note below)
+- `figures/` â€” EDA and introduction images used on the website
+- `website/` â€” React/Vite site (dark forest theme, real habitat photography,
   interactive tabs matching the assignment's required section names)
 
 ## Data sources
 
-- **Xeno-canto API v3** — https://xeno-canto.org/api/3/recordings
-- **eBird API 2.0** — https://api.ebird.org/v2/data/obs/{regionCode}/recent
+- **Xeno-canto API v3** â€” https://xeno-canto.org/api/3/recordings
+- **eBird API 2.0** â€” https://api.ebird.org/v2/data/obs/{regionCode}/recent
 
-Both require a free API key — see `.env.example`.
+Both require a free API key â€” see `.env.example`.
 
 ## Why raw audio isn't in this repo
 
@@ -36,5 +32,8 @@ are versioned here.
 
 ## Status
 
-Data acquisition and EDA in progress (Module 1). See `data/manifests/` for
-the cleaning log once populated.
+PCA and clustering are available. The supervised research now includes geographic corrections, grouped development validation, Naive Bayes, decision trees, calibration and sensitivity analyses. An annotated-soundscape pilot has reached initial BirdNET inference. The regional final test remains unevaluated.
+
+See [the current research checkpoint](docs/research-status.md) for notebook links, exact cohort definitions, performance interpretation, artifact locations and pending work. The website still needs the new research content integrated; its existing forest design is retained.
+
+See [the website content brief](docs/website-content-brief.md) before editing presentation or making scientific claims.

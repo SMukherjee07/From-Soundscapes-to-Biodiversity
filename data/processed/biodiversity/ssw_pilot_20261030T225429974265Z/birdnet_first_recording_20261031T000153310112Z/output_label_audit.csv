@@ -1,0 +1,145 @@
+Scientific name,Common name,candidate_rows,maximum_score,rows_ge_0_5,reference_code_exact_match
+Corvus ossifragus,Fish Crow,20,0.7963,1,
+Quiscalus quiscula,Common Grackle,754,0.636,1,comgra
+Corvus brachyrhynchos,American Crow,1159,0.6269,1,amecro
+Anser brachyrhynchus,Pink-footed Goose,7,0.5394,1,
+Fulica atra,Eurasian Coot,10,0.4778,0,
+Branta canadensis,Canada Goose,419,0.47,0,cangoo
+Certhia americana,Brown Creeper,703,0.3957,0,brncre
+Cyanocitta cristata,Blue Jay,955,0.3889,0,blujay
+Vireo olivaceus,Red-eyed Vireo,890,0.3442,0,reevir1
+Sitta canadensis,Red-breasted Nuthatch,17,0.3248,0,rebnut
+Anser caerulescens,Snow Goose,9,0.306,0,snogoo
+Regulus satrapa,Golden-crowned Kinglet,272,0.2275,0,gockin
+Columba livia,Rock Pigeon,4,0.2248,0,
+Baeolophus bicolor,Tufted Titmouse,366,0.1977,0,tuftit
+Falco columbarius,Merlin,4,0.1948,0,
+Poecile atricapillus,Black-capped Chickadee,659,0.1746,0,bkcchi
+Geothlypis trichas,Common Yellowthroat,315,0.1613,0,comyel
+Aramus guarauna,Limpkin,7,0.1433,0,
+Sitta carolinensis,White-breasted Nuthatch,152,0.142,0,whbnut
+Columba palumbus,Common Wood-Pigeon,4,0.1416,0,
+Contopus virens,Eastern Wood-Pewee,840,0.1409,0,eawpew
+Nannopterum auritum,Double-crested Cormorant,9,0.1265,0,
+Sphyrapicus varius,Yellow-bellied Sapsucker,846,0.1259,0,yebsap
+Anser albifrons,Greater White-fronted Goose,10,0.1214,0,
+Picoides arcticus,Black-backed Woodpecker,2,0.1159,0,
+Branta hutchinsii,Cackling Goose,6,0.1153,0,
+Strix aluco,Tawny Owl,1,0.115,0,
+Spinus tristis,American Goldfinch,572,0.1122,0,amegfi
+Pyrrhura amazonum,Santarem Parakeet,1,0.112,0,
+Cygnus columbianus,Tundra Swan,2,0.111,0,tunswa
+Cyanocitta stelleri,Steller's Jay,13,0.0994,0,
+Icterus chrysater,Yellow-backed Oriole,7,0.0994,0,
+Zonotrichia capensis,Rufous-collared Sparrow,26,0.0993,0,
+Haemorhous purpureus,Purple Finch,6,0.0919,0,purfin
+Nycticorax nycticorax,Black-crowned Night-Heron,8,0.0784,0,bcnher
+Cardinalis cardinalis,Northern Cardinal,101,0.0774,0,norcar
+Bombycilla cedrorum,Cedar Waxwing,265,0.0704,0,cedwax
+Dumetella carolinensis,Gray Catbird,86,0.0691,0,grycat
+Sphyrapicus thyroideus,Williamson's Sapsucker,187,0.0679,0,
+Bubo virginianus,Great Horned Owl,106,0.0677,0,
+Seiurus aurocapilla,Ovenbird,265,0.0668,0,ovenbi1
+Sayornis phoebe,Eastern Phoebe,121,0.0592,0,easpho
+Streptopelia lugens,Dusky Turtle-Dove,2,0.0583,0,
+Pandion haliaetus,Osprey,5,0.0581,0,
+Setophaga pensylvanica,Chestnut-sided Warbler,9,0.0536,0,chswar
+Myiarchus crinitus,Great Crested Flycatcher,136,0.0531,0,grcfly
+Melanitta nigra,Common Scoter,1,0.0529,0,
+Aulacorhynchus haematopygus,Crimson-rumped Toucanet,2,0.0514,0,
+Engine,Engine,9,0.0508,0,
+Poecile gambeli,Mountain Chickadee,16,0.0507,0,
+Gavia immer,Common Loon,2,0.0501,0,
+Troglodytes aedon,House Wren,10,0.0483,0,houwre
+Fulica americana,American Coot,1,0.04,0,
+Prosthemadera novaeseelandiae,Tui,1,0.0398,0,
+Turnix sylvaticus,Small Buttonquail,1,0.037,0,
+Melanerpes erythrocephalus,Red-headed Woodpecker,1,0.0367,0,
+Megarynchus pitangua,Boat-billed Flycatcher,1,0.0353,0,
+Colaptes auratus,Northern Flicker,7,0.0335,0,norfli
+Larus delawarensis,Ring-billed Gull,4,0.0333,0,ribgul
+Melanerpes carolinus,Red-bellied Woodpecker,54,0.0323,0,rebwoo
+Strix varia,Barred Owl,2,0.0299,0,brdowl
+Serpophaga subcristata,White-crested Tyrannulet,1,0.0295,0,
+Basileuterus rufifrons,Rufous-capped Warbler,3,0.0267,0,
+Melospiza melodia,Song Sparrow,25,0.0266,0,sonspa
+Arremon brunneinucha,Chestnut-capped Brushfinch,12,0.0265,0,
+Aix sponsa,Wood Duck,4,0.0261,0,wooduc
+Tyrannus couchii,Couch's Kingbird,1,0.0253,0,
+Agelaius phoeniceus,Red-winged Blackbird,6,0.0244,0,rewbla
+Otus scops,Eurasian Scops-Owl,1,0.0241,0,
+Corvus corone,Carrion Crow,2,0.0233,0,
+Megascops kennicottii,Western Screech-Owl,6,0.0233,0,
+Dryocopus pileatus,Pileated Woodpecker,8,0.0232,0,pilwoo
+Pipilo erythrophthalmus,Eastern Towhee,1,0.0231,0,eastow
+Parus major,Great Tit,2,0.023,0,
+Calidris subruficollis,Buff-breasted Sandpiper,5,0.0221,0,
+Ardea alba,Great Egret,2,0.0217,0,
+Penelope montagnii,Andean Guan,1,0.0216,0,
+Serpophaga munda,White-bellied Tyrannulet,1,0.0215,0,
+Zonotrichia albicollis,White-throated Sparrow,1,0.0213,0,whtspa
+Parkesia noveboracensis,Northern Waterthrush,14,0.0212,0,norwat
+Falco peregrinus,Peregrine Falcon,3,0.0201,0,
+Dryocopus martius,Black Woodpecker,1,0.0199,0,
+Dendrocopos major,Great Spotted Woodpecker,1,0.0195,0,
+Meleagris gallopavo,Wild Turkey,1,0.0188,0,
+Branta bernicla,Brant,1,0.0185,0,
+Phasianus colchicus,Ring-necked Pheasant,1,0.0179,0,
+Vireo solitarius,Blue-headed Vireo,4,0.0175,0,buhvir
+Antigone canadensis,Sandhill Crane,2,0.0171,0,
+Numenius arquata,Eurasian Curlew,1,0.0171,0,
+Falco tinnunculus,Eurasian Kestrel,1,0.0168,0,
+Lybius bidentatus,Double-toothed Barbet,1,0.0168,0,
+Pooecetes gramineus,Vesper Sparrow,2,0.0166,0,
+Hydrobates pelagicus,European Storm-Petrel,2,0.0165,0,
+Mionectes macconnelli,McConnell's Flycatcher,1,0.0164,0,
+Corvus corax,Common Raven,1,0.0162,0,comrav
+Bubo lacteus,Verreaux's Eagle-Owl,1,0.0161,0,
+Dryobates albolarvatus,White-headed Woodpecker,2,0.0161,0,
+Anser anser,Graylag Goose,2,0.0159,0,
+Guttera pucherani,Crested Guineafowl,1,0.0159,0,
+Archilochus colubris,Ruby-throated Hummingbird,1,0.0157,0,
+Ortalis columbiana,Colombian Chachalaca,2,0.0157,0,
+Colaptes rupicola,Andean Flicker,1,0.0156,0,
+Pica pica,Eurasian Magpie,1,0.0156,0,
+Dryobates pubescens,Downy Woodpecker,6,0.0155,0,dowwoo
+Accipiter cooperii,Cooper's Hawk,2,0.0154,0,coohaw
+Catharus fuscescens,Veery,1,0.0154,0,veery
+Hylocichla mustelina,Wood Thrush,1,0.0154,0,woothr
+Grus nigricollis,Black-necked Crane,1,0.0153,0,
+Corvus frugilegus,Rook,2,0.0149,0,
+Megaceryle alcyon,Belted Kingfisher,3,0.0149,0,belkin1
+Myiopsitta monachus,Monk Parakeet,1,0.0149,0,
+Gavia pacifica,Pacific Loon,1,0.0142,0,
+Pionus chalcopterus,Bronze-winged Parrot,2,0.0142,0,
+Gavia adamsii,Yellow-billed Loon,1,0.0141,0,
+Apus melba,Alpine Swift,2,0.0138,0,
+Charadrius vociferus,Killdeer,1,0.0137,0,killde
+Toxostoma rufum,Brown Thrasher,1,0.0137,0,
+Turdus migratorius,American Robin,2,0.0137,0,amerob
+Nucifraga columbiana,Clark's Nutcracker,2,0.0135,0,
+Oreortyx pictus,Mountain Quail,1,0.0135,0,
+Indicator variegatus,Scaly-throated Honeyguide,1,0.0134,0,
+Anas crecca,Green-winged Teal,1,0.0132,0,
+Molothrus ater,Brown-headed Cowbird,1,0.0132,0,bnhcow
+Cacomantis variolosus,Brush Cuckoo,1,0.013,0,
+Lithobates clamitans,Green Frog,1,0.013,0,
+Aegolius acadicus,Northern Saw-whet Owl,1,0.0121,0,
+Dryobates villosus,Hairy Woodpecker,1,0.0119,0,haiwoo
+Piranga ludoviciana,Western Tanager,1,0.0119,0,
+Penelope argyrotis,Band-tailed Guan,1,0.0118,0,
+Canis latrans,Coyote,1,0.0117,0,
+Cygnus atratus,Black Swan,1,0.0117,0,
+Turdus philomelos,Song Thrush,1,0.0116,0,
+Bonasa umbellus,Ruffed Grouse,1,0.0113,0,
+Larus schistisagus,Slaty-backed Gull,1,0.0113,0,
+Anas platyrhynchos,Mallard,2,0.011,0,mallar3
+Setophaga petechia,Yellow Warbler,1,0.0109,0,yelwar
+Bubo scandiacus,Snowy Owl,1,0.0108,0,
+Corvus cornix,Hooded Crow,1,0.0108,0,
+Piranga olivacea,Scarlet Tanager,1,0.0106,0,scatan
+Melospiza georgiana,Swamp Sparrow,1,0.0103,0,swaspa
+Anser serrirostris,Tundra Bean-Goose,1,0.0102,0,
+Erithacus rubecula,European Robin,1,0.0102,0,
+Coscoroba coscoroba,Coscoroba Swan,1,0.01,0,
+Streptopelia orientalis,Oriental Turtle-Dove,1,0.01,0,

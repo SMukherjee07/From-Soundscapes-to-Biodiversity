@@ -1,0 +1,58 @@
+{
+  "retrieved_utc": "2026-10-29T08:40:42.893182+00:00",
+  "endpoint": "https://xeno-canto.org/api/3/recordings",
+  "query": "nr:140011",
+  "recording": {
+    "id": "140011",
+    "gen": "Gallinula",
+    "sp": "galeata",
+    "ssp": "",
+    "grp": "birds",
+    "status": "identified",
+    "en": "Common Gallinule",
+    "rec": "Bobby Wilcox",
+    "cnt": "United States",
+    "loc": "Laguna Dam Road, Yuma County, Arizona",
+    "lat": "32.8688",
+    "lon": "-114.4516",
+    "alt": "50",
+    "type": "call",
+    "sex": "",
+    "stage": "juvenile",
+    "method": "field recording",
+    "url": "https://xeno-canto.org/140011",
+    "file": "https://xeno-canto.org/140011/download",
+    "file-name": "XC140011-Coga juv calls.mp3",
+    "sono": {
+      "small": "https://xeno-canto.org/sounds/spectrograms/YHKQPPJDVP/140011/grey-small.png",
+      "med": "https://xeno-canto.org/sounds/spectrograms/YHKQPPJDVP/140011/grey-medium.png",
+      "large": "https://xeno-canto.org/sounds/spectrograms/YHKQPPJDVP/140011/colour.png",
+      "full": "https://xeno-canto.org/sounds/spectrograms/YHKQPPJDVP/140011/colour.png"
+    },
+    "osci": {
+      "small": null,
+      "med": null,
+      "large": null
+    },
+    "lic": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "q": "B",
+    "length": "0:45",
+    "time": "10:45",
+    "date": "2013-06-23",
+    "uploaded": "2013-06-26",
+    "also": [
+      "Geothlypis trichas",
+      "Gallinula galeata"
+    ],
+    "rmk": "",
+    "animal-seen": "yes",
+    "playback-used": "no",
+    "temp": null,
+    "regnr": "",
+    "auto": "no",
+    "dvc": "",
+    "mic": "",
+    "smp": "44100",
+    "annotation-set": []
+  }
+}

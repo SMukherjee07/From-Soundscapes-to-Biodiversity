@@ -1,0 +1,15 @@
+{
+  "method": "Stratified sampling of unique coordinate groups",
+  "test_group_fraction": 0.2,
+  "random_state": 42,
+  "minimum_test_groups_per_state": 8,
+  "group_definition": "Exact numeric latitude/longitude pair",
+  "policy_sha256": "c4793f2e42d7156605bed0d19a85986d586f5c46ee5386a40725616e8b977b61",
+  "supersedes_manifest": "data\\processed\\supervised\\v1\\splits\\primary_20261030T011839645400Z\\primary_split_manifest.csv",
+  "supersedes_sha256": "41a913f011774e7bcfffb18ff7f9f0c2d09365e42ef41120c4eebb7d4a658196",
+  "revision_reason": "Initial split assigned all Arizona test recordings to one coordinate group. Revised before any model fitting or scoring to ensure broader test-location coverage.",
+  "development_n": 184,
+  "test_n": 52,
+  "model_scores_used_for_selection": false,
+  "limitation": "Exact-coordinate separation does not establish independence of nearby locations, species, encounters, or recordists."
+}

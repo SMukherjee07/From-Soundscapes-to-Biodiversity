@@ -1,0 +1,57 @@
+{
+  "retrieved_utc": "2026-10-29T08:40:56.476313+00:00",
+  "endpoint": "https://xeno-canto.org/api/3/recordings",
+  "query": "nr:317023",
+  "recording": {
+    "id": "317023",
+    "gen": "Eudocimus",
+    "sp": "albus",
+    "ssp": "",
+    "grp": "birds",
+    "status": "identified",
+    "en": "American White Ibis",
+    "rec": "Jim Holmes",
+    "cnt": "United States",
+    "loc": "Lighthouse Road, Cameron Parish, Louisiana",
+    "lat": "29.7278",
+    "lon": "-93.8523",
+    "alt": "0",
+    "type": "call",
+    "sex": "",
+    "stage": "",
+    "method": "field recording",
+    "url": "https://xeno-canto.org/317023",
+    "file": "https://xeno-canto.org/317023/download",
+    "file-name": "XC317023-White_Ibis_779.mp3",
+    "sono": {
+      "small": "https://xeno-canto.org/sounds/spectrograms/FIDXCHEYJO/317023/grey-small.png",
+      "med": "https://xeno-canto.org/sounds/spectrograms/FIDXCHEYJO/317023/grey-medium.png",
+      "large": "https://xeno-canto.org/sounds/spectrograms/FIDXCHEYJO/317023/colour.png",
+      "full": "https://xeno-canto.org/sounds/spectrograms/FIDXCHEYJO/317023/colour.png"
+    },
+    "osci": {
+      "small": null,
+      "med": null,
+      "large": null
+    },
+    "lic": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "q": "B",
+    "length": "0:16",
+    "time": "07:00",
+    "date": "2016-05-15",
+    "uploaded": "2016-05-17",
+    "also": [
+      "Rallus crepitans"
+    ],
+    "rmk": "",
+    "animal-seen": "yes",
+    "playback-used": "no",
+    "temp": null,
+    "regnr": "",
+    "auto": "no",
+    "dvc": "",
+    "mic": "",
+    "smp": "48000",
+    "annotation-set": []
+  }
+}

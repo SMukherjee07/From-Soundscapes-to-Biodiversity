@@ -1,0 +1,59 @@
+{
+  "retrieved_utc": "2026-10-29T08:40:58.838580+00:00",
+  "endpoint": "https://xeno-canto.org/api/3/recordings",
+  "query": "nr:383873",
+  "recording": {
+    "id": "383873",
+    "gen": "Amazona",
+    "sp": "finschi",
+    "ssp": "",
+    "grp": "birds",
+    "status": "identified",
+    "en": "Lilac-crowned Amazon",
+    "rec": "fernando mondaca fernandez",
+    "cnt": "Mexico",
+    "loc": "Delicias, Delicias Municipality, Chihuahua",
+    "lat": "28.1815",
+    "lon": "-105.4379",
+    "alt": "1200",
+    "type": "call",
+    "sex": "",
+    "stage": "",
+    "method": "field recording",
+    "url": "https://xeno-canto.org/383873",
+    "file": "https://xeno-canto.org/383873/download",
+    "file-name": "XC383873-Amazona finschivf.mp3",
+    "sono": {
+      "small": "https://xeno-canto.org/sounds/spectrograms/JOBJDFBHFD/383873/grey-small.png",
+      "med": "https://xeno-canto.org/sounds/spectrograms/JOBJDFBHFD/383873/grey-medium.png",
+      "large": "https://xeno-canto.org/sounds/spectrograms/JOBJDFBHFD/383873/colour.png",
+      "full": "https://xeno-canto.org/sounds/spectrograms/JOBJDFBHFD/383873/colour.png"
+    },
+    "osci": {
+      "small": null,
+      "med": null,
+      "large": null
+    },
+    "lic": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "q": "A",
+    "length": "0:21",
+    "time": "08:30",
+    "date": "2012-05-13",
+    "uploaded": "2017-08-22",
+    "also": [
+      "Melanerpes aurifrons",
+      "Zenaida asiatica",
+      "Quiscalus mexicanus"
+    ],
+    "rmk": "Possible a scape, however, multiple sights and reports and more than one individual make believe about a bigger group living in the zone.",
+    "animal-seen": "yes",
+    "playback-used": "no",
+    "temp": null,
+    "regnr": "",
+    "auto": "no",
+    "dvc": "",
+    "mic": "",
+    "smp": "44100",
+    "annotation-set": []
+  }
+}

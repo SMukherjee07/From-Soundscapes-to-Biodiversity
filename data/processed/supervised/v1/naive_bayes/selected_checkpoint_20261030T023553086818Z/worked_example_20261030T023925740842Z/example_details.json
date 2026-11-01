@@ -1,0 +1,19 @@
+{
+  "recording_id": "1080405",
+  "validation_fold": 0,
+  "actual": "AZ",
+  "predicted": "AZ",
+  "smoothing": {
+    "example_type": "Lowest-count pair; no zero-count pair exists in this fit",
+    "class": "CA",
+    "token": "ndsi_ratio_ba_mean_3.0",
+    "training_count": 2.0,
+    "total_class_tokens": 2600.0,
+    "vocabulary_size": 250,
+    "alpha": 1.0,
+    "unsmoothed_probability": 0.0007692307692307692,
+    "smoothed_probability": 0.0010526315789473684
+  },
+  "manual_calculation_matches_sklearn": true,
+  "probabilities_calibrated": false
+}

@@ -1,0 +1,14 @@
+{
+  "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0/query",
+  "parameters": {
+    "where": "STUSAB NOT IN ('AK','HI','PR','VI','GU','MP','AS')",
+    "outFields": "STUSAB,NAME",
+    "returnGeometry": "true",
+    "outSR": "4326",
+    "maxAllowableOffset": "0.001",
+    "f": "geojson"
+  },
+  "retrieved_utc": "2026-10-29T08:34:55.907915+00:00",
+  "sha256": "d3f6ff87a30cfc2424f028e2d51fc02e655abf2423b354b5826e507ab3f1adfd",
+  "purpose": "Geographic screening, not automatic label correction"
+}

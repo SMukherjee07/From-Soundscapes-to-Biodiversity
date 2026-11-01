@@ -1,0 +1,57 @@
+{
+  "retrieved_utc": "2026-10-29T08:41:04.716126+00:00",
+  "endpoint": "https://xeno-canto.org/api/3/recordings",
+  "query": "nr:543757",
+  "recording": {
+    "id": "543757",
+    "gen": "Sayornis",
+    "sp": "nigricans",
+    "ssp": "",
+    "grp": "birds",
+    "status": "identified",
+    "en": "Black Phoebe",
+    "rec": "Rick Koehler",
+    "cnt": "United States",
+    "loc": "Corrales, Sandoval County, New Mexico",
+    "lat": "35.2517",
+    "lon": "-106.5932",
+    "alt": "1500",
+    "type": "song",
+    "sex": "male",
+    "stage": "adult",
+    "method": "field recording",
+    "url": "https://xeno-canto.org/543757",
+    "file": "https://xeno-canto.org/543757/download",
+    "file-name": "XC543757-EasternPhoebe_CorralesRomeroRd_20200404_115721.mp3",
+    "sono": {
+      "small": "https://xeno-canto.org/sounds/spectrograms/LMEFUKUSCE/543757/grey-small.png",
+      "med": "https://xeno-canto.org/sounds/spectrograms/LMEFUKUSCE/543757/grey-medium.png",
+      "large": "https://xeno-canto.org/sounds/spectrograms/LMEFUKUSCE/543757/colour.png",
+      "full": "https://xeno-canto.org/sounds/spectrograms/LMEFUKUSCE/543757/colour.png"
+    },
+    "osci": {
+      "small": null,
+      "med": null,
+      "large": null
+    },
+    "lic": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "q": "B",
+    "length": "0:54",
+    "time": "12:00",
+    "date": "2020-04-04",
+    "uploaded": "2020-04-10",
+    "also": [
+      "Thryomanes bewickii"
+    ],
+    "rmk": "Flycatcher singing a constant 2-part song, slightly rising \"PHEE\" then falling slightly slurred \"TOO\". Repeating about every 1-2 seconds, little to no variation. Individual was perched in middle high level of cottonwood (?). Song not entirely consistent with typical Eastern Phoebe songs, but then again, not at all consistent with any other flycatcher either. Not Hammond's, not Least, not Cordilleran, not Gray, not Dusky. Certainly unlike any Western Wood-Pewee I've heard in these woods. Would like to know other more experienced opinions on ID.\r\nRecorded on Samsung Galaxy S8+ cell phone as mp4 file, imported into Audacity, amplified and high-pass filter to remove wind noise.\r\nUPDATE: this was originally misidentified as an Eastern Phoebe. The ID has been changed to Black Phoebe. 04/17/2020.\r\nThanks.",
+    "animal-seen": "no",
+    "playback-used": "no",
+    "temp": null,
+    "regnr": "",
+    "auto": "no",
+    "dvc": "",
+    "mic": "",
+    "smp": "48000",
+    "annotation-set": []
+  }
+}

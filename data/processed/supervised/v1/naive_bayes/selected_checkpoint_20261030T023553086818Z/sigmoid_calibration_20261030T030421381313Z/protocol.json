@@ -1,0 +1,18 @@
+{
+  "base_model": {
+    "bins": 5,
+    "alpha": 1.0,
+    "fit_prior": true,
+    "selection_mean_macro_f1": 0.4698080843238225,
+    "final_test_evaluated": false
+  },
+  "calibration_method": "sigmoid",
+  "outer_folds": "data\\processed\\supervised\\v1\\splits\\group_stratified_20261030T012037371263Z\\development_cv_20261030T012147989813Z\\development_fold_manifest.csv",
+  "inner_folds": 3,
+  "inner_grouping": "Exact-coordinate location groups",
+  "inner_seed": 42,
+  "ensemble": false,
+  "purpose": "Exploratory probability-quality comparison",
+  "limitation": "Base hyperparameters were selected using development folds; this is not fully nested model-selection evaluation.",
+  "final_test_evaluated": false
+}

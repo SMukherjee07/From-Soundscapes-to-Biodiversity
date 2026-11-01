@@ -1,0 +1,10 @@
+{
+  "continuous_standardized": {
+    "C": 0.1,
+    "mean_macro_f1": 0.4534147878846582
+  },
+  "five_bin_onehot": {
+    "C": 10.0,
+    "mean_macro_f1": 0.44939119178212844
+  }
+}
