@@ -1,0 +1,52 @@
+|--- spectral_centroid_mean_mean <= 2716.738525
+|   |--- mfcc_04_within_std_mean <= 10.362742
+|   |   |--- mfcc_13_within_std_mean <= 3.485137
+|   |   |   |--- mfcc_01_mean <= -191.513649
+|   |   |   |   |--- mfcc_03_mean <= -2.528342
+|   |   |   |   |   |--- weights: [5.000000, 0.000000, 0.000000] class: AZ
+|   |   |   |   |--- mfcc_03_mean >  -2.528342
+|   |   |   |   |   |--- weights: [1.000000, 12.000000, 0.000000] class: CA
+|   |   |   |--- mfcc_01_mean >  -191.513649
+|   |   |   |   |--- spectral_entropy_ecu_mean <= 0.427736
+|   |   |   |   |   |--- weights: [0.000000, 0.000000, 6.000000] class: TX
+|   |   |   |   |--- spectral_entropy_ecu_mean >  0.427736
+|   |   |   |   |   |--- weights: [2.000000, 3.000000, 1.000000] class: CA
+|   |   |--- mfcc_13_within_std_mean >  3.485137
+|   |   |   |--- mfcc_11_within_std_mean <= 4.637238
+|   |   |   |   |--- mfcc_06_within_std_mean <= 6.371038
+|   |   |   |   |   |--- weights: [0.000000, 6.000000, 4.000000] class: CA
+|   |   |   |   |--- mfcc_06_within_std_mean >  6.371038
+|   |   |   |   |   |--- weights: [0.000000, 0.000000, 8.000000] class: TX
+|   |   |   |--- mfcc_11_within_std_mean >  4.637238
+|   |   |   |   |--- spectral_centroid_mean_mean <= 1849.312927
+|   |   |   |   |   |--- weights: [0.000000, 4.000000, 1.000000] class: CA
+|   |   |   |   |--- spectral_centroid_mean_mean >  1849.312927
+|   |   |   |   |   |--- weights: [0.000000, 6.000000, 0.000000] class: CA
+|   |--- mfcc_04_within_std_mean >  10.362742
+|   |   |--- bioacoustic_index_mean <= 1668.243347
+|   |   |   |--- weights: [0.000000, 14.000000, 0.000000] class: CA
+|   |   |--- bioacoustic_index_mean >  1668.243347
+|   |   |   |--- weights: [5.000000, 1.000000, 0.000000] class: AZ
+|--- spectral_centroid_mean_mean >  2716.738525
+|   |--- mfcc_13_within_std_mean <= 5.990738
+|   |   |--- spectral_centroid_std_mean <= 426.230057
+|   |   |   |--- mfcc_08_within_std_mean <= 2.845607
+|   |   |   |   |--- weights: [0.000000, 3.000000, 3.000000] class: CA
+|   |   |   |--- mfcc_08_within_std_mean >  2.845607
+|   |   |   |   |--- mfcc_08_within_std_mean <= 4.182055
+|   |   |   |   |   |--- weights: [10.000000, 0.000000, 2.000000] class: AZ
+|   |   |   |   |--- mfcc_08_within_std_mean >  4.182055
+|   |   |   |   |   |--- weights: [4.000000, 1.000000, 11.000000] class: TX
+|   |   |--- spectral_centroid_std_mean >  426.230057
+|   |   |   |--- mfcc_13_mean <= -1.983574
+|   |   |   |   |--- weights: [2.000000, 0.000000, 4.000000] class: TX
+|   |   |   |--- mfcc_13_mean >  -1.983574
+|   |   |   |   |--- mfcc_01_within_std_mean <= 38.358479
+|   |   |   |   |   |--- weights: [34.000000, 9.000000, 0.000000] class: AZ
+|   |   |   |   |--- mfcc_01_within_std_mean >  38.358479
+|   |   |   |   |   |--- weights: [2.000000, 5.000000, 2.000000] class: CA
+|   |--- mfcc_13_within_std_mean >  5.990738
+|   |   |--- temporal_entropy_mean <= 0.633667
+|   |   |   |--- weights: [1.000000, 1.000000, 3.000000] class: TX
+|   |   |--- temporal_entropy_mean >  0.633667
+|   |   |   |--- weights: [0.000000, 0.000000, 8.000000] class: TX

@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-01T07:37:48.163283+00:00",
+  "boundary_sha256": "d3f6ff87a30cfc2424f028e2d51fc02e655abf2423b354b5826e507ab3f1adfd",
+  "boundary_reference": "data\\reference\\geography\\census_states_screening_v1.geojson",
+  "recordings": 275,
+  "manual_review_cases": 61,
+  "decisions_applied": false,
+  "note": "Screening evidence only; original research files unchanged."
+}

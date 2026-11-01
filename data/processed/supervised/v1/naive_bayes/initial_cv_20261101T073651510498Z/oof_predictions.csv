@@ -1,0 +1,369 @@
+model,recording_id,location_group,validation_fold,actual,predicted
+Prior baseline,1080405,LOC_0056,0,AZ,AZ
+Prior baseline,109164,LOC_0025,0,TX,AZ
+Prior baseline,114789,LOC_0077,0,AZ,AZ
+Prior baseline,121403,LOC_0135,0,AZ,AZ
+Prior baseline,130846,LOC_0013,0,TX,AZ
+Prior baseline,135420,LOC_0145,0,CA,AZ
+Prior baseline,135438,LOC_0145,0,CA,AZ
+Prior baseline,154976,LOC_0014,0,TX,AZ
+Prior baseline,154983,LOC_0014,0,TX,AZ
+Prior baseline,196870,LOC_0073,0,AZ,AZ
+Prior baseline,196879,LOC_0073,0,AZ,AZ
+Prior baseline,277744,LOC_0010,0,TX,AZ
+Prior baseline,282613,LOC_0091,0,CA,AZ
+Prior baseline,34088,LOC_0067,0,TX,AZ
+Prior baseline,34952,LOC_0036,0,TX,AZ
+Prior baseline,363448,LOC_0142,0,CA,AZ
+Prior baseline,377125,LOC_0141,0,CA,AZ
+Prior baseline,384977,LOC_0167,0,CA,AZ
+Prior baseline,416763,LOC_0031,0,TX,AZ
+Prior baseline,452998,LOC_0015,0,TX,AZ
+Prior baseline,453003,LOC_0015,0,TX,AZ
+Prior baseline,453004,LOC_0015,0,TX,AZ
+Prior baseline,461828,LOC_0126,0,CA,AZ
+Prior baseline,465656,LOC_0138,0,CA,AZ
+Prior baseline,511453,LOC_0109,0,AZ,AZ
+Prior baseline,511471,LOC_0109,0,AZ,AZ
+Prior baseline,533394,LOC_0130,0,CA,AZ
+Prior baseline,534824,LOC_0043,0,TX,AZ
+Prior baseline,541633,LOC_0085,0,CA,AZ
+Prior baseline,547258,LOC_0120,0,CA,AZ
+Prior baseline,552939,LOC_0098,0,CA,AZ
+Prior baseline,619062,LOC_0159,0,CA,AZ
+Prior baseline,70990,LOC_0039,0,TX,AZ
+Prior baseline,974054,LOC_0064,0,AZ,AZ
+Prior baseline,1089596,LOC_0157,1,CA,AZ
+Prior baseline,109171,LOC_0022,1,TX,AZ
+Prior baseline,1152009,LOC_0161,1,CA,AZ
+Prior baseline,120845,LOC_0097,1,AZ,AZ
+Prior baseline,132946,LOC_0128,1,CA,AZ
+Prior baseline,134480,LOC_0129,1,CA,AZ
+Prior baseline,1382,LOC_0020,1,TX,AZ
+Prior baseline,140011,LOC_0096,1,AZ,AZ
+Prior baseline,150244,LOC_0155,1,CA,AZ
+Prior baseline,154199,LOC_0061,1,AZ,AZ
+Prior baseline,163986,LOC_0080,1,CA,AZ
+Prior baseline,167459,LOC_0152,1,CA,AZ
+Prior baseline,193254,LOC_0062,1,AZ,AZ
+Prior baseline,193255,LOC_0062,1,AZ,AZ
+Prior baseline,210719,LOC_0047,1,TX,AZ
+Prior baseline,218535,LOC_0054,1,AZ,AZ
+Prior baseline,222338,LOC_0037,1,TX,AZ
+Prior baseline,230023,LOC_0037,1,TX,AZ
+Prior baseline,231963,LOC_0037,1,TX,AZ
+Prior baseline,288791,LOC_0050,1,TX,AZ
+Prior baseline,312735,LOC_0019,1,TX,AZ
+Prior baseline,318524,LOC_0011,1,TX,AZ
+Prior baseline,362097,LOC_0090,1,CA,AZ
+Prior baseline,408852,LOC_0079,1,AZ,AZ
+Prior baseline,449497,LOC_0089,1,CA,AZ
+Prior baseline,450846,LOC_0154,1,CA,AZ
+Prior baseline,452826,LOC_0026,1,TX,AZ
+Prior baseline,608776,LOC_0113,1,AZ,AZ
+Prior baseline,608781,LOC_0113,1,AZ,AZ
+Prior baseline,614743,LOC_0110,1,TX,AZ
+Prior baseline,772323,LOC_0062,1,AZ,AZ
+Prior baseline,779907,LOC_0165,1,CA,AZ
+Prior baseline,1080401,LOC_0066,2,AZ,CA
+Prior baseline,123297,LOC_0049,2,TX,CA
+Prior baseline,123582,LOC_0045,2,TX,CA
+Prior baseline,132208,LOC_0066,2,AZ,CA
+Prior baseline,132209,LOC_0066,2,AZ,CA
+Prior baseline,132328,LOC_0066,2,AZ,CA
+Prior baseline,132452,LOC_0066,2,AZ,CA
+Prior baseline,132684,LOC_0066,2,AZ,CA
+Prior baseline,132844,LOC_0066,2,AZ,CA
+Prior baseline,132890,LOC_0066,2,AZ,CA
+Prior baseline,132967,LOC_0066,2,AZ,CA
+Prior baseline,132968,LOC_0066,2,AZ,CA
+Prior baseline,133346,LOC_0066,2,AZ,CA
+Prior baseline,133556,LOC_0066,2,AZ,CA
+Prior baseline,144038,LOC_0168,2,CA,CA
+Prior baseline,145955,LOC_0066,2,AZ,CA
+Prior baseline,145957,LOC_0066,2,AZ,CA
+Prior baseline,147270,LOC_0042,2,TX,CA
+Prior baseline,265347,LOC_0123,2,AZ,CA
+Prior baseline,297470,LOC_0136,2,CA,CA
+Prior baseline,299108,LOC_0016,2,TX,CA
+Prior baseline,317033,LOC_0149,2,CA,CA
+Prior baseline,321717,LOC_0066,2,AZ,CA
+Prior baseline,321736,LOC_0066,2,AZ,CA
+Prior baseline,321958,LOC_0065,2,AZ,CA
+Prior baseline,323984,LOC_0105,2,CA,CA
+Prior baseline,324293,LOC_0051,2,AZ,CA
+Prior baseline,361084,LOC_0168,2,CA,CA
+Prior baseline,395208,LOC_0168,2,CA,CA
+Prior baseline,404749,LOC_0030,2,TX,CA
+Prior baseline,452506,LOC_0108,2,AZ,CA
+Prior baseline,452515,LOC_0108,2,AZ,CA
+Prior baseline,453180,LOC_0107,2,AZ,CA
+Prior baseline,458919,LOC_0101,2,CA,CA
+Prior baseline,567440,LOC_0132,2,AZ,CA
+Prior baseline,583809,LOC_0051,2,AZ,CA
+Prior baseline,585126,LOC_0151,2,CA,CA
+Prior baseline,623628,LOC_0051,2,AZ,CA
+Prior baseline,623629,LOC_0051,2,AZ,CA
+Prior baseline,624546,LOC_0051,2,AZ,CA
+Prior baseline,652385,LOC_0150,2,CA,CA
+Prior baseline,666132,LOC_0148,2,CA,CA
+Prior baseline,669065,LOC_0150,2,CA,CA
+Prior baseline,691005,LOC_0084,2,CA,CA
+Prior baseline,700909,LOC_0051,2,AZ,CA
+Prior baseline,705765,LOC_0018,2,TX,CA
+Prior baseline,705767,LOC_0003,2,TX,CA
+Prior baseline,710475,LOC_0051,2,AZ,CA
+Prior baseline,807038,LOC_0164,2,CA,CA
+Prior baseline,845953,LOC_0060,2,TX,CA
+Prior baseline,900944,LOC_0002,2,TX,CA
+Prior baseline,941132,LOC_0051,2,AZ,CA
+Prior baseline,952203,LOC_0116,2,CA,CA
+Prior baseline,1106496,LOC_0038,3,TX,AZ
+Prior baseline,132942,LOC_0069,3,AZ,AZ
+Prior baseline,132948,LOC_0069,3,AZ,AZ
+Prior baseline,147312,LOC_0046,3,TX,AZ
+Prior baseline,200277,LOC_0044,3,TX,AZ
+Prior baseline,230019,LOC_0029,3,TX,AZ
+Prior baseline,232953,LOC_0094,3,CA,AZ
+Prior baseline,233658,LOC_0032,3,TX,AZ
+Prior baseline,251890,LOC_0052,3,AZ,AZ
+Prior baseline,256444,LOC_0170,3,CA,AZ
+Prior baseline,265124,LOC_0170,3,CA,AZ
+Prior baseline,278460,LOC_0017,3,TX,AZ
+Prior baseline,286971,LOC_0082,3,CA,AZ
+Prior baseline,345878,LOC_0103,3,CA,AZ
+Prior baseline,357823,LOC_0099,3,CA,AZ
+Prior baseline,452094,LOC_0104,3,CA,AZ
+Prior baseline,452502,LOC_0134,3,AZ,AZ
+Prior baseline,452611,LOC_0035,3,TX,AZ
+Prior baseline,452706,LOC_0005,3,TX,AZ
+Prior baseline,48224,LOC_0115,3,AZ,AZ
+Prior baseline,527676,LOC_0140,3,CA,AZ
+Prior baseline,562113,LOC_0111,3,AZ,AZ
+Prior baseline,574647,LOC_0127,3,CA,AZ
+Prior baseline,578134,LOC_0166,3,CA,AZ
+Prior baseline,611001,LOC_0058,3,AZ,AZ
+Prior baseline,632234,LOC_0058,3,AZ,AZ
+Prior baseline,660470,LOC_0156,3,CA,AZ
+Prior baseline,691650,LOC_0143,3,CA,AZ
+Prior baseline,750809,LOC_0117,3,TX,AZ
+Prior baseline,75505,LOC_0078,3,AZ,AZ
+Prior baseline,130831,LOC_0001,4,TX,AZ
+Prior baseline,141468,LOC_0040,4,TX,AZ
+Prior baseline,163344,LOC_0092,4,CA,AZ
+Prior baseline,163349,LOC_0092,4,CA,AZ
+Prior baseline,175369,LOC_0133,4,AZ,AZ
+Prior baseline,17795,LOC_0119,4,CA,AZ
+Prior baseline,195342,LOC_0125,4,CA,AZ
+Prior baseline,212892,LOC_0118,4,CA,AZ
+Prior baseline,218539,LOC_0075,4,AZ,AZ
+Prior baseline,227104,LOC_0075,4,AZ,AZ
+Prior baseline,254988,LOC_0071,4,AZ,AZ
+Prior baseline,297543,LOC_0027,4,TX,AZ
+Prior baseline,297547,LOC_0027,4,TX,AZ
+Prior baseline,297550,LOC_0027,4,TX,AZ
+Prior baseline,34329,LOC_0070,4,AZ,AZ
+Prior baseline,380363,LOC_0158,4,CA,AZ
+Prior baseline,392829,LOC_0006,4,TX,AZ
+Prior baseline,428179,LOC_0053,4,TX,AZ
+Prior baseline,445707,LOC_0163,4,CA,AZ
+Prior baseline,453026,LOC_0004,4,TX,AZ
+Prior baseline,503346,LOC_0146,4,CA,AZ
+Prior baseline,551487,LOC_0112,4,AZ,AZ
+Prior baseline,565888,LOC_0021,4,TX,AZ
+Prior baseline,57994,LOC_0100,4,TX,AZ
+Prior baseline,585340,LOC_0095,4,CA,AZ
+Prior baseline,611977,LOC_0057,4,AZ,AZ
+Prior baseline,611978,LOC_0057,4,AZ,AZ
+Prior baseline,720644,LOC_0163,4,CA,AZ
+Prior baseline,731959,LOC_0122,4,TX,AZ
+Prior baseline,799409,LOC_0137,4,CA,AZ
+Prior baseline,87027,LOC_0055,4,AZ,AZ
+Prior baseline,877615,LOC_0124,4,CA,AZ
+Prior baseline,964245,LOC_0139,4,CA,AZ
+Prior baseline,964250,LOC_0139,4,CA,AZ
+Prior baseline,964290,LOC_0139,4,CA,AZ
+"MNB: 3 bins, alpha=1",1080405,LOC_0056,0,AZ,AZ
+"MNB: 3 bins, alpha=1",109164,LOC_0025,0,TX,CA
+"MNB: 3 bins, alpha=1",114789,LOC_0077,0,AZ,AZ
+"MNB: 3 bins, alpha=1",121403,LOC_0135,0,AZ,CA
+"MNB: 3 bins, alpha=1",130846,LOC_0013,0,TX,CA
+"MNB: 3 bins, alpha=1",135420,LOC_0145,0,CA,CA
+"MNB: 3 bins, alpha=1",135438,LOC_0145,0,CA,CA
+"MNB: 3 bins, alpha=1",154976,LOC_0014,0,TX,AZ
+"MNB: 3 bins, alpha=1",154983,LOC_0014,0,TX,AZ
+"MNB: 3 bins, alpha=1",196870,LOC_0073,0,AZ,AZ
+"MNB: 3 bins, alpha=1",196879,LOC_0073,0,AZ,AZ
+"MNB: 3 bins, alpha=1",277744,LOC_0010,0,TX,TX
+"MNB: 3 bins, alpha=1",282613,LOC_0091,0,CA,CA
+"MNB: 3 bins, alpha=1",34088,LOC_0067,0,TX,TX
+"MNB: 3 bins, alpha=1",34952,LOC_0036,0,TX,CA
+"MNB: 3 bins, alpha=1",363448,LOC_0142,0,CA,CA
+"MNB: 3 bins, alpha=1",377125,LOC_0141,0,CA,CA
+"MNB: 3 bins, alpha=1",384977,LOC_0167,0,CA,TX
+"MNB: 3 bins, alpha=1",416763,LOC_0031,0,TX,TX
+"MNB: 3 bins, alpha=1",452998,LOC_0015,0,TX,CA
+"MNB: 3 bins, alpha=1",453003,LOC_0015,0,TX,TX
+"MNB: 3 bins, alpha=1",453004,LOC_0015,0,TX,TX
+"MNB: 3 bins, alpha=1",461828,LOC_0126,0,CA,CA
+"MNB: 3 bins, alpha=1",465656,LOC_0138,0,CA,CA
+"MNB: 3 bins, alpha=1",511453,LOC_0109,0,AZ,CA
+"MNB: 3 bins, alpha=1",511471,LOC_0109,0,AZ,TX
+"MNB: 3 bins, alpha=1",533394,LOC_0130,0,CA,CA
+"MNB: 3 bins, alpha=1",534824,LOC_0043,0,TX,AZ
+"MNB: 3 bins, alpha=1",541633,LOC_0085,0,CA,AZ
+"MNB: 3 bins, alpha=1",547258,LOC_0120,0,CA,AZ
+"MNB: 3 bins, alpha=1",552939,LOC_0098,0,CA,AZ
+"MNB: 3 bins, alpha=1",619062,LOC_0159,0,CA,AZ
+"MNB: 3 bins, alpha=1",70990,LOC_0039,0,TX,AZ
+"MNB: 3 bins, alpha=1",974054,LOC_0064,0,AZ,TX
+"MNB: 3 bins, alpha=1",1089596,LOC_0157,1,CA,CA
+"MNB: 3 bins, alpha=1",109171,LOC_0022,1,TX,CA
+"MNB: 3 bins, alpha=1",1152009,LOC_0161,1,CA,TX
+"MNB: 3 bins, alpha=1",120845,LOC_0097,1,AZ,AZ
+"MNB: 3 bins, alpha=1",132946,LOC_0128,1,CA,CA
+"MNB: 3 bins, alpha=1",134480,LOC_0129,1,CA,CA
+"MNB: 3 bins, alpha=1",1382,LOC_0020,1,TX,CA
+"MNB: 3 bins, alpha=1",140011,LOC_0096,1,AZ,AZ
+"MNB: 3 bins, alpha=1",150244,LOC_0155,1,CA,CA
+"MNB: 3 bins, alpha=1",154199,LOC_0061,1,AZ,AZ
+"MNB: 3 bins, alpha=1",163986,LOC_0080,1,CA,CA
+"MNB: 3 bins, alpha=1",167459,LOC_0152,1,CA,CA
+"MNB: 3 bins, alpha=1",193254,LOC_0062,1,AZ,AZ
+"MNB: 3 bins, alpha=1",193255,LOC_0062,1,AZ,AZ
+"MNB: 3 bins, alpha=1",210719,LOC_0047,1,TX,AZ
+"MNB: 3 bins, alpha=1",218535,LOC_0054,1,AZ,CA
+"MNB: 3 bins, alpha=1",222338,LOC_0037,1,TX,TX
+"MNB: 3 bins, alpha=1",230023,LOC_0037,1,TX,TX
+"MNB: 3 bins, alpha=1",231963,LOC_0037,1,TX,AZ
+"MNB: 3 bins, alpha=1",288791,LOC_0050,1,TX,TX
+"MNB: 3 bins, alpha=1",312735,LOC_0019,1,TX,TX
+"MNB: 3 bins, alpha=1",318524,LOC_0011,1,TX,TX
+"MNB: 3 bins, alpha=1",362097,LOC_0090,1,CA,CA
+"MNB: 3 bins, alpha=1",408852,LOC_0079,1,AZ,CA
+"MNB: 3 bins, alpha=1",449497,LOC_0089,1,CA,AZ
+"MNB: 3 bins, alpha=1",450846,LOC_0154,1,CA,CA
+"MNB: 3 bins, alpha=1",452826,LOC_0026,1,TX,CA
+"MNB: 3 bins, alpha=1",608776,LOC_0113,1,AZ,AZ
+"MNB: 3 bins, alpha=1",608781,LOC_0113,1,AZ,AZ
+"MNB: 3 bins, alpha=1",614743,LOC_0110,1,TX,CA
+"MNB: 3 bins, alpha=1",772323,LOC_0062,1,AZ,AZ
+"MNB: 3 bins, alpha=1",779907,LOC_0165,1,CA,CA
+"MNB: 3 bins, alpha=1",1080401,LOC_0066,2,AZ,TX
+"MNB: 3 bins, alpha=1",123297,LOC_0049,2,TX,TX
+"MNB: 3 bins, alpha=1",123582,LOC_0045,2,TX,CA
+"MNB: 3 bins, alpha=1",132208,LOC_0066,2,AZ,TX
+"MNB: 3 bins, alpha=1",132209,LOC_0066,2,AZ,TX
+"MNB: 3 bins, alpha=1",132328,LOC_0066,2,AZ,TX
+"MNB: 3 bins, alpha=1",132452,LOC_0066,2,AZ,TX
+"MNB: 3 bins, alpha=1",132684,LOC_0066,2,AZ,AZ
+"MNB: 3 bins, alpha=1",132844,LOC_0066,2,AZ,TX
+"MNB: 3 bins, alpha=1",132890,LOC_0066,2,AZ,TX
+"MNB: 3 bins, alpha=1",132967,LOC_0066,2,AZ,CA
+"MNB: 3 bins, alpha=1",132968,LOC_0066,2,AZ,TX
+"MNB: 3 bins, alpha=1",133346,LOC_0066,2,AZ,TX
+"MNB: 3 bins, alpha=1",133556,LOC_0066,2,AZ,AZ
+"MNB: 3 bins, alpha=1",144038,LOC_0168,2,CA,TX
+"MNB: 3 bins, alpha=1",145955,LOC_0066,2,AZ,AZ
+"MNB: 3 bins, alpha=1",145957,LOC_0066,2,AZ,AZ
+"MNB: 3 bins, alpha=1",147270,LOC_0042,2,TX,CA
+"MNB: 3 bins, alpha=1",265347,LOC_0123,2,AZ,AZ
+"MNB: 3 bins, alpha=1",297470,LOC_0136,2,CA,TX
+"MNB: 3 bins, alpha=1",299108,LOC_0016,2,TX,TX
+"MNB: 3 bins, alpha=1",317033,LOC_0149,2,CA,CA
+"MNB: 3 bins, alpha=1",321717,LOC_0066,2,AZ,TX
+"MNB: 3 bins, alpha=1",321736,LOC_0066,2,AZ,TX
+"MNB: 3 bins, alpha=1",321958,LOC_0065,2,AZ,CA
+"MNB: 3 bins, alpha=1",323984,LOC_0105,2,CA,TX
+"MNB: 3 bins, alpha=1",324293,LOC_0051,2,AZ,TX
+"MNB: 3 bins, alpha=1",361084,LOC_0168,2,CA,CA
+"MNB: 3 bins, alpha=1",395208,LOC_0168,2,CA,CA
+"MNB: 3 bins, alpha=1",404749,LOC_0030,2,TX,CA
+"MNB: 3 bins, alpha=1",452506,LOC_0108,2,AZ,AZ
+"MNB: 3 bins, alpha=1",452515,LOC_0108,2,AZ,CA
+"MNB: 3 bins, alpha=1",453180,LOC_0107,2,AZ,AZ
+"MNB: 3 bins, alpha=1",458919,LOC_0101,2,CA,CA
+"MNB: 3 bins, alpha=1",567440,LOC_0132,2,AZ,CA
+"MNB: 3 bins, alpha=1",583809,LOC_0051,2,AZ,TX
+"MNB: 3 bins, alpha=1",585126,LOC_0151,2,CA,TX
+"MNB: 3 bins, alpha=1",623628,LOC_0051,2,AZ,AZ
+"MNB: 3 bins, alpha=1",623629,LOC_0051,2,AZ,CA
+"MNB: 3 bins, alpha=1",624546,LOC_0051,2,AZ,TX
+"MNB: 3 bins, alpha=1",652385,LOC_0150,2,CA,TX
+"MNB: 3 bins, alpha=1",666132,LOC_0148,2,CA,AZ
+"MNB: 3 bins, alpha=1",669065,LOC_0150,2,CA,AZ
+"MNB: 3 bins, alpha=1",691005,LOC_0084,2,CA,TX
+"MNB: 3 bins, alpha=1",700909,LOC_0051,2,AZ,CA
+"MNB: 3 bins, alpha=1",705765,LOC_0018,2,TX,CA
+"MNB: 3 bins, alpha=1",705767,LOC_0003,2,TX,CA
+"MNB: 3 bins, alpha=1",710475,LOC_0051,2,AZ,AZ
+"MNB: 3 bins, alpha=1",807038,LOC_0164,2,CA,CA
+"MNB: 3 bins, alpha=1",845953,LOC_0060,2,TX,CA
+"MNB: 3 bins, alpha=1",900944,LOC_0002,2,TX,CA
+"MNB: 3 bins, alpha=1",941132,LOC_0051,2,AZ,AZ
+"MNB: 3 bins, alpha=1",952203,LOC_0116,2,CA,AZ
+"MNB: 3 bins, alpha=1",1106496,LOC_0038,3,TX,AZ
+"MNB: 3 bins, alpha=1",132942,LOC_0069,3,AZ,AZ
+"MNB: 3 bins, alpha=1",132948,LOC_0069,3,AZ,AZ
+"MNB: 3 bins, alpha=1",147312,LOC_0046,3,TX,AZ
+"MNB: 3 bins, alpha=1",200277,LOC_0044,3,TX,TX
+"MNB: 3 bins, alpha=1",230019,LOC_0029,3,TX,CA
+"MNB: 3 bins, alpha=1",232953,LOC_0094,3,CA,AZ
+"MNB: 3 bins, alpha=1",233658,LOC_0032,3,TX,AZ
+"MNB: 3 bins, alpha=1",251890,LOC_0052,3,AZ,TX
+"MNB: 3 bins, alpha=1",256444,LOC_0170,3,CA,AZ
+"MNB: 3 bins, alpha=1",265124,LOC_0170,3,CA,CA
+"MNB: 3 bins, alpha=1",278460,LOC_0017,3,TX,AZ
+"MNB: 3 bins, alpha=1",286971,LOC_0082,3,CA,AZ
+"MNB: 3 bins, alpha=1",345878,LOC_0103,3,CA,CA
+"MNB: 3 bins, alpha=1",357823,LOC_0099,3,CA,CA
+"MNB: 3 bins, alpha=1",452094,LOC_0104,3,CA,TX
+"MNB: 3 bins, alpha=1",452502,LOC_0134,3,AZ,CA
+"MNB: 3 bins, alpha=1",452611,LOC_0035,3,TX,AZ
+"MNB: 3 bins, alpha=1",452706,LOC_0005,3,TX,CA
+"MNB: 3 bins, alpha=1",48224,LOC_0115,3,AZ,TX
+"MNB: 3 bins, alpha=1",527676,LOC_0140,3,CA,TX
+"MNB: 3 bins, alpha=1",562113,LOC_0111,3,AZ,CA
+"MNB: 3 bins, alpha=1",574647,LOC_0127,3,CA,CA
+"MNB: 3 bins, alpha=1",578134,LOC_0166,3,CA,CA
+"MNB: 3 bins, alpha=1",611001,LOC_0058,3,AZ,AZ
+"MNB: 3 bins, alpha=1",632234,LOC_0058,3,AZ,AZ
+"MNB: 3 bins, alpha=1",660470,LOC_0156,3,CA,AZ
+"MNB: 3 bins, alpha=1",691650,LOC_0143,3,CA,AZ
+"MNB: 3 bins, alpha=1",750809,LOC_0117,3,TX,CA
+"MNB: 3 bins, alpha=1",75505,LOC_0078,3,AZ,CA
+"MNB: 3 bins, alpha=1",130831,LOC_0001,4,TX,TX
+"MNB: 3 bins, alpha=1",141468,LOC_0040,4,TX,AZ
+"MNB: 3 bins, alpha=1",163344,LOC_0092,4,CA,CA
+"MNB: 3 bins, alpha=1",163349,LOC_0092,4,CA,CA
+"MNB: 3 bins, alpha=1",175369,LOC_0133,4,AZ,AZ
+"MNB: 3 bins, alpha=1",17795,LOC_0119,4,CA,TX
+"MNB: 3 bins, alpha=1",195342,LOC_0125,4,CA,CA
+"MNB: 3 bins, alpha=1",212892,LOC_0118,4,CA,TX
+"MNB: 3 bins, alpha=1",218539,LOC_0075,4,AZ,TX
+"MNB: 3 bins, alpha=1",227104,LOC_0075,4,AZ,TX
+"MNB: 3 bins, alpha=1",254988,LOC_0071,4,AZ,AZ
+"MNB: 3 bins, alpha=1",297543,LOC_0027,4,TX,AZ
+"MNB: 3 bins, alpha=1",297547,LOC_0027,4,TX,AZ
+"MNB: 3 bins, alpha=1",297550,LOC_0027,4,TX,TX
+"MNB: 3 bins, alpha=1",34329,LOC_0070,4,AZ,AZ
+"MNB: 3 bins, alpha=1",380363,LOC_0158,4,CA,CA
+"MNB: 3 bins, alpha=1",392829,LOC_0006,4,TX,CA
+"MNB: 3 bins, alpha=1",428179,LOC_0053,4,TX,TX
+"MNB: 3 bins, alpha=1",445707,LOC_0163,4,CA,TX
+"MNB: 3 bins, alpha=1",453026,LOC_0004,4,TX,TX
+"MNB: 3 bins, alpha=1",503346,LOC_0146,4,CA,AZ
+"MNB: 3 bins, alpha=1",551487,LOC_0112,4,AZ,AZ
+"MNB: 3 bins, alpha=1",565888,LOC_0021,4,TX,CA
+"MNB: 3 bins, alpha=1",57994,LOC_0100,4,TX,TX
+"MNB: 3 bins, alpha=1",585340,LOC_0095,4,CA,AZ
+"MNB: 3 bins, alpha=1",611977,LOC_0057,4,AZ,TX
+"MNB: 3 bins, alpha=1",611978,LOC_0057,4,AZ,CA
+"MNB: 3 bins, alpha=1",720644,LOC_0163,4,CA,CA
+"MNB: 3 bins, alpha=1",731959,LOC_0122,4,TX,AZ
+"MNB: 3 bins, alpha=1",799409,LOC_0137,4,CA,CA
+"MNB: 3 bins, alpha=1",87027,LOC_0055,4,AZ,AZ
+"MNB: 3 bins, alpha=1",877615,LOC_0124,4,CA,CA
+"MNB: 3 bins, alpha=1",964245,LOC_0139,4,CA,CA
+"MNB: 3 bins, alpha=1",964250,LOC_0139,4,CA,CA
+"MNB: 3 bins, alpha=1",964290,LOC_0139,4,CA,CA

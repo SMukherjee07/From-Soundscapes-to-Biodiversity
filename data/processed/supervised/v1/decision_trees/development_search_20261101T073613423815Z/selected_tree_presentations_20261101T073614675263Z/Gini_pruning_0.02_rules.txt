@@ -1,0 +1,25 @@
+|--- spectral_centroid_mean_mean <= 2716.738525
+|   |--- mfcc_03_mean <= -2.223356
+|   |   |--- zcr_std_mean <= 0.059011
+|   |   |   |--- spectral_entropy_eps_skew_mean <= 5.656692
+|   |   |   |   |--- weights: [1.000000, 10.000000, 1.000000] class: CA
+|   |   |   |--- spectral_entropy_eps_skew_mean >  5.656692
+|   |   |   |   |--- weights: [10.000000, 3.000000, 3.000000] class: AZ
+|   |   |--- zcr_std_mean >  0.059011
+|   |   |   |--- weights: [0.000000, 1.000000, 7.000000] class: TX
+|   |--- mfcc_03_mean >  -2.223356
+|   |   |--- weights: [2.000000, 32.000000, 9.000000] class: CA
+|--- spectral_centroid_mean_mean >  2716.738525
+|   |--- mfcc_09_within_std_mean <= 6.845779
+|   |   |--- mfcc_04_mean <= -0.715366
+|   |   |   |--- weights: [7.000000, 2.000000, 12.000000] class: TX
+|   |   |--- mfcc_04_mean >  -0.715366
+|   |   |   |--- ndsi_ratio_ba_mean <= 192.606964
+|   |   |   |   |--- mfcc_08_mean <= -2.943831
+|   |   |   |   |   |--- weights: [0.000000, 3.000000, 3.000000] class: CA
+|   |   |   |   |--- mfcc_08_mean >  -2.943831
+|   |   |   |   |   |--- weights: [44.000000, 9.000000, 5.000000] class: AZ
+|   |   |   |--- ndsi_ratio_ba_mean >  192.606964
+|   |   |   |   |--- weights: [1.000000, 4.000000, 2.000000] class: CA
+|   |--- mfcc_09_within_std_mean >  6.845779
+|   |   |--- weights: [1.000000, 1.000000, 11.000000] class: TX
