@@ -10,3 +10,18 @@ main.site-shell[data-view] #research{padding:28px!important;margin-top:25px!impo
 main.site-shell .leaf-title{font:11px/1.6 'DM Mono',monospace!important;text-transform:uppercase;letter-spacing:.1em;margin:18px 0!important;color:#53604b!important}.journal-page-content .sk-stats>div{background:#203b2b!important}.journal-page-content .sk-stats dd{color:#f1d6a6!important}.journal-page-content .sk-stats dt{color:#f3ead4!important}.journal-page-content .sk-tabs{background:#203b2b!important}.journal-page-content .sk-tabs button{color:#f3ead4!important}.journal-page-content .sk-tabs button.on{background:#e6cc93!important;color:#253728!important}.journal-page-content .sk-chapter__no{color:#79623a!important}main.site-shell .journal-page-content .sk-code a{color:#f1d6a6!important}
 main.site-shell[data-view]:not([data-view=top]) .expedition-hud{display:none}main.site-shell[data-view=methods]>.closing-section{display:flex!important}main.site-shell[data-view=field-guide]>.research-snapshot{display:grid}
 main.site-shell .journal-page-content div[style*="color"]{color:#38462c!important}main.site-shell .journal-page-content .sk-explore div[style*="color"]{color:inherit!important}.journal-book--introduction .journal-page-content div[style*="position: absolute"][style*="bottom"]{background:#173426!important;color:#f9edd0!important;padding:8px!important}.journal-note-turn{animation:note-turn .35s ease-out;transform-origin:left center}@keyframes note-turn{from{opacity:.2;transform:perspective(1000px) rotateY(8deg)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.journal-note-turn{animation:none!important}}
+
+/* Explicit paper-theme colors: inherited table colors do not override cell colors. */
+.site-shell .journal-page-content .sk-tablewrap { background: #f5edd8; border: 1px solid #b6a785; border-radius: 4px; margin: 18px 0; max-width: 100%; overflow-x: auto; }
+.site-shell .journal-page-content .sk-table { background: #f5edd8; color: #28372b; width: 100%; border-collapse: collapse; }
+.site-shell .journal-page-content .sk-table caption,
+.site-shell .journal-page-content .sk-table thead th,
+.site-shell .journal-page-content .sk-table tbody th,
+.site-shell .journal-page-content .sk-table td { color: #28372b; -webkit-text-fill-color: #28372b; opacity: 1; }
+.site-shell .journal-page-content .sk-table caption { padding: 12px; font-weight: 700; letter-spacing: .06em; }
+.site-shell .journal-page-content .sk-table thead th { background: #e3d7b7; font-weight: 700; }
+.site-shell .journal-page-content .sk-table th,
+.site-shell .journal-page-content .sk-table td { padding: 10px 12px; border-color: #b6a785; line-height: 1.5; }
+.site-shell .journal-page-content .sk-table tbody tr:nth-child(even) { background: #eee4c8; }
+.site-shell .journal-page-content .sk-table tbody tr:hover { background: #e3d7b7; }
+.site-shell .journal-page-content .sk-tablewrap:focus-visible { outline: 3px solid #7a5a27; outline-offset: 3px; }
