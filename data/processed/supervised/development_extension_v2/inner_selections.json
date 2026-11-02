@@ -1,0 +1,297 @@
+[
+  {
+    "model": "Prior",
+    "fold": 0,
+    "parameters": {},
+    "inner_macro_f1": 0.17594080877662968
+  },
+  {
+    "model": "Multinomial NB",
+    "fold": 0,
+    "parameters": {
+      "model__alpha": 0.5,
+      "representation__encode__n_bins": 3
+    },
+    "inner_macro_f1": 0.45434254017870757
+  },
+  {
+    "model": "Bernoulli NB",
+    "fold": 0,
+    "parameters": {
+      "model__alpha": 0.5
+    },
+    "inner_macro_f1": 0.43933064211150974
+  },
+  {
+    "model": "Gaussian NB",
+    "fold": 0,
+    "parameters": {
+      "model__var_smoothing": 1e-09
+    },
+    "inner_macro_f1": 0.36097299572190034
+  },
+  {
+    "model": "Decision tree",
+    "fold": 0,
+    "parameters": {
+      "model__criterion": "gini",
+      "model__max_depth": 3,
+      "model__min_samples_leaf": 10
+    },
+    "inner_macro_f1": 0.4441462196526847
+  },
+  {
+    "model": "Logistic regression",
+    "fold": 0,
+    "parameters": {
+      "model__C": 10
+    },
+    "inner_macro_f1": 0.4936679523049559
+  },
+  {
+    "model": "Random forest",
+    "fold": 0,
+    "parameters": {
+      "max_depth": null,
+      "max_features": "sqrt",
+      "min_samples_leaf": 10
+    },
+    "inner_macro_f1": 0.5152709584508391
+  },
+  {
+    "model": "Prior",
+    "fold": 1,
+    "parameters": {},
+    "inner_macro_f1": 0.17576407918813539
+  },
+  {
+    "model": "Multinomial NB",
+    "fold": 1,
+    "parameters": {
+      "model__alpha": 2,
+      "representation__encode__n_bins": 5
+    },
+    "inner_macro_f1": 0.43721853580029335
+  },
+  {
+    "model": "Bernoulli NB",
+    "fold": 1,
+    "parameters": {
+      "model__alpha": 0.5
+    },
+    "inner_macro_f1": 0.4826525608335645
+  },
+  {
+    "model": "Gaussian NB",
+    "fold": 1,
+    "parameters": {
+      "model__var_smoothing": 1e-07
+    },
+    "inner_macro_f1": 0.4149024371246593
+  },
+  {
+    "model": "Decision tree",
+    "fold": 1,
+    "parameters": {
+      "model__criterion": "entropy",
+      "model__max_depth": 2,
+      "model__min_samples_leaf": 10
+    },
+    "inner_macro_f1": 0.4753399009945918
+  },
+  {
+    "model": "Logistic regression",
+    "fold": 1,
+    "parameters": {
+      "model__C": 0.1
+    },
+    "inner_macro_f1": 0.4980572670115153
+  },
+  {
+    "model": "Random forest",
+    "fold": 1,
+    "parameters": {
+      "max_depth": 3,
+      "max_features": 0.5,
+      "min_samples_leaf": 5
+    },
+    "inner_macro_f1": 0.5024304815476293
+  },
+  {
+    "model": "Prior",
+    "fold": 2,
+    "parameters": {},
+    "inner_macro_f1": 0.17822651448639157
+  },
+  {
+    "model": "Multinomial NB",
+    "fold": 2,
+    "parameters": {
+      "model__alpha": 0.5,
+      "representation__encode__n_bins": 3
+    },
+    "inner_macro_f1": 0.5163536406771337
+  },
+  {
+    "model": "Bernoulli NB",
+    "fold": 2,
+    "parameters": {
+      "model__alpha": 0.5
+    },
+    "inner_macro_f1": 0.5422859873740632
+  },
+  {
+    "model": "Gaussian NB",
+    "fold": 2,
+    "parameters": {
+      "model__var_smoothing": 1e-07
+    },
+    "inner_macro_f1": 0.4059137118064038
+  },
+  {
+    "model": "Decision tree",
+    "fold": 2,
+    "parameters": {
+      "model__criterion": "entropy",
+      "model__max_depth": 2,
+      "model__min_samples_leaf": 5
+    },
+    "inner_macro_f1": 0.5169476516288669
+  },
+  {
+    "model": "Logistic regression",
+    "fold": 2,
+    "parameters": {
+      "model__C": 0.01
+    },
+    "inner_macro_f1": 0.47539071829851975
+  },
+  {
+    "model": "Random forest",
+    "fold": 2,
+    "parameters": {
+      "max_depth": null,
+      "max_features": 0.5,
+      "min_samples_leaf": 5
+    },
+    "inner_macro_f1": 0.5283849682816604
+  },
+  {
+    "model": "Prior",
+    "fold": 3,
+    "parameters": {},
+    "inner_macro_f1": 0.17664204231368408
+  },
+  {
+    "model": "Multinomial NB",
+    "fold": 3,
+    "parameters": {
+      "model__alpha": 0.5,
+      "representation__encode__n_bins": 5
+    },
+    "inner_macro_f1": 0.46415897984985427
+  },
+  {
+    "model": "Bernoulli NB",
+    "fold": 3,
+    "parameters": {
+      "model__alpha": 0.5
+    },
+    "inner_macro_f1": 0.4609720521551191
+  },
+  {
+    "model": "Gaussian NB",
+    "fold": 3,
+    "parameters": {
+      "model__var_smoothing": 1e-09
+    },
+    "inner_macro_f1": 0.4059412208440754
+  },
+  {
+    "model": "Decision tree",
+    "fold": 3,
+    "parameters": {
+      "model__criterion": "entropy",
+      "model__max_depth": 2,
+      "model__min_samples_leaf": 5
+    },
+    "inner_macro_f1": 0.3808069958445899
+  },
+  {
+    "model": "Logistic regression",
+    "fold": 3,
+    "parameters": {
+      "model__C": 0.1
+    },
+    "inner_macro_f1": 0.42001484628463664
+  },
+  {
+    "model": "Random forest",
+    "fold": 3,
+    "parameters": {
+      "max_depth": 3,
+      "max_features": 0.5,
+      "min_samples_leaf": 5
+    },
+    "inner_macro_f1": 0.4755313959177694
+  },
+  {
+    "model": "Prior",
+    "fold": 4,
+    "parameters": {},
+    "inner_macro_f1": 0.17822651448639157
+  },
+  {
+    "model": "Multinomial NB",
+    "fold": 4,
+    "parameters": {
+      "model__alpha": 2,
+      "representation__encode__n_bins": 8
+    },
+    "inner_macro_f1": 0.46890682689202423
+  },
+  {
+    "model": "Bernoulli NB",
+    "fold": 4,
+    "parameters": {
+      "model__alpha": 0.5
+    },
+    "inner_macro_f1": 0.44961676007780604
+  },
+  {
+    "model": "Gaussian NB",
+    "fold": 4,
+    "parameters": {
+      "model__var_smoothing": 1e-09
+    },
+    "inner_macro_f1": 0.38001700610396266
+  },
+  {
+    "model": "Decision tree",
+    "fold": 4,
+    "parameters": {
+      "model__criterion": "gini",
+      "model__max_depth": 2,
+      "model__min_samples_leaf": 10
+    },
+    "inner_macro_f1": 0.4691329081574091
+  },
+  {
+    "model": "Logistic regression",
+    "fold": 4,
+    "parameters": {
+      "model__C": 0.1
+    },
+    "inner_macro_f1": 0.5652664789506895
+  },
+  {
+    "model": "Random forest",
+    "fold": 4,
+    "parameters": {
+      "max_depth": 3,
+      "max_features": 0.5,
+      "min_samples_leaf": 5
+    },
+    "inner_macro_f1": 0.5182861894867611
+  }
+]

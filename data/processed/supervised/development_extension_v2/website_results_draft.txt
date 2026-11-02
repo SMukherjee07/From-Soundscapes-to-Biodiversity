@@ -1,0 +1,15 @@
+# New development experiments — not final-test results
+
+                     mean_outer_macro_f1   fold_sd  pooled_accuracy  pooled_macro_f1
+model                                                                               
+Random forest                   0.503718  0.056235         0.521739         0.509251
+Decision tree                   0.491486  0.132703         0.516304         0.510205
+Bernoulli NB                    0.487103  0.049936         0.500000         0.490276
+Multinomial NB                  0.476910  0.069093         0.483696         0.476704
+Logistic regression             0.451243  0.060033         0.451087         0.452085
+Gaussian NB                     0.369567  0.095910         0.385870         0.378607
+Prior                           0.170041  0.004787         0.342391         0.241311
+
+These analyses were designed after viewing the original test results. They cannot demonstrate an improvement on an independent test. The original selected models and final-test results remain the historical evaluation.
+Any apparent leader among these families needs a prespecified training procedure and a new independent test before a generalization claim.
+Exact-coordinate grouping does not ensure independence of nearby sites, species or recordists. A successful regional prediction is not a biodiversity estimate.
